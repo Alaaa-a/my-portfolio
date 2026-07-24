@@ -1,0 +1,95 @@
+backend:
+  name: github
+  repo: Alaaa-a/my-portfolio
+  branch: main
+  # 换成你部署到 Vercel 后的正式域名（例如 https://my-portfolio.vercel.app）
+  base_url: https://REPLACE-WITH-YOUR-VERCEL-DOMAIN
+  auth_endpoint: api/auth
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "about"
+    label: "关于我"
+    files:
+      - name: "about"
+        label: "关于我页面"
+        file: "data/about.json"
+        fields:
+          - { label: "页面副标题", name: "intro", widget: "string" }
+          - label: "内容板块"
+            name: "sections"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "标签", name: "tag", widget: "string" }
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "正文", name: "body", widget: "text" }
+
+  - name: "portfolio"
+    label: "作品展示"
+    files:
+      - name: "portfolio"
+        label: "作品列表页面"
+        file: "data/portfolio.json"
+        fields:
+          - { label: "页面副标题", name: "intro", widget: "string" }
+          - label: "作品列表"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "标签", name: "tag", widget: "string", default: "占位作品" }
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "简介", name: "description", widget: "text" }
+
+  - name: "now"
+    label: "最近在玩"
+    files:
+      - name: "now"
+        label: "最近在玩页面"
+        file: "data/now.json"
+        fields:
+          - { label: "页面副标题", name: "intro", widget: "string" }
+          - label: "条目列表"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "标签", name: "tag", widget: "string", default: "游戏" }
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "描述", name: "description", widget: "text" }
+
+  - name: "rankings"
+    label: "游戏排行榜"
+    files:
+      - name: "rankings"
+        label: "排行榜页面"
+        file: "data/rankings.json"
+        fields:
+          - { label: "页面副标题", name: "intro", widget: "string" }
+          - label: "排名列表（列表顺序即排名，可在编辑器里拖拽调整顺序）"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "游戏标题", name: "title", widget: "string" }
+              - { label: "上榜理由", name: "reason", widget: "text" }
+
+  - name: "reviews"
+    label: "游戏鉴赏总结"
+    files:
+      - name: "reviews"
+        label: "鉴赏列表页面"
+        file: "data/reviews.json"
+        fields:
+          - { label: "页面副标题", name: "intro", widget: "string" }
+          - label: "鉴赏列表"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "标签", name: "tag", widget: "string", default: "占位鉴赏" }
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "正文", name: "body", widget: "text" }

@@ -1,0 +1,6 @@
+{
+  "name": "alaaa-my-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Alaaa 的个人网站，纯静态 HTML/CSS/JS，外加两个 Vercel Serverless Function 用于 Decap CMS 的 GitHub OAuth。"
+}
