@@ -1,0 +1,552 @@
+[
+  {
+    "id": "martini", "name": "马天尼", "nameEn": "Martini", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "60ml" },
+      { "name": "干味美思", "amount": "10ml" },
+      { "name": "橄榄或柠檬皮", "amount": "装饰" }
+    ],
+    "method": ["将金酒与干味美思倒入调酒杯，加满冰块搅拌约30秒", "滤入冰镇过的马天尼杯", "用橄榄或柠檬皮卷装饰"],
+    "story": "有人说它是鸡尾酒里的白衬衫——简单到近乎苛刻，却容不下一丝敷衍。关于它的身世众说纷纭，有人说源自加州小镇马提内兹，也有人说是纽约酒保的随手之作。邦德要「摇不要搅」，老派调酒师却坚持搅拌才能保住那份清澈，这场分歧至今没有赢家。"
+  },
+  {
+    "id": "mojito", "name": "莫吉托", "nameEn": "Mojito", "base": "白朗姆酒", "image": null,
+    "ingredients": [
+      { "name": "白朗姆酒", "amount": "45ml" },
+      { "name": "青柠", "amount": "半个，切块" },
+      { "name": "白砂糖或糖浆", "amount": "2茶匙" },
+      { "name": "薄荷叶", "amount": "6-8片" },
+      { "name": "苏打水", "amount": "适量" }
+    ],
+    "method": ["薄荷叶与青柠、糖在杯中轻轻捣压出香气", "加入朗姆酒和碎冰", "顶部倒满苏打水，轻轻搅拌，装饰薄荷枝"],
+    "story": "古巴老渔民相信薄荷能驱散海上的湿气，也有人说它治好过坏血病——传说难以考证，但哈瓦那的老城墙根下，它确实凉了几百年的夏天。海明威在小酒馆里一杯接一杯地喝，把它写成了自己的招牌，也写成了这座城市的名片。"
+  },
+  {
+    "id": "negroni", "name": "内格罗尼", "nameEn": "Negroni", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "30ml" },
+      { "name": "甜味美思", "amount": "30ml" },
+      { "name": "金巴利", "amount": "30ml" },
+      { "name": "橙皮", "amount": "装饰" }
+    ],
+    "method": ["所有材料倒入装满冰块的老式杯中", "搅拌均匀", "以橙皮扭转装饰"],
+    "story": "1919年的佛罗伦萨，卡米洛·内格罗尼伯爵嫌自己常喝的美国佬鸡尾酒不够劲，让调酒师把苏打水换成金酒。一句随口的要求，换来了一杯此后风靡百年的苦甜三重奏，酒精度陡然上升，风味也从此有了棱角。"
+  },
+  {
+    "id": "old-fashioned", "name": "老式鸡尾酒", "nameEn": "Old Fashioned", "base": "波本威士忌", "image": null,
+    "ingredients": [
+      { "name": "波本或黑麦威士忌", "amount": "60ml" },
+      { "name": "方糖", "amount": "1颗" },
+      { "name": "安高天娜苦精", "amount": "2-3滴" },
+      { "name": "橙皮", "amount": "装饰" }
+    ],
+    "method": ["方糖置于杯底，滴入苦精，加少量水压碎融化", "加入威士忌和大冰块，搅拌", "橙皮扭转释放油脂，装饰杯口"],
+    "story": "十九世纪的调酒师什么都愿意往杯子里加，直到有人厌烦了那些花哨的糖浆和利口酒，怀念起最初糖、苦精、烈酒的简单配比，便管它叫「老式」——这大概是鸡尾酒历史上，第一次有人怀旧。"
+  },
+  {
+    "id": "manhattan", "name": "曼哈顿", "nameEn": "Manhattan", "base": "黑麦威士忌", "image": null,
+    "ingredients": [
+      { "name": "黑麦威士忌", "amount": "60ml" },
+      { "name": "甜味美思", "amount": "30ml" },
+      { "name": "安高天娜苦精", "amount": "2滴" },
+      { "name": "马拉斯奇诺樱桃", "amount": "装饰" }
+    ],
+    "method": ["所有材料加冰搅拌均匀", "滤入冰镇鸡尾酒杯", "以樱桃装饰"],
+    "story": "据说这杯酒诞生于曼哈顿俱乐部一场为丘吉尔母亲举办的晚宴，虽然后来的考据者证明她当时人在国外，故事经不起推敲，但这座岛屿的名字，还是被永远地系在了这杯威士忌鸡尾酒身上。"
+  },
+  {
+    "id": "daiquiri", "name": "代基里", "nameEn": "Daiquiri", "base": "白朗姆酒", "image": null,
+    "ingredients": [
+      { "name": "白朗姆酒", "amount": "60ml" },
+      { "name": "青柠汁", "amount": "25ml" },
+      { "name": "糖浆", "amount": "15ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤后倒入冰镇鸡尾酒杯"],
+    "story": "1900年代初，古巴矿场附近一位美国工程师用手边仅有的朗姆酒、青柠和糖，调出了给自己解暑的饮料，随口以矿区的名字命名。后来海明威把它喝出了名，传说他曾一口气喝下十几杯，还嫌调酒师手下留了情。"
+  },
+  {
+    "id": "margarita", "name": "玛格丽特", "nameEn": "Margarita", "base": "龙舌兰", "image": null,
+    "ingredients": [
+      { "name": "龙舌兰", "amount": "50ml" },
+      { "name": "橙皮利口酒（君度）", "amount": "20ml" },
+      { "name": "青柠汁", "amount": "20ml" },
+      { "name": "盐边", "amount": "装饰，可选" }
+    ],
+    "method": ["杯口蘸盐制作盐边", "所有材料加冰摇匀", "滤入盐边杯中，可加冰或不加冰"],
+    "story": "关于名字的来历，坊间流传着至少五个版本：有人说为逝去的爱人调制，有人说以一场调酒比赛的获奖者命名。玛格丽特在西班牙语里是「雏菊」的意思，无论故事真假，这杯酒都像雏菊一样，在酒吧菜单上开了将近一个世纪。"
+  },
+  {
+    "id": "cosmopolitan", "name": "大都会", "nameEn": "Cosmopolitan", "base": "伏特加", "image": null,
+    "ingredients": [
+      { "name": "柑橘伏特加", "amount": "40ml" },
+      { "name": "橙皮利口酒", "amount": "15ml" },
+      { "name": "蔓越莓汁", "amount": "30ml" },
+      { "name": "青柠汁", "amount": "15ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤倒入冰镇鸡尾酒杯", "以橙皮装饰"],
+    "story": "它本该只是八十年代同志酒吧里一杯粉色的小甜水，直到《欲望都市》里凯莉举着它谈论纽约的爱情。从那以后，这杯酒成了都市女性独立与精致的某种暗号，粉色液体里，装的其实是一整个时代的想象。"
+  },
+  {
+    "id": "whiskey-sour", "name": "威士忌酸", "nameEn": "Whiskey Sour", "base": "波本威士忌", "image": null,
+    "ingredients": [
+      { "name": "波本威士忌", "amount": "60ml" },
+      { "name": "柠檬汁", "amount": "25ml" },
+      { "name": "糖浆", "amount": "20ml" },
+      { "name": "蛋清", "amount": "1个，可选" }
+    ],
+    "method": ["所有材料加冰摇匀（加蛋清可先干摇再加冰摇）", "滤入装冰的老式杯或鸡尾酒杯", "以樱桃与橙片装饰"],
+    "story": "酸、甜、烈酒——这三样构成了整个「酸类鸡尾酒」家族的骨架，而威士忌酸正是这个家族最早被写进文献的成员之一。十九世纪的水手靠柑橘对抗坏血病，酒保们顺手把它调进了烈酒里，治病与享乐从此难分你我。"
+  },
+  {
+    "id": "pina-colada", "name": "椰林飘香", "nameEn": "Piña Colada", "base": "朗姆酒", "image": null,
+    "ingredients": [
+      { "name": "白朗姆酒", "amount": "45ml" },
+      { "name": "椰浆", "amount": "30ml" },
+      { "name": "菠萝汁", "amount": "90ml" },
+      { "name": "菠萝片", "amount": "装饰" }
+    ],
+    "method": ["所有材料与碎冰一同放入搅拌机打匀", "倒入大号高杯", "以菠萝片和樱桃装饰"],
+    "story": "1954年，波多黎各一家酒店的调酒师为了给游客一点「阳光的味道」，把菠萝、椰奶和朗姆酒打进了一台崭新的搅拌机——大概是最早诞生在电器里、而不是雪克壶里的经典鸡尾酒。"
+  },
+  {
+    "id": "mai-tai", "name": "迈泰", "nameEn": "Mai Tai", "base": "朗姆酒", "image": null,
+    "ingredients": [
+      { "name": "陈年朗姆酒", "amount": "45ml" },
+      { "name": "橙皮库拉索", "amount": "15ml" },
+      { "name": "杏仁糖浆（Orgeat）", "amount": "15ml" },
+      { "name": "青柠汁", "amount": "20ml" }
+    ],
+    "method": ["所有材料加碎冰摇匀", "连冰倒入古典杯", "以薄荷枝与青柠壳装饰"],
+    "story": "调酒师「贸易风」维克第一次把这杯酒端给大溪地朋友时，对方尝了一口，脱口而出「Maita'i roa ae」——大溪地语里「好极了」的意思。这句赞叹后来就成了它的名字，一句夸奖，喝了七十年。"
+  },
+  {
+    "id": "bloody-mary", "name": "血腥玛丽", "nameEn": "Bloody Mary", "base": "伏特加", "image": null,
+    "ingredients": [
+      { "name": "伏特加", "amount": "45ml" },
+      { "name": "番茄汁", "amount": "90ml" },
+      { "name": "柠檬汁", "amount": "15ml" },
+      { "name": "塔巴斯科辣酱", "amount": "数滴" },
+      { "name": "伍斯特酱", "amount": "数滴" },
+      { "name": "盐、黑胡椒、芹菜盐", "amount": "适量" }
+    ],
+    "method": ["所有材料倒入装满冰块的高杯中", "轻轻搅拌均匀", "以芹菜梗、柠檬角或橄榄装饰"],
+    "story": "1920年代的巴黎，一位调酒师把伏特加和番茄汁调在一起，起初觉得味道寡淡，直到辣酱与香料一样样加进去，才有了这杯「血色」的清晨解药——如今它更像一种仪式，专治宿醉之后第一个清醒的念头。"
+  },
+  {
+    "id": "tom-collins", "name": "汤姆·柯林斯", "nameEn": "Tom Collins", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "45ml" },
+      { "name": "柠檬汁", "amount": "25ml" },
+      { "name": "糖浆", "amount": "15ml" },
+      { "name": "苏打水", "amount": "适量" }
+    ],
+    "method": ["金酒、柠檬汁、糖浆加冰摇匀", "滤入装冰的高杯", "顶部加满苏打水，装饰柠檬片与樱桃"],
+    "story": "1874年，纽约的酒吧里流传起一个恶作剧：陌生人跑进店里问「汤姆·柯林斯在哪儿，他说了你坏话」，急得人满城寻找一个根本不存在的家伙。闹剧退潮后，这个名字却留了下来，安安静静地挂在一杯清爽的金酒汽水上。"
+  },
+  {
+    "id": "mint-julep", "name": "薄荷朱丽普", "nameEn": "Mint Julep", "base": "波本威士忌", "image": null,
+    "ingredients": [
+      { "name": "波本威士忌", "amount": "60ml" },
+      { "name": "薄荷叶", "amount": "8-10片" },
+      { "name": "糖浆", "amount": "10ml" },
+      { "name": "碎冰", "amount": "适量" }
+    ],
+    "method": ["薄荷叶与糖浆在杯底轻轻捣压", "加满碎冰，倒入威士忌", "搅拌至杯壁结霜，插满薄荷枝装饰"],
+    "story": "肯塔基赛马会的看台上，这杯酒和骏马一样是主角——银杯盛着碎冰与波本，握在手里能沁凉一整个五月的午后。南方绅士们说，做朱丽普没有秘方，只有耐心，杯壁结的那层白霜，就是唯一的证书。"
+  },
+  {
+    "id": "sidecar", "name": "边车", "nameEn": "Sidecar", "base": "干邑", "image": null,
+    "ingredients": [
+      { "name": "干邑白兰地", "amount": "50ml" },
+      { "name": "橙皮库拉索", "amount": "20ml" },
+      { "name": "柠檬汁", "amount": "20ml" },
+      { "name": "糖边", "amount": "可选" }
+    ],
+    "method": ["杯口可制作糖边装饰", "所有材料加冰摇匀", "双重过滤倒入鸡尾酒杯"],
+    "story": "第一次世界大战期间，一位美军上尉总爱坐着摩托车的边车往返酒吧，风大天冷，调酒师便为他调了这杯暖身的白兰地——名字也就这样从街边的交通工具，一路开进了鸡尾酒的经典名录。"
+  },
+  {
+    "id": "french-75", "name": "法式75", "nameEn": "French 75", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "30ml" },
+      { "name": "柠檬汁", "amount": "15ml" },
+      { "name": "糖浆", "amount": "10ml" },
+      { "name": "香槟", "amount": "适量" }
+    ],
+    "method": ["金酒、柠檬汁、糖浆加冰摇匀", "滤入笛形香槟杯", "顶部加满香槟"],
+    "story": "名字借自一战战场上那门著名的75毫米速射炮——法国人相信，这杯气泡与金酒的组合后劲之猛，喝下去的冲击感不亚于炮弹出膛。轻盈的气泡底下，藏着一点战壕里的黑色幽默。"
+  },
+  {
+    "id": "aviation", "name": "飞行", "nameEn": "Aviation", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "45ml" },
+      { "name": "樱桃利口酒（Maraschino）", "amount": "15ml" },
+      { "name": "紫罗兰利口酒", "amount": "7.5ml" },
+      { "name": "柠檬汁", "amount": "15ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤倒入鸡尾酒杯"],
+    "story": "紫罗兰利口酒给了它一抹极淡的天空蓝，像云层裂开的一道缝隙。这杯诞生于飞行刚成为奇迹年代的鸡尾酒，后来因紫罗兰利口酒一度停产而险些「坠机」，直到近些年才重新被调酒师们请回天上。"
+  },
+  {
+    "id": "sazerac", "name": "萨泽拉克", "nameEn": "Sazerac", "base": "黑麦威士忌", "image": null,
+    "ingredients": [
+      { "name": "黑麦威士忌", "amount": "60ml" },
+      { "name": "方糖", "amount": "1颗" },
+      { "name": "佩肖苦精", "amount": "3滴" },
+      { "name": "苦艾酒", "amount": "少许，涮杯" },
+      { "name": "柠檬皮", "amount": "装饰" }
+    ],
+    "method": ["苦艾酒涮杯后倒出多余部分", "另一杯中将方糖、苦精与威士忌搅拌加冰", "滤入涮过苦艾酒的杯中，柠檬皮扭转释放香气后弃用"],
+    "story": "常被称作「美国最古老的鸡尾酒」，诞生于新奥尔良一家名叫Sazerac的咖啡馆，最初用干邑调制，后来根瘤蚜虫灾摧毁了欧洲葡萄园，人们才改用黑麦威士忌——一场植物瘟疫，间接改写了一杯酒的配方。"
+  },
+  {
+    "id": "boulevardier", "name": "大道", "nameEn": "Boulevardier", "base": "波本威士忌", "image": null,
+    "ingredients": [
+      { "name": "波本威士忌", "amount": "30ml" },
+      { "name": "甜味美思", "amount": "30ml" },
+      { "name": "金巴利", "amount": "30ml" },
+      { "name": "橙皮", "amount": "装饰" }
+    ],
+    "method": ["所有材料加冰搅拌均匀", "滤入装冰的老式杯", "橙皮装饰"],
+    "story": "内格罗尼的威士忌表亲——把金酒换成波本，苦甜的骨架不变，多了几分谷物的醇厚。名字来自1920年代巴黎一本名为《大道》的英文杂志，编辑是个美国浪荡子，据说这杯酒的配方，就是他留给巴黎最好的遗产。"
+  },
+  {
+    "id": "vieux-carre", "name": "老广场", "nameEn": "Vieux Carré", "base": "黑麦威士忌与干邑", "image": null,
+    "ingredients": [
+      { "name": "黑麦威士忌", "amount": "20ml" },
+      { "name": "干邑白兰地", "amount": "20ml" },
+      { "name": "甜味美思", "amount": "20ml" },
+      { "name": "本尼迪克丁", "amount": "1茶匙" },
+      { "name": "苦精（安高天娜与佩肖各半）", "amount": "共4滴" }
+    ],
+    "method": ["所有材料加冰搅拌均匀", "滤入装冰的老式杯", "柠檬皮装饰"],
+    "story": "得名于新奥尔良法语区的旧称，这杯酒本身就是一场移民史的缩影：黑麦威士忌来自北方，干邑属于法国传统，本尼迪克丁则是修道院配方——各种血统在一只杯子里握手言和。"
+  },
+  {
+    "id": "corpse-reviver-2", "name": "亡者复生2号", "nameEn": "Corpse Reviver No. 2", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "20ml" },
+      { "name": "橙皮库拉索", "amount": "20ml" },
+      { "name": "丽叶白（Lillet Blanc）", "amount": "20ml" },
+      { "name": "柠檬汁", "amount": "20ml" },
+      { "name": "苦艾酒", "amount": "1茶匙" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤倒入鸡尾酒杯"],
+    "story": "1930年哈利·克拉多克在《萨伏伊鸡尾酒手册》里写下警告：「一次喝四杯会让你起死回生，喝五杯又会把你打回原形。」这杯专治宿醉的解药，配方里悄悄藏着一点苦艾酒的鬼魅气息。"
+  },
+  {
+    "id": "last-word", "name": "最后一言", "nameEn": "Last Word", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "20ml" },
+      { "name": "绿查特酒", "amount": "20ml" },
+      { "name": "樱桃利口酒（Maraschino）", "amount": "20ml" },
+      { "name": "青柠汁", "amount": "20ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤倒入鸡尾酒杯"],
+    "story": "禁酒令时期的底特律运动员俱乐部里悄悄诞生，此后沉寂了半个多世纪，直到2000年代一位西雅图调酒师在旧书里翻到配方，把它重新端上吧台——原来有些「最后一言」，其实还没说完。"
+  },
+  {
+    "id": "paper-plane", "name": "纸飞机", "nameEn": "Paper Plane", "base": "波本威士忌", "image": null,
+    "ingredients": [
+      { "name": "波本威士忌", "amount": "22.5ml" },
+      { "name": "阿马罗（Amaro Nonino）", "amount": "22.5ml" },
+      { "name": "阿佩罗", "amount": "22.5ml" },
+      { "name": "柠檬汁", "amount": "22.5ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤倒入鸡尾酒杯"],
+    "story": "四种材料等量相拼，像四条对角线交汇于纸飞机的机身。名字借自M.I.A.的同名歌曲，2007年由纽约调酒师山姆·罗斯设计，是少数在21世纪诞生却迅速跻身经典行列的年轻鸡尾酒。"
+  },
+  {
+    "id": "penicillin", "name": "青霉素", "nameEn": "Penicillin", "base": "苏格兰威士忌", "image": null,
+    "ingredients": [
+      { "name": "调和苏格兰威士忌", "amount": "60ml" },
+      { "name": "柠檬汁", "amount": "20ml" },
+      { "name": "蜂蜜姜汁糖浆", "amount": "20ml" },
+      { "name": "泥煤威士忌", "amount": "5ml，漂浮" }
+    ],
+    "method": ["主威士忌、柠檬汁、蜂蜜姜汁糖浆加冰摇匀", "滤入装冰的老式杯", "泥煤威士忌漂浮于表面"],
+    "story": "名字听着像药方，喝起来也确实带着姜的辛辣和泥煤的烟熏味，像一剂猛药。2005年由纽约调酒师山姆·罗斯发明——没错，又是他——用一杯酒，治好了整个鸡尾酒复兴年代的「平淡症」。"
+  },
+  {
+    "id": "espresso-martini", "name": "浓缩咖啡马天尼", "nameEn": "Espresso Martini", "base": "伏特加", "image": null,
+    "ingredients": [
+      { "name": "伏特加", "amount": "50ml" },
+      { "name": "咖啡利口酒（Kahlúa）", "amount": "20ml" },
+      { "name": "现萃浓缩咖啡", "amount": "30ml" },
+      { "name": "糖浆", "amount": "少许，可选" }
+    ],
+    "method": ["所有材料加冰用力摇匀，充分打出泡沫", "滤入冰镇鸡尾酒杯", "撒几粒咖啡豆装饰"],
+    "story": "1980年代伦敦，一位名模走进酒吧对传奇调酒师迪克·布拉德塞尔说：「给我来一杯能先让我清醒、再让我喝醉的东西。」于是有了这杯酒——一场深夜派对的续命符，也是咖啡因与酒精最诚实的和解。"
+  },
+  {
+    "id": "white-lady", "name": "白色佳人", "nameEn": "White Lady", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "40ml" },
+      { "name": "橙皮库拉索", "amount": "20ml" },
+      { "name": "柠檬汁", "amount": "20ml" },
+      { "name": "蛋清", "amount": "1个，可选" }
+    ],
+    "method": ["所有材料加冰摇匀（加蛋清可先干摇）", "双重过滤倒入鸡尾酒杯"],
+    "story": "哈利·麦克艾霍恩在1920年代的巴黎哈利酒吧几经调整才定型这杯酒，从最初的薄荷利口酒版本，一路简化成如今这般清瘦优雅的模样——像所有经典一样，越改越简单，才越接近完美。"
+  },
+  {
+    "id": "clover-club", "name": "三叶草俱乐部", "nameEn": "Clover Club", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "45ml" },
+      { "name": "覆盆子糖浆", "amount": "15ml" },
+      { "name": "柠檬汁", "amount": "15ml" },
+      { "name": "蛋清", "amount": "1个" }
+    ],
+    "method": ["所有材料先干摇（不加冰）使蛋清充分乳化", "再加冰摇匀", "双重过滤倒入鸡尾酒杯"],
+    "story": "名字来自二十世纪初费城一群报社编辑和律师组成的男士俱乐部，讽刺的是，这杯粉红绵密、口感近乎甜品的鸡尾酒，如今常被当作「女士酒」——历史有时候就爱开这种玩笑。"
+  },
+  {
+    "id": "bees-knees", "name": "蜂之膝", "nameEn": "Bee's Knees", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "50ml" },
+      { "name": "蜂蜜糖浆", "amount": "20ml" },
+      { "name": "柠檬汁", "amount": "20ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤倒入鸡尾酒杯"],
+    "story": "禁酒令年代，私酿金酒气味粗糙，酒保便用蜂蜜和柠檬来掩盖那股「浴缸味」。「蜂之膝」是当时形容「顶呱呱」的俚语，如今私酿早已成为历史，这份掩饰的智慧却成了一杯正经的经典。"
+  },
+  {
+    "id": "southside", "name": "南方", "nameEn": "Southside", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "50ml" },
+      { "name": "青柠汁", "amount": "20ml" },
+      { "name": "糖浆", "amount": "15ml" },
+      { "name": "薄荷叶", "amount": "6-8片" }
+    ],
+    "method": ["薄荷叶与其余材料一同摇匀", "双重过滤倒入鸡尾酒杯，或滤入装冰高杯", "薄荷叶装饰"],
+    "story": "有人说它诞生于芝加哥南区的黑帮酒吧，是为了掩盖劣质私酿金酒而加的薄荷；也有人说它其实来自纽约上东区的南方俱乐部——南北两地，都想认领这杯清凉的酒。"
+  },
+  {
+    "id": "gimlet", "name": "琴蕾", "nameEn": "Gimlet", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "50ml" },
+      { "name": "青柠汁", "amount": "15ml" },
+      { "name": "糖浆", "amount": "15ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "滤入冰镇鸡尾酒杯"],
+    "story": "十九世纪的英国海军军医给水手们的朗姆酒里掺进青柠汁预防坏血病，据说这个主意出自一位姓Gimlette的军医——工具「手摇钻」（gimlet）与人名撞了个巧合，这杯酒的名字，从此说不清究竟纪念的是谁。"
+  },
+  {
+    "id": "moscow-mule", "name": "莫斯科骡子", "nameEn": "Moscow Mule", "base": "伏特加", "image": null,
+    "ingredients": [
+      { "name": "伏特加", "amount": "45ml" },
+      { "name": "青柠汁", "amount": "15ml" },
+      { "name": "姜汁啤酒", "amount": "适量" }
+    ],
+    "method": ["伏特加与青柠汁倒入铜杯中加冰", "顶部加满姜汁啤酒，轻轻搅拌", "青柠角装饰"],
+    "story": "1941年，一位卖不出去的伏特加经销商和一位滞销姜汁啤酒的老板，在好莱坞一间酒吧偶然相遇，两人一拍即合，把彼此的库存倒进了同一只铜杯——一场绝望的清库存，意外调出了一款传世经典。"
+  },
+  {
+    "id": "dark-n-stormy", "name": "黑暗风暴", "nameEn": "Dark 'n' Stormy", "base": "黑朗姆酒", "image": null,
+    "ingredients": [
+      { "name": "黑朗姆酒", "amount": "60ml" },
+      { "name": "姜汁啤酒", "amount": "适量" },
+      { "name": "青柠角", "amount": "装饰" }
+    ],
+    "method": ["杯中加冰，倒入姜汁啤酒", "将黑朗姆酒缓缓漂浮于顶层", "青柠角装饰，饮用前搅拌"],
+    "story": "百慕大人给这杯酒起名时毫不含糊——深色朗姆浮在姜啤上，像极了热带风暴逼近前，翻涌的乌云压在海面上的样子。这个名字甚至被当地一家酒厂注册成了商标，够霸气，也够诚实。"
+  },
+  {
+    "id": "rusty-nail", "name": "生锈钉子", "nameEn": "Rusty Nail", "base": "苏格兰威士忌", "image": null,
+    "ingredients": [
+      { "name": "苏格兰威士忌", "amount": "45ml" },
+      { "name": "蜂蜜利口酒（Drambuie）", "amount": "22.5ml" }
+    ],
+    "method": ["所有材料加冰倒入老式杯", "搅拌均匀", "柠檬皮可选装饰"],
+    "story": "1960年代的纽约酒吧里，调酒师们曾用一枚真的生锈钉子搅拌这杯酒来试味道，直到配方调整到位——名字就这么糙、这么直接地留了下来，倒是很配苏格兰人的脾气。"
+  },
+  {
+    "id": "rob-roy", "name": "罗伯罗伊", "nameEn": "Rob Roy", "base": "苏格兰威士忌", "image": null,
+    "ingredients": [
+      { "name": "苏格兰威士忌", "amount": "45ml" },
+      { "name": "甜味美思", "amount": "20ml" },
+      { "name": "安高天娜苦精", "amount": "2滴" }
+    ],
+    "method": ["所有材料加冰搅拌均匀", "滤入冰镇鸡尾酒杯", "以樱桃或柠檬皮装饰"],
+    "story": "曼哈顿的苏格兰版本，1894年为纪念一部讲述苏格兰侠盗罗伯·罗伊的歌剧在纽约上演，由华尔道夫酒店的调酒师特别调制——用黑麦换成苏格兰威士忌，倒也像极了那位侠盗劫富济贫的做派。"
+  },
+  {
+    "id": "blood-and-sand", "name": "血与沙", "nameEn": "Blood and Sand", "base": "苏格兰威士忌", "image": null,
+    "ingredients": [
+      { "name": "苏格兰威士忌", "amount": "20ml" },
+      { "name": "樱桃白兰地利口酒（Cherry Heering）", "amount": "20ml" },
+      { "name": "甜味美思", "amount": "20ml" },
+      { "name": "鲜榨橙汁", "amount": "20ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤倒入鸡尾酒杯"],
+    "story": "名字来自1922年鲁道夫·瓦伦蒂诺主演的同名斗牛电影——猩红的樱桃利口酒与橙汁交融的色泽，确实有几分斗牛场上血与沙的暧昧。是少数以电影命名、又比电影本身活得更久的鸡尾酒。"
+  },
+  {
+    "id": "hanky-panky", "name": "调情者", "nameEn": "Hanky Panky", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "45ml" },
+      { "name": "甜味美思", "amount": "45ml" },
+      { "name": "芙内布兰卡（Fernet-Branca）", "amount": "2茶匙" }
+    ],
+    "method": ["所有材料加冰搅拌均匀", "滤入冰镇鸡尾酒杯", "橙皮装饰"],
+    "story": "萨伏伊酒店史上第一位女性首席调酒师艾达·科尔曼，为一位演员朋友调制了这杯酒。朋友尝过后大呼一声「这才是真正的调情之作」，一句夸奖，从此成了永久的名字。"
+  },
+  {
+    "id": "bramble", "name": "荆棘", "nameEn": "Bramble", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "50ml" },
+      { "name": "柠檬汁", "amount": "25ml" },
+      { "name": "糖浆", "amount": "12.5ml" },
+      { "name": "黑莓利口酒（Crème de Mûre）", "amount": "15ml，漂浮" }
+    ],
+    "method": ["金酒、柠檬汁、糖浆加碎冰摇匀后倒入杯中", "黑莓利口酒缓缓漂浮于表面", "以黑莓与柠檬片装饰"],
+    "story": "1984年伦敦调酒师迪克·布拉德塞尔调制此酒，灵感来自他儿时在英国乡间采摘黑莓的记忆——杯中那道渗流的紫红色，就像荆棘划破手指后，血珠渗进糖浆里的样子。"
+  },
+  {
+    "id": "amaretto-sour", "name": "杏仁酸酒", "nameEn": "Amaretto Sour", "base": "杏仁利口酒", "image": null,
+    "ingredients": [
+      { "name": "杏仁利口酒（Amaretto）", "amount": "60ml" },
+      { "name": "柠檬汁", "amount": "25ml" },
+      { "name": "糖浆", "amount": "10ml" },
+      { "name": "蛋清", "amount": "1个，可选" }
+    ],
+    "method": ["所有材料加冰摇匀（加蛋清可先干摇）", "滤入装冰的老式杯", "以橙片与樱桃装饰"],
+    "story": "杏仁利口酒的甜香本就浓烈，兑上柠檬的酸，像给一段过于殷勤的甜言蜜语掺了一句大实话。八十年代的美国酒吧里几乎人手一杯，是那个夸张年代里，难得留存至今的甜蜜遗产。"
+  },
+  {
+    "id": "tequila-sunrise", "name": "龙舌兰日出", "nameEn": "Tequila Sunrise", "base": "龙舌兰", "image": null,
+    "ingredients": [
+      { "name": "龙舌兰", "amount": "45ml" },
+      { "name": "橙汁", "amount": "90ml" },
+      { "name": "红石榴糖浆", "amount": "15ml" }
+    ],
+    "method": ["龙舌兰与橙汁倒入装冰高杯，搅拌", "沿杯壁缓缓倒入红石榴糖浆，使其自然沉淀", "自然形成日出渐变色，插吸管即可"],
+    "story": "1970年代，滚石乐队在墨西哥巡演期间迷上了这杯酒，杯中橙红渐变的色泽像极了黎明——后来它随着摇滚乐队的行李箱走遍世界，成了「派对结束前最后一杯」的代名词。"
+  },
+  {
+    "id": "long-island-iced-tea", "name": "长岛冰茶", "nameEn": "Long Island Iced Tea", "base": "混合烈酒", "image": null,
+    "ingredients": [
+      { "name": "伏特加、金酒、白朗姆酒、龙舌兰、橙皮库拉索", "amount": "各15ml" },
+      { "name": "柠檬汁", "amount": "25ml" },
+      { "name": "糖浆", "amount": "15ml" },
+      { "name": "可乐", "amount": "适量" }
+    ],
+    "method": ["除可乐外所有材料加冰摇匀", "滤入装冰高杯", "顶部加可乐调色调味，柠檬片装饰"],
+    "story": "杯子里几乎集齐了半个酒柜，颜色却像一杯无害的冰茶——1970年代纽约长岛的调酒师用这个「障眼法」，在餐厅里调出了一杯后劲最凶猛的伪装者。"
+  },
+  {
+    "id": "zombie", "name": "僵尸", "nameEn": "Zombie", "base": "朗姆酒", "image": null,
+    "ingredients": [
+      { "name": "白朗姆酒", "amount": "30ml" },
+      { "name": "金朗姆酒", "amount": "30ml" },
+      { "name": "黑朗姆酒", "amount": "30ml" },
+      { "name": "青柠汁", "amount": "20ml" },
+      { "name": "红石榴糖浆", "amount": "15ml" },
+      { "name": "肉桂糖浆", "amount": "少许" }
+    ],
+    "method": ["所有材料加碎冰摇匀", "倒入大号提基杯，可留冰", "以薄荷与水果装饰"],
+    "story": "调酒师「贸易风」维克的秘方之一，据说他为了保密，把配方拆成好几份分别锁在不同保险柜里。传说这杯酒后劲极强，喝完的人走起路来像僵尸，名字便由此而来——是警告，也是挑衅。"
+  },
+  {
+    "id": "hurricane", "name": "飓风", "nameEn": "Hurricane", "base": "朗姆酒", "image": null,
+    "ingredients": [
+      { "name": "金朗姆酒", "amount": "30ml" },
+      { "name": "黑朗姆酒", "amount": "30ml" },
+      { "name": "百香果糖浆", "amount": "30ml" },
+      { "name": "青柠汁", "amount": "15ml" },
+      { "name": "红石榴糖浆", "amount": "15ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "倒入飓风杯或高脚杯", "以橙片与樱桃装饰"],
+    "story": "二战后新奥尔良朗姆酒滞销、威士忌紧俏，酒吧老板灵机一动，逼着批发商「想买威士忌，先买十箱朗姆」——为消化库存调出的这杯酒，杯型都特意做成飓风灯的样子，卖相成了它最初的卖点。"
+  },
+  {
+    "id": "aperol-spritz", "name": "阿佩罗气泡酒", "nameEn": "Aperol Spritz", "base": "阿佩罗", "image": null,
+    "ingredients": [
+      { "name": "阿佩罗", "amount": "60ml" },
+      { "name": "普罗塞克起泡酒", "amount": "90ml" },
+      { "name": "苏打水", "amount": "30ml" },
+      { "name": "橙片", "amount": "装饰" }
+    ],
+    "method": ["杯中加冰，依次倒入阿佩罗、普罗塞克", "最后加苏打水", "轻轻搅拌，橙片装饰"],
+    "story": "威尼斯人管这种带气泡、微苦的开胃酒叫「Spritz」，源自奥匈帝国士兵嫌意大利葡萄酒太烈、往里兑苏打水的习惯。橙红色的阿佩罗版本近些年红遍社交媒体，成了「夏天」本身的颜色。"
+  },
+  {
+    "id": "kir-royale", "name": "皇家基尔", "nameEn": "Kir Royale", "base": "香槟", "image": null,
+    "ingredients": [
+      { "name": "黑加仑利口酒（Crème de Cassis）", "amount": "15ml" },
+      { "name": "香槟", "amount": "适量" }
+    ],
+    "method": ["黑加仑利口酒倒入笛形香槟杯", "缓缓加满香槟", "轻轻搅拌"],
+    "story": "第戎市长基尔用本地的黑加仑利口酒兑勃艮第白葡萄酒招待宾客，简单又体面，被称作「基尔」；后来有人换上香槟，平民的调酒瞬间有了皇室的气派，「皇家」二字，便是这么来的。"
+  },
+  {
+    "id": "bellini", "name": "贝里尼", "nameEn": "Bellini", "base": "起泡酒", "image": null,
+    "ingredients": [
+      { "name": "白桃果泥", "amount": "30ml" },
+      { "name": "普罗塞克起泡酒", "amount": "90ml" }
+    ],
+    "method": ["白桃果泥倒入笛形香槟杯", "缓缓加满普罗塞克起泡酒", "轻轻搅拌均匀"],
+    "story": "1948年，威尼斯哈利酒吧的老板朱塞佩·奇普里亚尼被一场画展上的粉色深深打动，那正是画家乔凡尼·贝里尼笔下圣徒长袍的颜色——他把白桃果泥兑进起泡酒里，调出了同样的粉，也调出了这个名字。"
+  },
+  {
+    "id": "irish-coffee", "name": "爱尔兰咖啡", "nameEn": "Irish Coffee", "base": "爱尔兰威士忌", "image": null,
+    "ingredients": [
+      { "name": "爱尔兰威士忌", "amount": "45ml" },
+      { "name": "热咖啡", "amount": "适量" },
+      { "name": "红糖", "amount": "1茶匙" },
+      { "name": "打发淡奶油", "amount": "适量" }
+    ],
+    "method": ["糖溶于热咖啡中，加入威士忌搅拌", "倒入耐热玻璃杯", "背刮出淡奶油缓缓浮于表层，不搅拌"],
+    "story": "1940年代，香农机场的乘客们熬过又冷又颠簸的飞行，厨师长为安抚他们，在咖啡里加了威士忌又浮上奶油——从此，这杯酒成了旅途疲惫时，最体面的一句「到家了」。"
+  },
+  {
+    "id": "grasshopper", "name": "蚱蜢", "nameEn": "Grasshopper", "base": "薄荷可可利口酒", "image": null,
+    "ingredients": [
+      { "name": "绿薄荷利口酒（Crème de Menthe）", "amount": "20ml" },
+      { "name": "可可利口酒（白）", "amount": "20ml" },
+      { "name": "淡奶油", "amount": "20ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤倒入鸡尾酒杯"],
+    "story": "薄荷绿的颜色像一只草地上的蚱蜢，口感却像一杯液态的薄荷巧克力甜品——1950到70年代美国餐厅甜点车上的常客，如今更像一枚复古的糖果，偶尔被怀旧的调酒师重新翻出来。"
+  },
+  {
+    "id": "brandy-alexander", "name": "白兰地亚历山大", "nameEn": "Brandy Alexander", "base": "干邑", "image": null,
+    "ingredients": [
+      { "name": "干邑白兰地", "amount": "30ml" },
+      { "name": "可可利口酒（棕）", "amount": "30ml" },
+      { "name": "淡奶油", "amount": "30ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "双重过滤倒入鸡尾酒杯", "可撒少许肉豆蔻粉装饰"],
+    "story": "据说得名于1920年代一位叫亚历山大的记者，也有人说是为纪念访美的英国王储——身世成谜，唯一确定的是它绵密如甜品的口感，让它常年混迹在「入门鸡尾酒」和「餐后甜酒」两个身份之间。"
+  },
+  {
+    "id": "singapore-sling", "name": "新加坡司令", "nameEn": "Singapore Sling", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "30ml" },
+      { "name": "樱桃白兰地利口酒（Cherry Heering）", "amount": "15ml" },
+      { "name": "橙皮库拉索", "amount": "7.5ml" },
+      { "name": "本尼迪克丁", "amount": "7.5ml" },
+      { "name": "石榴糖浆", "amount": "10ml" },
+      { "name": "青柠汁", "amount": "15ml" },
+      { "name": "苦精", "amount": "1滴" },
+      { "name": "菠萝汁", "amount": "60ml" }
+    ],
+    "method": ["所有材料加冰摇匀", "滤入装冰高杯", "以菠萝片与樱桃装饰"],
+    "story": "1915年新加坡莱佛士酒店的调酒师严崇文，为了让女士们也能在公开场合「名正言顺」地喝一杯酒，把烈酒调成了粉红果味——那个年代女性在酒吧独自饮酒尚属失礼，这杯酒算是钻了时代的一个温柔的空子。"
+  },
+  {
+    "id": "ramos-gin-fizz", "name": "拉莫斯金菲兹", "nameEn": "Ramos Gin Fizz", "base": "金酒", "image": null,
+    "ingredients": [
+      { "name": "金酒", "amount": "45ml" },
+      { "name": "柠檬汁", "amount": "15ml" },
+      { "name": "青柠汁", "amount": "15ml" },
+      { "name": "糖浆", "amount": "15ml" },
+      { "name": "淡奶油", "amount": "30ml" },
+      { "name": "蛋清", "amount": "1个" },
+      { "name": "橙花水", "amount": "3滴" },
+      { "name": "苏打水", "amount": "适量" }
+    ],
+    "method": ["除苏打水外所有材料先干摇约1分钟", "再加冰用力摇至少2分钟以上（传统做法需摇十分钟）", "滤入高杯，顶部加苏打水"],
+    "story": "新奥尔良酒保亨利·拉莫斯坚持这杯酒必须摇够十二分钟，忙起来的夜晚甚至雇了一整排「摇酒男孩」轮流接力——一杯酒，愣是喝出了流水线的排场，也喝出了对手艺近乎偏执的讲究。"
+  }
+]

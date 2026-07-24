@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Claude Code local tool config (dev-machine specific, not part of the site)
+.claude/
