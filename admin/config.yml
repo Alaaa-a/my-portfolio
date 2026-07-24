@@ -2,8 +2,7 @@ backend:
   name: github
   repo: Alaaa-a/my-portfolio
   branch: main
-  # 换成你部署到 Vercel 后的正式域名（例如 https://my-portfolio.vercel.app）
-  base_url: https://REPLACE-WITH-YOUR-VERCEL-DOMAIN
+  base_url: https://my-portfolio-six-gray-45.vercel.app
   auth_endpoint: api/auth
 
 media_folder: "assets/uploads"
