@@ -881,6 +881,26 @@ main {
   pointer-events: auto;
   transform: translate(0, 0);
   will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 贴图素材放到位后（js/cat.js 里的 SPRITE.src）会自动加上这个 class，
+   隐藏下面手绘的 SVG 猫，换成雪碧图逐帧播放 */
+.desktop-cat.sprite-mode .cat-svg {
+  display: none;
+}
+
+.cat-sprite {
+  display: none;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.desktop-cat.sprite-mode .cat-sprite {
+  display: block;
 }
 
 .cat-svg {
@@ -949,11 +969,13 @@ main {
   transform: rotate(-22deg);
 }
 
-.desktop-cat.alert .cat-svg {
+.desktop-cat.alert .cat-svg,
+.desktop-cat.alert .cat-sprite {
   animation: cat-alert 0.45s ease-out;
 }
 
-.desktop-cat.clicked .cat-svg {
+.desktop-cat.clicked .cat-svg,
+.desktop-cat.clicked .cat-sprite {
   animation: cat-bounce-click 0.4s ease-out;
 }
 
@@ -1086,5 +1108,207 @@ main {
   .desktop-cat.walking .cat-leg-back,
   .desktop-cat.walking .cat-tail {
     animation: none !important;
+  }
+}
+
+/* ===== 开发日志：标签筛选 ===== */
+.devlog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.devlog-tag-btn {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-panel);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.devlog-tag-btn:hover {
+  color: var(--text-main);
+  border-color: var(--tarot-gold);
+}
+
+.devlog-tag-btn.active {
+  color: var(--tarot-gold);
+  border-color: var(--tarot-gold);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+/* ===== 开发日志：列表 ===== */
+.devlog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.devlog-card {
+  display: flex;
+  gap: 20px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.devlog-card:hover {
+  border-color: var(--tarot-gold);
+  transform: translateY(-2px);
+}
+
+.devlog-thumb {
+  flex-shrink: 0;
+  width: 120px;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 35%, #1c2040 0%, #0b0c1a 75%);
+  border: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tarot-gold);
+}
+
+.devlog-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.devlog-card-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.devlog-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.devlog-date {
+  color: var(--tarot-gold);
+  letter-spacing: 0.03em;
+}
+
+.devlog-card-body h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.devlog-excerpt {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.devlog-tag-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.devlog-tag-pill {
+  font-size: 0.72rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--tarot-gold);
+}
+
+/* ===== 开发日志：详情页 ===== */
+.devlog-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.devlog-back:hover {
+  color: var(--tarot-gold);
+}
+
+.devlog-article {
+  max-width: 760px;
+}
+
+.devlog-article-header {
+  margin-bottom: 28px;
+}
+
+.devlog-article-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin: 0 0 12px;
+}
+
+.devlog-article-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.devlog-article-gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+}
+
+.devlog-body {
+  color: var(--text-main);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.devlog-body p {
+  margin: 0 0 1.2em;
+}
+
+.devlog-body strong {
+  color: var(--tarot-gold);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .devlog-card {
+    flex-direction: column;
+  }
+
+  .devlog-thumb {
+    width: 100%;
+    height: 160px;
   }
 }

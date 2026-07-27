@@ -9,6 +9,21 @@
   var ALERT_RADIUS = 90;
   var ALERT_COOLDOWN = 1500;
 
+  // ===== 贴图配置：把雪碧图放到 SRC 这个路径就会自动换上，不用改代码 =====
+  // 没有这个文件时会静默失败，继续用下面的 SVG 版本兜底，不影响现有效果
+  var SPRITE = {
+    src: "assets/cat/sprite.png",
+    frameWidth: 32, // 单帧宽度（像素），素材做好后如果不是这个尺寸告诉我改这里
+    frameHeight: 32, // 单帧高度（像素）
+    sitFrame: 0, // 坐下用第几帧（从 0 开始数）
+    walkFrames: [1, 2], // 走路循环用哪几帧，按顺序播放
+    fps: 6, // 走路动画播放速度
+    displayScale: 1.8, // 像素画通常偏小，放大一点展示；不需要可以改回 1
+  };
+
+  var spriteMode = false;
+  var spriteFrameTimer = null;
+
   var cat;
   var pos = { x: 0, y: 0 };
   var target = null;
@@ -111,6 +126,27 @@
   function setState(state) {
     cat.classList.remove("sitting", "walking");
     cat.classList.add(state);
+    if (spriteMode) syncSpriteFrame(state);
+  }
+
+  function setSpriteFrame(frameIndex) {
+    var sprite = cat.querySelector(".cat-sprite");
+    if (!sprite) return;
+    sprite.style.backgroundPosition = -(frameIndex * SPRITE.frameWidth) + "px 0";
+  }
+
+  function syncSpriteFrame(state) {
+    clearInterval(spriteFrameTimer);
+    if (state === "walking" && SPRITE.walkFrames.length) {
+      var i = 0;
+      setSpriteFrame(SPRITE.walkFrames[0]);
+      spriteFrameTimer = setInterval(function () {
+        i = (i + 1) % SPRITE.walkFrames.length;
+        setSpriteFrame(SPRITE.walkFrames[i]);
+      }, 1000 / SPRITE.fps);
+    } else {
+      setSpriteFrame(SPRITE.sitFrame);
+    }
   }
 
   function scheduleNextMove(delay) {
@@ -254,13 +290,35 @@
       '<ellipse class="cat-eye" cx="49" cy="12.5" rx="1.4" ry="1.9"/>' +
       '<line class="cat-leg-back" x1="16" y1="31" x2="16" y2="39"/>' +
       '<line class="cat-leg-front" x1="38" y1="31" x2="38" y2="39"/>' +
-      "</svg>";
+      "</svg>" +
+      '<div class="cat-sprite"></div>';
     document.body.appendChild(wrap);
     return wrap;
   }
 
+  // 探测雪碧图是否存在：加载成功就切到贴图模式，失败（还没放文件）就什么都不做，
+  // 继续用上面的 SVG 版本，不影响现有效果
+  function trySprite() {
+    var img = new Image();
+    img.onload = function () {
+      var sprite = cat.querySelector(".cat-sprite");
+      sprite.style.width = SPRITE.frameWidth + "px";
+      sprite.style.height = SPRITE.frameHeight + "px";
+      sprite.style.backgroundImage = "url(" + SPRITE.src + ")";
+      sprite.style.transform = "scale(" + SPRITE.displayScale + ")";
+      cat.classList.add("sprite-mode");
+      spriteMode = true;
+      syncSpriteFrame(cat.classList.contains("walking") ? "walking" : "sitting");
+    };
+    img.onerror = function () {
+      // 贴图还没准备好，保持现在的 SVG 猫
+    };
+    img.src = SPRITE.src;
+  }
+
   function init() {
     cat = buildCat();
+    trySprite();
 
     var start = pickTarget();
     pos.x = start.x;

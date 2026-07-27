@@ -92,3 +92,41 @@ collections:
               - { label: "标签", name: "tag", widget: "string", default: "占位鉴赏" }
               - { label: "标题", name: "title", widget: "string" }
               - { label: "正文", name: "body", widget: "text" }
+
+  - name: "devlog"
+    label: "开发日志"
+    files:
+      - name: "devlog"
+        label: "开发日志页面"
+        file: "data/devlog.json"
+        fields:
+          - { label: "页面副标题", name: "intro", widget: "string" }
+          - label: "日志列表"
+            name: "posts"
+            widget: "list"
+            summary: "{{date}} · {{title}}"
+            fields:
+              - {
+                  label: "日志编号（英文/数字/短横线，例如 2026-07-24-prologue；用于生成链接，发布后不要再改）",
+                  name: "id",
+                  widget: "string",
+                }
+              - { label: "标题", name: "title", widget: "string" }
+              - { label: "日期", name: "date", widget: "date", format: "YYYY-MM-DD" }
+              - { label: "关联项目", name: "project", widget: "string", default: "Ala 吟游诗人" }
+              - label: "标签"
+                name: "tags"
+                widget: "list"
+                field: { label: "标签", name: "tag", widget: "string" }
+              - { label: "摘要（列表页展示）", name: "excerpt", widget: "text" }
+              - label: "配图（可多张，第一张会用作列表缩略图）"
+                name: "images"
+                widget: "list"
+                field: { label: "图片", name: "image", widget: "image" }
+              - {
+                  label: "正文（支持空行分段、**加粗**、*斜体*）",
+                  name: "body",
+                  widget: "markdown",
+                  buttons: ["bold", "italic"],
+                  editor_components: [],
+                }

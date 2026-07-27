@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>关于我 · Alaaa</title>
+<title>开发日志 · Alaaa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -19,34 +19,26 @@
   <a class="brand" href="index.html">Alaaa</a>
   <ul class="nav-links">
     <li><a href="index.html">首页</a></li>
-    <li><a href="about.html" class="active">关于我</a></li>
+    <li><a href="about.html">关于我</a></li>
     <li><a href="portfolio.html">作品展示</a></li>
     <li><a href="now.html">最近在玩</a></li>
     <li><a href="rankings.html">游戏排行榜</a></li>
     <li><a href="reviews.html">游戏鉴赏总结</a></li>
-    <li><a href="devlog.html">开发日志</a></li>
+    <li><a href="devlog.html" class="active">开发日志</a></li>
     <li><a href="guestbook.html">留言板</a></li>
   </ul>
 </nav>
 
 <main>
   <div class="page-header">
-    <h1>关于我</h1>
-    <p id="page-intro">占位介绍：这里以后会写自我介绍、经历和联系方式。</p>
+    <h1>开发日志</h1>
+    <p id="page-intro">占位说明：这里记录游戏项目的开发过程，日志按时间倒序排列，可以按标签筛选。</p>
   </div>
 
-  <div id="about-sections">
-    <div class="placeholder-card">
-      <span class="placeholder-tag">占位内容</span>
-      <h2>这是一个占位标题</h2>
-      <p>这里放个人简介的正文，比如是谁、在做什么、兴趣爱好等等。先用占位文字撑着页面结构。</p>
-    </div>
+  <div class="devlog-tags" id="devlog-tags" hidden></div>
 
-    <div class="placeholder-card">
-      <span class="placeholder-tag">占位内容</span>
-      <h2>技能 / 经历</h2>
-      <p>之后可以放时间线或者标签列表，展示技能栈和经历。</p>
-    </div>
+  <div class="devlog-list" id="devlog-list">
+    <p class="tarot-hint">日志加载中…</p>
   </div>
 </main>
 
@@ -57,7 +49,7 @@
 <script src="js/stars.js"></script>
 <script src="js/tarot.js"></script>
 <script src="js/cocktail.js"></script>
-<script src="js/about.js"></script>
+<script src="js/devlog.js"></script>
 <script src="js/cat.js"></script>
 </body>
 </html>
