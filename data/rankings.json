@@ -1,8 +1,17 @@
 {
-  "intro": "占位说明：这里以后会放个人心目中的游戏排名，附简短理由。",
+  "intro": "这里以后会放个人心目中的游戏排名，附简短理由。",
   "items": [
-    { "title": "占位游戏标题", "reason": "上榜理由占位文字。" },
-    { "title": "占位游戏标题", "reason": "上榜理由占位文字。" },
-    { "title": "占位游戏标题", "reason": "上榜理由占位文字。" }
+    {
+      "title": "Final Fantasy XIV",
+      "reason": "我的皇后。"
+    },
+    {
+      "title": "VA-11 HALL-A: Cyberpunk Bartender Action",
+      "reason": "想起就会感到幸福。"
+    },
+    {
+      "title": "Ace Attorney",
+      "reason": "異議あり！"
+    }
   ]
 }
