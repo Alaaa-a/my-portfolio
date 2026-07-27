@@ -89,9 +89,21 @@ collections:
             widget: "list"
             summary: "{{title}}"
             fields:
+              - {
+                  label: "编号（英文/数字/短横线，例如 review-elden-ring；用于生成链接，发布后不要再改）",
+                  name: "id",
+                  widget: "string",
+                }
               - { label: "标签", name: "tag", widget: "string", default: "占位鉴赏" }
               - { label: "标题", name: "title", widget: "string" }
-              - { label: "正文", name: "body", widget: "text" }
+              - { label: "摘要（列表页展示）", name: "excerpt", widget: "text" }
+              - {
+                  label: "正文（支持空行分段、**加粗**、*斜体*）",
+                  name: "body",
+                  widget: "markdown",
+                  buttons: ["bold", "italic"],
+                  editor_components: [],
+                }
 
   - name: "devlog"
     label: "开发日志"

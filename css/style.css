@@ -1243,6 +1243,54 @@ main {
   color: var(--tarot-gold);
 }
 
+/* ===== 游戏鉴赏：列表（详情页复用开发日志的 .devlog-back / .devlog-article / .devlog-body） ===== */
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-card {
+  display: block;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.review-card:hover {
+  border-color: var(--tarot-gold);
+  transform: translateY(-2px);
+}
+
+.review-card .devlog-tag-pill {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.review-card h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 8px;
+}
+
+.review-excerpt {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 /* ===== 开发日志：详情页 ===== */
 .devlog-back {
   display: inline-block;
