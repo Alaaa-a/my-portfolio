@@ -869,6 +869,60 @@ main {
   margin: 0;
 }
 
+/* ===== 桌宠猫隐藏开关：藏在左上角的一个小圆点 ===== */
+.cat-toggle {
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.cat-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(232, 233, 245, 0.1);
+  transform: translate(-50%, -50%);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cat-toggle:hover::after {
+  background: rgba(212, 175, 55, 0.75);
+  transform: translate(-50%, -50%) scale(1.6);
+}
+
+.cat-toggle-tip {
+  position: fixed;
+  z-index: 201;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--text-main);
+  background: var(--bg-panel-solid);
+  border: 1px solid var(--border-soft);
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.cat-toggle-tip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== 桌宠小黑猫 ===== */
 .desktop-cat {
   position: fixed;

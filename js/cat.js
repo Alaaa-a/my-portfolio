@@ -24,6 +24,9 @@
   var spriteMode = false;
   var spriteFrameTimer = null;
 
+  var TOGGLE_KEY = "alaaa-cat-enabled";
+  var running = false;
+
   var cat;
   var pos = { x: 0, y: 0 };
   var target = null;
@@ -173,6 +176,7 @@
   }
 
   function tick(now) {
+    if (!running) return;
     if (lastFrameTime == null) lastFrameTime = now;
     var dt = Math.min(0.05, (now - lastFrameTime) / 1000);
     lastFrameTime = now;
@@ -316,7 +320,25 @@
     img.src = SPRITE.src;
   }
 
-  function init() {
+  // ===== 隐藏开关：控制桌宠猫的显示/隐藏，状态记在 localStorage 里 =====
+  function isEnabled() {
+    try {
+      var v = localStorage.getItem(TOGGLE_KEY);
+      return v === null ? true : v === "1";
+    } catch (e) {
+      return true;
+    }
+  }
+
+  function setEnabled(enabled) {
+    try {
+      localStorage.setItem(TOGGLE_KEY, enabled ? "1" : "0");
+    } catch (e) {}
+  }
+
+  function startCat() {
+    if (cat) return;
+
     cat = buildCat();
     trySprite();
 
@@ -332,9 +354,69 @@
       return;
     }
 
+    running = true;
     window.addEventListener("mousemove", onMouseMove);
     requestAnimationFrame(tick);
     scheduleNextMove(1200 + Math.random() * 1800);
+  }
+
+  function stopCat() {
+    running = false;
+    walking = false;
+    target = null;
+    lastFrameTime = null;
+    clearTimeout(stateTimeout);
+    clearInterval(spriteFrameTimer);
+    window.removeEventListener("mousemove", onMouseMove);
+    if (cat) {
+      cat.remove();
+      cat = null;
+    }
+  }
+
+  function showToggleFeedback(btn, enabled) {
+    var rect = btn.getBoundingClientRect();
+    var tip = document.createElement("span");
+    tip.className = "cat-toggle-tip";
+    tip.textContent = enabled ? "🐾 桌宠已开启" : "🐾 桌宠已关闭";
+    tip.style.left = rect.right + 10 + "px";
+    tip.style.top = rect.top - 4 + "px";
+    document.body.appendChild(tip);
+
+    requestAnimationFrame(function () {
+      tip.classList.add("show");
+    });
+    setTimeout(function () {
+      tip.classList.remove("show");
+      setTimeout(function () {
+        tip.remove();
+      }, 300);
+    }, 1400);
+  }
+
+  // 藏在页面左上角的小圆点，平时几乎看不见，点一下切换桌宠猫的开关
+  function buildToggle() {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "cat-toggle";
+    btn.setAttribute("aria-label", "切换桌宠猫显示");
+    document.body.appendChild(btn);
+
+    btn.addEventListener("click", function () {
+      var next = !isEnabled();
+      setEnabled(next);
+      if (next) {
+        startCat();
+      } else {
+        stopCat();
+      }
+      showToggleFeedback(btn, next);
+    });
+  }
+
+  function init() {
+    buildToggle();
+    if (isEnabled()) startCat();
   }
 
   if (document.readyState === "loading") {
