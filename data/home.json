@@ -1,0 +1,10 @@
+{
+  "greeting": "welcome to my little planet",
+  "heading": "你好，我是 Alaaa",
+  "intro": "这里是我的个人小站，占位文字先顶着，内容之后再慢慢填。",
+  "links": [
+    { "label": "关于我", "href": "about.html" },
+    { "label": "看看作品", "href": "portfolio.html" },
+    { "label": "留个言", "href": "guestbook.html" }
+  ]
+}

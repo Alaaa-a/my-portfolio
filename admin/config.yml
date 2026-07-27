@@ -9,6 +9,24 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
+  - name: "home"
+    label: "首页"
+    files:
+      - name: "home"
+        label: "首页 Hero 区域"
+        file: "data/home.json"
+        fields:
+          - { label: "小标签（英文问候语）", name: "greeting", widget: "string" }
+          - { label: "大标题", name: "heading", widget: "string" }
+          - { label: "简介", name: "intro", widget: "text" }
+          - label: "按钮"
+            name: "links"
+            widget: "list"
+            summary: "{{label}}"
+            fields:
+              - { label: "文字（不用加箭头，会自动加上）", name: "label", widget: "string" }
+              - { label: "链接地址", name: "href", widget: "string" }
+
   - name: "about"
     label: "关于我"
     files:
