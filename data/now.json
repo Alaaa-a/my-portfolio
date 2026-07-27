@@ -3,13 +3,18 @@
   "items": [
     {
       "tag": "游戏",
-      "title": "占位游戏名称",
-      "description": "正在玩到第几章 / 感受如何，占位文字。"
+      "title": "Final Fantasy XIV",
+      "description": "困難も含めて、日々を謳歌している。"
     },
     {
       "tag": "游戏",
-      "title": "占位游戏名称",
-      "description": "正在玩到第几章 / 感受如何，占位文字。"
+      "title": "我的美味丈夫",
+      "description": "感觉还不错"
+    },
+    {
+      "tag": "番剧",
+      "title": "石纪元",
+      "description": "葱头实在美丽"
     }
   ]
 }
