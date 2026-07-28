@@ -306,9 +306,85 @@ main {
 }
 
 .guestbook-item .meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text-dim);
   font-size: 0.8rem;
   margin-bottom: 6px;
+}
+
+.guestbook-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.guestbook-category-btn {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-panel-solid);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.guestbook-category-btn:hover {
+  color: var(--text-main);
+}
+
+.guestbook-category-btn.active {
+  color: var(--tarot-gold);
+  border-color: var(--tarot-gold);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.guestbook-feedback {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.guestbook-feedback.error {
+  color: #e08a8a;
+}
+
+.guestbook-tag {
+  font-size: 0.72rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--tarot-gold);
+}
+
+.guestbook-admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.guestbook-admin-actions button {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  padding: 5px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-panel-solid);
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.guestbook-admin-approve {
+  border-color: rgba(122, 200, 150, 0.5) !important;
+  color: #8fd6a8 !important;
+}
+
+.guestbook-admin-ignore {
+  border-color: rgba(224, 138, 138, 0.5) !important;
+  color: #e08a8a !important;
 }
 
 /* ===== 页脚 ===== */

@@ -32,24 +32,26 @@
 <main>
   <div class="page-header">
     <h1>留言板</h1>
-    <p>占位说明：表单目前还没接后端，先摆个骨架，之后再接留言功能。</p>
+    <p>功能建议、Bug 反馈、单纯想说的话都欢迎～留言会先经过审核，通过之后才会显示在下面。</p>
   </div>
 
-  <form class="guestbook-form">
-    <input type="text" placeholder="你的名字（占位）" disabled />
-    <textarea rows="3" placeholder="想说点什么…（占位）" disabled></textarea>
-    <button type="button" disabled>提交留言（暂未启用）</button>
+  <form class="guestbook-form" id="guestbook-form">
+    <input type="text" id="gb-nickname" placeholder="昵称（选填，不填就是「匿名」）" maxlength="40" />
+
+    <div class="guestbook-category" id="gb-category" role="radiogroup" aria-label="留言分类">
+      <button type="button" class="guestbook-category-btn active" data-value="功能建议">功能建议</button>
+      <button type="button" class="guestbook-category-btn" data-value="Bug反馈">Bug 反馈</button>
+      <button type="button" class="guestbook-category-btn" data-value="单纯想说的话">单纯想说的话</button>
+    </div>
+
+    <textarea id="gb-message" rows="4" placeholder="想说点什么…" maxlength="2000" required></textarea>
+
+    <button type="submit" id="gb-submit">提交留言</button>
+    <p class="guestbook-feedback" id="gb-feedback" hidden></p>
   </form>
 
-  <div class="guestbook-list">
-    <div class="guestbook-item">
-      <div class="meta">占位访客 · 2026-01-01</div>
-      <p style="margin:0;">这是一条占位留言，展示留言卡片的样式。</p>
-    </div>
-    <div class="guestbook-item">
-      <div class="meta">占位访客 · 2026-01-01</div>
-      <p style="margin:0;">这是另一条占位留言。</p>
-    </div>
+  <div class="guestbook-list" id="guestbook-list">
+    <p class="tarot-hint">留言加载中…</p>
   </div>
 </main>
 
@@ -58,6 +60,7 @@
 </footer>
 
 <script src="js/stars.js"></script>
+<script src="js/guestbook.js"></script>
 <script src="js/tarot.js"></script>
 <script src="js/cocktail.js"></script>
 <script src="js/cat.js"></script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>留言审核 · Alaaa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<canvas id="stars-canvas"></canvas>
+
+<main style="max-width: 720px;">
+  <div class="page-header">
+    <h1>留言审核</h1>
+    <p>只有你能看到这个页面，别把链接发出去就行。</p>
+  </div>
+
+  <div id="gb-admin-login">
+    <form class="guestbook-form" id="gb-admin-login-form">
+      <input type="password" id="gb-admin-password" placeholder="管理密码" autocomplete="current-password" />
+      <button type="submit">登录</button>
+      <p class="guestbook-feedback" id="gb-admin-login-feedback" hidden></p>
+    </form>
+  </div>
+
+  <div id="gb-admin-panel" hidden>
+    <div class="devlog-tags" id="gb-admin-tabs">
+      <button class="devlog-tag-btn active" data-status="pending">待审核</button>
+      <button class="devlog-tag-btn" data-status="approved">已通过</button>
+      <button class="devlog-tag-btn" data-status="ignored">已忽略</button>
+    </div>
+    <div class="guestbook-list" id="gb-admin-list">
+      <p class="tarot-hint">加载中…</p>
+    </div>
+  </div>
+</main>
+
+<script src="js/stars.js"></script>
+<script src="js/guestbook-admin.js"></script>
+</body>
+</html>
