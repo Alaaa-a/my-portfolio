@@ -3,8 +3,9 @@
 (function () {
   // anon key 是设计给前端公开用的，配合 Supabase 的 RLS 策略（见 supabase/schema.sql）
   // 保证访客只能新建"待审核"留言、只能读到"已通过"的留言
-  var SUPABASE_URL = "https://YOUR-PROJECT.supabase.co";
-  var SUPABASE_ANON_KEY = "YOUR-ANON-KEY";
+  var SUPABASE_URL = "https://ytzpqrqcssvhgltfjeya.supabase.co";
+  var SUPABASE_ANON_KEY =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl0enBxcnFjc3N2aGdsdGZqZXlhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUyMDEzMjUsImV4cCI6MjEwMDc3NzMyNX0.mypDPjgJLXrWjBMtKKH6MqmZv7lHHE7UtrUrfouktb4";
 
   var configured = SUPABASE_URL.indexOf("YOUR-PROJECT") === -1 && SUPABASE_ANON_KEY.indexOf("YOUR-ANON-KEY") === -1;
 
