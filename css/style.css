@@ -387,6 +387,15 @@ main {
   color: #e08a8a !important;
 }
 
+.guestbook-admin-delete {
+  border-color: rgba(224, 138, 138, 0.5) !important;
+  color: #e08a8a !important;
+}
+
+.guestbook-admin-delete:hover {
+  background: rgba(224, 138, 138, 0.15) !important;
+}
+
 /* ===== 页脚 ===== */
 .site-footer {
   position: relative;

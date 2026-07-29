@@ -1,4 +1,5 @@
-// 留言审核后台用：把一条留言标成"已通过"或"已忽略"（不会真的删除）
+// 留言审核后台用：approve/ignore 把留言标成"已通过"/"已忽略"（不删除）；
+// delete 是真的从数据库删掉，不可恢复
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
     res.status(405).json({ error: "Method not allowed" });
@@ -15,8 +16,8 @@ module.exports = async (req, res) => {
     return;
   }
 
-  if (!id || (action !== "approve" && action !== "ignore")) {
-    res.status(400).json({ error: "缺少 id，或 action 不是 approve/ignore" });
+  if (!id || ["approve", "ignore", "delete"].indexOf(action) === -1) {
+    res.status(400).json({ error: "缺少 id，或 action 不是 approve/ignore/delete" });
     return;
   }
 
@@ -27,19 +28,33 @@ module.exports = async (req, res) => {
     return;
   }
 
-  var status = action === "approve" ? "approved" : "ignored";
+  var endpoint = url + "/rest/v1/guestbook_messages?id=eq." + encodeURIComponent(id);
 
   try {
-    var upstream = await fetch(url + "/rest/v1/guestbook_messages?id=eq." + encodeURIComponent(id), {
-      method: "PATCH",
-      headers: {
-        apikey: key,
-        Authorization: "Bearer " + key,
-        "Content-Type": "application/json",
-        Prefer: "return=minimal",
-      },
-      body: JSON.stringify({ status: status }),
-    });
+    var upstream;
+    if (action === "delete") {
+      upstream = await fetch(endpoint, {
+        method: "DELETE",
+        headers: {
+          apikey: key,
+          Authorization: "Bearer " + key,
+          Prefer: "return=minimal",
+        },
+      });
+    } else {
+      var status = action === "approve" ? "approved" : "ignored";
+      upstream = await fetch(endpoint, {
+        method: "PATCH",
+        headers: {
+          apikey: key,
+          Authorization: "Bearer " + key,
+          "Content-Type": "application/json",
+          Prefer: "return=minimal",
+        },
+        body: JSON.stringify({ status: status }),
+      });
+    }
+
     if (!upstream.ok) {
       var errText = await upstream.text();
       res.status(upstream.status).send(errText);

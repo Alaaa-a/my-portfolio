@@ -49,6 +49,13 @@
         row.id +
         '">忽略</button>' +
         "</div>";
+    } else {
+      actions =
+        '<div class="guestbook-admin-actions">' +
+        '<button type="button" class="guestbook-admin-delete" data-id="' +
+        row.id +
+        '">删除</button>' +
+        "</div>";
     }
 
     return (
@@ -95,10 +102,16 @@
     })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
-        var target = messages.filter(function (m) {
-          return String(m.id) === String(id);
-        })[0];
-        if (target) target.status = action === "approve" ? "approved" : "ignored";
+        if (action === "delete") {
+          messages = messages.filter(function (m) {
+            return String(m.id) !== String(id);
+          });
+        } else {
+          var target = messages.filter(function (m) {
+            return String(m.id) === String(id);
+          })[0];
+          if (target) target.status = action === "approve" ? "approved" : "ignored";
+        }
         renderList();
       })
       .catch(function () {
@@ -109,8 +122,14 @@
   listEl.addEventListener("click", function (e) {
     var approveBtn = e.target.closest(".guestbook-admin-approve");
     var ignoreBtn = e.target.closest(".guestbook-admin-ignore");
+    var deleteBtn = e.target.closest(".guestbook-admin-delete");
     if (approveBtn) handleAction(approveBtn.dataset.id, "approve");
     if (ignoreBtn) handleAction(ignoreBtn.dataset.id, "ignore");
+    if (deleteBtn) {
+      if (window.confirm("确定要永久删除这条留言吗？删除后没法恢复。")) {
+        handleAction(deleteBtn.dataset.id, "delete");
+      }
+    }
   });
 
   tabsEl.addEventListener("click", function (e) {
