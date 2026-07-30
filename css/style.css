@@ -1008,6 +1008,60 @@ main {
   transform: translateY(0);
 }
 
+/* ===== 眼睛装饰边框隐藏开关：藏在右上角的一个小圆点，默认关闭 ===== */
+.eyes-toggle {
+  position: fixed;
+  top: 2px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.eyes-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(232, 233, 245, 0.1);
+  transform: translate(-50%, -50%);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.eyes-toggle:hover::after {
+  background: rgba(212, 175, 55, 0.75);
+  transform: translate(-50%, -50%) scale(1.6);
+}
+
+.eyes-toggle-tip {
+  position: fixed;
+  z-index: 201;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--text-main);
+  background: var(--bg-panel-solid);
+  border: 1px solid var(--border-soft);
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.eyes-toggle-tip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== 桌宠小黑猫 ===== */
 .desktop-cat {
   position: fixed;
@@ -1497,5 +1551,46 @@ main {
   .devlog-thumb {
     width: 100%;
     height: 160px;
+  }
+}
+
+/* ===== 眼睛装饰边框：贴着视口四周的彩色卡通眼睛，纯装饰不可交互 ===== */
+.eyes-border {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.eye-deco {
+  position: absolute;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
+}
+
+.eye-deco-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.eye-deco-iris {
+  transition-property: transform;
+  transition-duration: 900ms;
+  transition-timing-function: ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eye-deco-iris {
+    transition: none !important;
+  }
+}
+
+/* 视口太窄时正文本身没什么边距了，先隐藏整圈眼睛避免遮住内容 */
+@media (max-width: 699px) {
+  .eyes-border {
+    display: none;
   }
 }
