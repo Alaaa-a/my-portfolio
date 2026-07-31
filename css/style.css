@@ -1131,6 +1131,31 @@ main {
   }
 }
 
+/* 眨眼：整只眼睛（含黄色轮廓）沿垂直方向压扁，圆心固定在自身包围盒中心，
+   不受父级 scale(-1,1) 镜像影响 */
+.cat-eye-blink {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.09s ease-in-out;
+}
+
+.cat-eye-blink.blinking {
+  transform: scaleY(0.05);
+}
+
+/* 瞳孔跟着鼠标看：位移由 JS 算好写进 transform 属性，这里只负责让它平滑过渡，
+   不是每次 mousemove 都瞬间跳过去 */
+.cat-eye-pupil {
+  transition: transform 0.12s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-eye-blink,
+  .cat-eye-pupil {
+    transition: none !important;
+  }
+}
+
 /* ===== 桌宠小黑猫 ===== */
 .desktop-cat {
   position: fixed;
