@@ -1062,6 +1062,75 @@ main {
   transform: translateY(0);
 }
 
+/* ===== 猫猫眼睛背景彩蛋隐藏开关：紧挨着装饰眼睛开关左边，默认关闭 ===== */
+.cat-eyes-toggle {
+  position: fixed;
+  top: 2px;
+  right: 22px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.cat-eyes-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(232, 233, 245, 0.1);
+  transform: translate(-50%, -50%);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cat-eyes-toggle:hover::after {
+  background: rgba(212, 175, 55, 0.75);
+  transform: translate(-50%, -50%) scale(1.6);
+}
+
+/* ===== 猫猫眼睛背景彩蛋：固定居中，纯装饰不可交互 ===== */
+.cat-eyes-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cat-eyes-bg-svg {
+  width: min(720px, 82vw);
+  height: auto;
+  filter: drop-shadow(0 0 24px rgba(245, 208, 32, 0.25));
+  animation: cat-eyes-bg-breathe 4.5s ease-in-out infinite;
+}
+
+@keyframes cat-eyes-bg-breathe {
+  0%,
+  100% {
+    opacity: 0.82;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.015);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-eyes-bg-svg {
+    animation: none !important;
+  }
+}
+
 /* ===== 桌宠小黑猫 ===== */
 .desktop-cat {
   position: fixed;
