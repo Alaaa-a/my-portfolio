@@ -6,8 +6,10 @@
 (function () {
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var TOTAL_EYES = 21;
+  var TOP_EYES = 15;
+  var BOTTOM_EYES = 14;
   var EDGE_MARGIN = 0.03; // 每条边两端留出的空白比例，避免眼睛全部挤在角上
+  var MIN_GAP_PX = 10; // 同一条边上相邻两只眼睛的包围盒之间至少留这么多像素，避免叠在一起
   var MIN_HUE_DIST = 50; // 同一只眼睛三层颜色之间最小色相间隔（角度），避免选到两个"看着差不多"的颜色
   var NAV_CLEARANCE = 64; // 顶部导航栏高度（--nav-height），上边缘的眼睛要避开它，不然会被盖住
 
@@ -31,12 +33,19 @@
   var SHAPES = {
     almond: {
       vbW: 120, vbH: 96, cx: 60, cy: 48,
+      // 两端不再收成尖角，而是用一段半径 8 的小圆弧把尖点削圆——弧的圆心分别在
+      // 尖角往内 8 个单位处，弧本身跨 90°，正好在原来的尖点位置达到最外沿，
+      // 视觉上就是一个被磨圆了的杏仁形，而不是完全的尖角。
       outline: function (j) {
         var topY = (10 + j()).toFixed(1);
         var botY = (86 + j()).toFixed(1);
-        return '<path d="M 10 48 Q 60 ' + topY + ' 110 48 Q 60 ' + botY + ' 10 48 Z" />';
+        return (
+          '<path d="M 12.3 42.3 Q 60 ' + topY + ' 107.7 42.3' +
+          ' A 8 8 0 0 1 107.7 53.7 Q 60 ' + botY + ' 12.3 53.7' +
+          ' A 8 8 0 0 1 12.3 42.3 Z" />'
+        );
       },
-      irisR: 13, safeAx: 22, safeAy: 13
+      irisR: 17, safeAx: 18, safeAy: 10
     }
   };
   var SHAPE_KEYS = Object.keys(SHAPES);
@@ -149,17 +158,25 @@
     };
     var colors = pickDistinctColors(3, MIN_HUE_DIST);
     var scleraFill = colors[0];
-    var irisOuterColor = colors[1];
-    var irisInnerColor = colors[2];
     var strokeW = rand(2, 3.4).toFixed(1);
     var strokeColor = "rgba(10, 8, 6, 0.82)";
     var clipId = "eye-clip-" + eyeIdSeq++;
 
     // 静止的眼睛也随机给一个初始朝向，不是所有眼睛都直勾勾看向正前方
     var restOffset = randomPointInSafeZone(shape.safeAx, shape.safeAy);
-    var irisR = shape.irisR;
-    var innerR = (irisR * 0.62).toFixed(1);
-    var pupilR = (irisR * 0.34).toFixed(1);
+    var outerR = shape.irisR;
+
+    // 瞳孔（最内层）缩回最初设计版本的比例，虹膜整体大小（outerR）不变；
+    // 中间这层的厚度还是随机分配，留一个最小厚度让每一层都还看得见
+    var minLayerGap = outerR * 0.08;
+    var pupilR = outerR * 0.34;
+    var midR = rand(pupilR + minLayerGap, outerR - minLayerGap);
+
+    // 最内层（瞳孔）固定是黑色，外圈和中圈从色板里挑两个互不相近的鲜艳色，
+    // 保证不会出现黑色跑到外圈/中圈的情况
+    var outerColor = colors[1];
+    var midColor = colors[2];
+    var pupilColor = "#141414";
 
     // 眼眶轮廓只画一次，同时喂给可见的眼白 <g> 和 clipPath——两者形状完全一致，
     // 瞳孔那层套上这个 clip-path 之后，游走到眼眶边缘时会被眼眶"遮住"而不是画到外面去，
@@ -174,9 +191,9 @@
       '</g>' +
       '<g clip-path="url(#' + clipId + ')">' +
       '<g class="eye-deco-iris" transform="translate(' + restOffset.x.toFixed(1) + ' ' + restOffset.y.toFixed(1) + ')">' +
-      '<circle cx="' + shape.cx + '" cy="' + shape.cy + '" r="' + irisR + '" fill="' + irisOuterColor + '" />' +
-      '<circle cx="' + shape.cx + '" cy="' + shape.cy + '" r="' + innerR + '" fill="' + irisInnerColor + '" />' +
-      '<circle cx="' + shape.cx + '" cy="' + shape.cy + '" r="' + pupilR + '" fill="#141414" />' +
+      '<circle cx="' + shape.cx + '" cy="' + shape.cy + '" r="' + outerR.toFixed(1) + '" fill="' + outerColor + '" />' +
+      '<circle cx="' + shape.cx + '" cy="' + shape.cy + '" r="' + midR.toFixed(1) + '" fill="' + midColor + '" />' +
+      '<circle cx="' + shape.cx + '" cy="' + shape.cy + '" r="' + pupilR.toFixed(1) + '" fill="' + pupilColor + '" />' +
       '</g>' +
       '</g>' +
       '</svg>';
@@ -220,32 +237,67 @@
     pendingTimers.push(setTimeout(step, rand(0, 1200)));
   }
 
-  function distributeCounts(total) {
-    var topN = Math.round(total / 2);
-    var bottomN = total - topN;
-    return { top: topN, bottom: bottomN };
-  }
+  // 沿一条边生成 count 只眼睛并摆位，保证同一条边上任意两只的水平范围都不会重叠。
+  // 做法：先按"均匀分布 + 轻微随机抖动"算出每只眼睛想要的目标位置（保留手绘散布的随机感），
+  // 再按目标位置从左到右排序，依次摆放——如果某一只跟前一只挨得太近（近到会重叠），
+  // 就把它顺移到刚好紧挨着前一只、留够 MIN_GAP_PX 间距的位置，这样无论目标位置怎么抖动，
+  // 最终结果里同一条边的眼睛之间必然留有间距。
+  function layoutEdge(edgeName, count, vw) {
+    // 每只眼睛还会随机旋转 ±12°，旋转后的视觉包围盒比未旋转时略宽，理想情况下
+    // 碰撞检测按 1.15 倍宽度预留空间。但"不重叠"是硬约束，"旋转安全边距"只是
+    // 有富余空间时才享受的额外保险——如果这条边上所有眼睛的真实宽度加最小间距
+    // 已经快要放不下了，就按比例把这份额外安全边距压缩甚至去掉，
+    // 而不是像之前那样直接把眼睛的位置怼回视口内、导致挤开前一只顶到它。
+    var ROTATION_SAFETY = 1.15;
 
-  function edgePositions(count) {
-    var positions = [];
+    var items = [];
     for (var i = 0; i < count; i++) {
+      var el = buildEyeEl();
+      var width = parseFloat(el.style.width);
       var base = (i + 0.5) / count;
       var jitter = rand(-0.35, 0.35) / count;
-      var frac = base + jitter;
-      frac = Math.min(1 - EDGE_MARGIN, Math.max(EDGE_MARGIN, frac));
-      positions.push(frac);
+      var frac = Math.min(1 - EDGE_MARGIN, Math.max(EDGE_MARGIN, base + jitter));
+      items.push({ el: el, width: width, desiredCenterPx: frac * vw });
     }
-    return positions;
-  }
 
-  function placeOnEdge(el, edge, frac, depth) {
-    var style = el.style;
-    style.left = (frac * 100).toFixed(2) + "%";
-    if (edge === "top") {
-      style.top = depth + "px";
-    } else {
-      style.bottom = depth + "px";
-    }
+    var totalRawWidth = items.reduce(function (sum, it) {
+      return sum + it.width;
+    }, 0);
+    var minGapsTotal = Math.max(0, count - 1) * MIN_GAP_PX;
+    var desiredRotationPad = totalRawWidth * (ROTATION_SAFETY - 1);
+    var availableSlack = Math.max(0, vw - totalRawWidth - minGapsTotal);
+    var padScale = desiredRotationPad > 0 ? Math.min(1, availableSlack / desiredRotationPad) : 0;
+
+    items.forEach(function (item) {
+      item.footprint = item.width + item.width * (ROTATION_SAFETY - 1) * padScale;
+    });
+
+    items.sort(function (a, b) {
+      return a.desiredCenterPx - b.desiredCenterPx;
+    });
+
+    var cursor = 0;
+    items.forEach(function (item) {
+      var slotLeft = Math.max(item.desiredCenterPx - item.footprint / 2, cursor);
+      item.leftPx = slotLeft + (item.footprint - item.width) / 2;
+      cursor = slotLeft + item.footprint + MIN_GAP_PX;
+    });
+
+    items.forEach(function (item) {
+      var el = item.el;
+      el.style.position = "absolute";
+      el.style.left = ((item.leftPx / vw) * 100).toFixed(2) + "%";
+      var depth = edgeName === "top" ? rand(NAV_CLEARANCE + 6, NAV_CLEARANCE + 40) : rand(6, 46);
+      if (edgeName === "top") {
+        el.style.top = depth + "px";
+      } else {
+        el.style.bottom = depth + "px";
+      }
+    });
+
+    return items.map(function (item) {
+      return item.el;
+    });
   }
 
   function startEyes() {
@@ -255,23 +307,14 @@
     container.className = "eyes-border";
     container.setAttribute("aria-hidden", "true");
 
-    var counts = distributeCounts(TOTAL_EYES);
-    var edges = [
-      { name: "top", n: counts.top },
-      { name: "bottom", n: counts.bottom }
-    ];
-
+    var vw = window.innerWidth || document.documentElement.clientWidth || 1280;
     var fragment = document.createDocumentFragment();
 
-    edges.forEach(function (edge) {
-      var fracs = edgePositions(edge.n);
-      fracs.forEach(function (frac) {
-        var el = buildEyeEl();
-        el.style.position = "absolute";
-        var depth = edge.name === "top" ? rand(NAV_CLEARANCE + 6, NAV_CLEARANCE + 40) : rand(6, 46);
-        placeOnEdge(el, edge.name, frac, depth);
-        fragment.appendChild(el);
-      });
+    layoutEdge("top", TOP_EYES, vw).forEach(function (el) {
+      fragment.appendChild(el);
+    });
+    layoutEdge("bottom", BOTTOM_EYES, vw).forEach(function (el) {
+      fragment.appendChild(el);
     });
 
     container.appendChild(fragment);
