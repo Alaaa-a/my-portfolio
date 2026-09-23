@@ -4,6 +4,13 @@
 // innerWidth/clientWidth 在页面刚加载、布局还没跑完时偶尔会读到 0（参考 cat.js 里同样的坑），
 // 用 CSS 隐藏还能在窗口缩放时自动响应，不需要额外监听 resize。
 (function () {
+  // 纯净版：页脚的"小彩蛋"总开关没打开时，这个小组件完全不加载
+  try {
+    if (localStorage.getItem("alaaa-extras-enabled") !== "1") return;
+  } catch (e) {
+    return;
+  }
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var TOP_EYES = 15;

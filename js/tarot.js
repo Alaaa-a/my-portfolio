@@ -1,5 +1,12 @@
 // 每日塔罗抽卡悬浮组件 —— 曜石黑金视觉模板，卡面完全由 data/tarot.json 驱动
 (function () {
+  // 纯净版：页脚的"小彩蛋"总开关没打开时，这个小组件完全不加载
+  try {
+    if (localStorage.getItem("alaaa-extras-enabled") !== "1") return;
+  } catch (e) {
+    return;
+  }
+
   var STORAGE_KEY = "alaaa-daily-tarot";
   var DATA_URL = "data/tarot.json";
 

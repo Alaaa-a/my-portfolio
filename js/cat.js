@@ -1,5 +1,12 @@
 // 桌宠小黑猫：随机游走 + 避开主内容区 + 靠近反应 + 点击特效
 (function () {
+  // 纯净版：页脚的"小彩蛋"总开关没打开时，这个小组件完全不加载
+  try {
+    if (localStorage.getItem("alaaa-extras-enabled") !== "1") return;
+  } catch (e) {
+    return;
+  }
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var CAT_W = 60;
@@ -324,9 +331,9 @@
   function isEnabled() {
     try {
       var v = localStorage.getItem(TOGGLE_KEY);
-      return v === null ? true : v === "1";
+      return v === "1";
     } catch (e) {
-      return true;
+      return false;
     }
   }
 

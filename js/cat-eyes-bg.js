@@ -1,6 +1,13 @@
 // 桌宠彩蛋：猫猫眼睛背景，默认关闭，靠右上角"眼睛开关"左边的隐藏小圆点切换。
 // 会眨眼、瞳孔会跟着鼠标看
 (function () {
+  // 纯净版：页脚的"小彩蛋"总开关没打开时，这个小组件完全不加载
+  try {
+    if (localStorage.getItem("alaaa-extras-enabled") !== "1") return;
+  } catch (e) {
+    return;
+  }
+
   var TOGGLE_KEY = "alaaa-cat-eyes-bg-enabled";
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var container = null;

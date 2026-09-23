@@ -1,5 +1,12 @@
 // 每日鸡尾酒悬浮组件（与塔罗组件共用「每日仪式」视觉语言）
 (function () {
+  // 纯净版：页脚的"小彩蛋"总开关没打开时，这个小组件完全不加载
+  try {
+    if (localStorage.getItem("alaaa-extras-enabled") !== "1") return;
+  } catch (e) {
+    return;
+  }
+
   var DATA_URL = "data/cocktails.json";
 
   var cocktails = [];
