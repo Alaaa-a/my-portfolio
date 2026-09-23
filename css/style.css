@@ -119,6 +119,22 @@ main {
   margin: 0 auto;
   padding: 48px 24px 96px;
   min-height: calc(100vh - var(--nav-height));
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+/* 页面里写死的占位文字要等对应 JS 把 data/*.json 的真实内容换上去之后才显示，
+   不然会先看到占位内容一闪而过再跳成正确内容。对应 JS 在 fetch 成功/失败后
+   都会移除这个 class（用 .finally() 保证一定会移除，另外还有个兜底 timeout，
+   防止脚本出意外导致页面卡在隐藏状态出不来）。没有 JS 时 <noscript> 会覆盖回来。 */
+main.page-loading {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main {
+    transition: none;
+  }
 }
 
 .page-header {

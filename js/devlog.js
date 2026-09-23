@@ -1,5 +1,13 @@
 // 开发日志列表：读取 data/devlog.json，按日期倒序展示，支持按标签筛选
 (function () {
+  // 真实内容换上去之后（无论 fetch 成功还是失败）才把 <main> 显示出来，
+  // 避免先闪一下写死的占位内容；4 秒兜底，防止意外卡在隐藏状态
+  function reveal() {
+    var main = document.querySelector("main");
+    if (main) main.classList.remove("page-loading");
+  }
+  setTimeout(reveal, 4000);
+
   var BOOK_ICON =
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5c3-1.5 6-1.5 8 0c2-1.5 5-1.5 8 0v13c-3-1.5-6-1.5-8 0c-2-1.5-5-1.5-8 0z"/><line x1="12" y1="5" x2="12" y2="18"/></svg>';
 
@@ -105,5 +113,6 @@
     .catch(function () {
       listEl.innerHTML =
         '<p class="tarot-hint">日志加载失败。若你是直接双击打开 HTML 文件，浏览器会阻止读取本地 JSON —— 请用本地服务器打开页面后重试。</p>';
-    });
+    })
+    .finally(reveal);
 })();
