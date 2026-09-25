@@ -70,8 +70,8 @@
       glassSVG(26) +
       "</div>" +
       '<div class="cocktail-collapsed-text">' +
-      '<div class="cocktail-label">今日鸡尾酒</div>' +
-      '<div class="cocktail-name" id="cocktail-name-collapsed">占卜准备中…</div>' +
+      '<div class="cocktail-label">' + i18n.t("cocktail.label") + "</div>" +
+      '<div class="cocktail-name" id="cocktail-name-collapsed">' + i18n.t("cocktail.preparing") + "</div>" +
       '<div class="cocktail-name-en" id="cocktail-name-en-collapsed"></div>' +
       "</div>" +
       "</div>" +
@@ -92,16 +92,31 @@
     });
   }
 
+  // 英文模式：大标题用英文名，副标题用中文名；中文模式反过来
+  function mainName(c) {
+    return i18n.lang === "en" ? c.nameEn : c.name;
+  }
+  function subName(c) {
+    return i18n.lang === "en" ? c.name : c.nameEn;
+  }
+
+  // 数组字段（调制步骤）的英文版 method_en 长度对得上才用，否则回退中文
+  function listF(obj, field) {
+    var en = obj[field + "_en"];
+    if (i18n.lang === "en" && Array.isArray(en) && en.length === obj[field].length) return en;
+    return obj[field];
+  }
+
   function renderExpanded(cocktail) {
     var ingredientsHTML = cocktail.ingredients
       .map(function (ing) {
         return (
-          "<li><span>" + ing.name + '</span><span class="amount">' + ing.amount + "</span></li>"
+          "<li><span>" + i18n.f(ing, "name") + '</span><span class="amount">' + i18n.f(ing, "amount") + "</span></li>"
         );
       })
       .join("");
 
-    var methodHTML = cocktail.method
+    var methodHTML = listF(cocktail, "method")
       .map(function (step) {
         return "<li>" + step + "</li>";
       })
@@ -109,36 +124,36 @@
 
     els.expanded.innerHTML =
       '<div class="cocktail-expanded-header">' +
-      '<span class="cocktail-label">今日鸡尾酒</span>' +
-      '<button class="cocktail-close" id="cocktail-close" aria-label="收起">&times;</button>' +
+      '<span class="cocktail-label">' + i18n.t("cocktail.label") + "</span>" +
+      '<button class="cocktail-close" id="cocktail-close" aria-label="' + i18n.t("cocktail.close") + '">&times;</button>' +
       "</div>" +
       '<div class="cocktail-thumb-large" id="cocktail-thumb-large"></div>' +
       "<div>" +
       '<h3 class="cocktail-name">' +
-      cocktail.name +
+      mainName(cocktail) +
       "</h3>" +
       '<p class="cocktail-name-en">' +
-      cocktail.nameEn +
+      subName(cocktail) +
       " · " +
-      cocktail.base +
+      i18n.f(cocktail, "base") +
       "</p>" +
       "</div>" +
       "<div>" +
-      '<div class="cocktail-section-title">配方</div>' +
+      '<div class="cocktail-section-title">' + i18n.t("cocktail.recipe") + "</div>" +
       '<ul class="cocktail-ingredients">' +
       ingredientsHTML +
       "</ul>" +
       "</div>" +
       "<div>" +
-      '<div class="cocktail-section-title">调制方法</div>' +
+      '<div class="cocktail-section-title">' + i18n.t("cocktail.method") + "</div>" +
       '<ol class="cocktail-method">' +
       methodHTML +
       "</ol>" +
       "</div>" +
       "<div>" +
-      '<div class="cocktail-section-title">小故事</div>' +
+      '<div class="cocktail-section-title">' + i18n.t("cocktail.story") + "</div>" +
       '<p class="cocktail-story">' +
-      cocktail.story +
+      i18n.f(cocktail, "story") +
       "</p>" +
       "</div>";
 
@@ -151,12 +166,12 @@
   }
 
   function renderError() {
-    els.nameCollapsed.textContent = "加载失败";
-    els.nameEnCollapsed.textContent = "请用本地服务器打开页面";
+    els.nameCollapsed.textContent = i18n.t("cocktail.failTitle");
+    els.nameEnCollapsed.textContent = i18n.t("cocktail.failSub");
     els.expanded.innerHTML =
-      '<div class="cocktail-expanded-header"><span class="cocktail-label">今日鸡尾酒</span>' +
-      '<button class="cocktail-close" id="cocktail-close" aria-label="收起">&times;</button></div>' +
-      '<p class="tarot-hint">鸡尾酒数据加载失败。若你是直接双击打开 HTML 文件，浏览器会阻止读取本地 JSON —— 请用本地服务器（比如 VS Code 的 Live Server，或命令行 python3 -m http.server）打开页面后重试。</p>';
+      '<div class="cocktail-expanded-header"><span class="cocktail-label">' + i18n.t("cocktail.label") + "</span>" +
+      '<button class="cocktail-close" id="cocktail-close" aria-label="' + i18n.t("cocktail.close") + '">&times;</button></div>' +
+      '<p class="tarot-hint">' + i18n.t("cocktail.loadFail") + "</p>";
     document.getElementById("cocktail-close").addEventListener("click", function (e) {
       e.stopPropagation();
       els.card.classList.remove("expanded");
@@ -174,8 +189,8 @@
       .then(function (data) {
         cocktails = data;
         var today = pickToday(cocktails);
-        els.nameCollapsed.textContent = today.name;
-        els.nameEnCollapsed.textContent = today.nameEn;
+        els.nameCollapsed.textContent = mainName(today);
+        els.nameEnCollapsed.textContent = subName(today);
         renderThumb(els.thumb, today, 26);
         renderExpanded(today);
       })

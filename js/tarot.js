@@ -145,7 +145,7 @@
       card.name +
       "</div>" +
       '<div class="tarot-front-orientation">' +
-      (reversed ? "逆位 · REVERSED" : "正位 · UPRIGHT") +
+      i18n.t(reversed ? "tarot.frontReversed" : "tarot.frontUpright") +
       "</div>" +
       "</div>";
 
@@ -182,15 +182,20 @@
     );
   }
 
+  // 英文模式下牌名用英文名，中文模式保持原样
+  function cardName(card) {
+    return i18n.lang === "en" ? card.nameEn : card.name;
+  }
+
   function buildWidget() {
     var wrap = document.createElement("div");
     wrap.className = "tarot-widget";
     wrap.innerHTML =
       '<div class="tarot-panel" id="tarot-panel" hidden>' +
-      '<div class="tarot-panel-header"><span>今日塔罗</span><button class="tarot-close" id="tarot-close" aria-label="收起">&times;</button></div>' +
-      '<div class="tarot-panel-body" id="tarot-panel-body"><p class="tarot-hint">占卜准备中…</p></div>' +
+      '<div class="tarot-panel-header"><span>' + i18n.t("tarot.title") + '</span><button class="tarot-close" id="tarot-close" aria-label="' + i18n.t("tarot.close") + '">&times;</button></div>' +
+      '<div class="tarot-panel-body" id="tarot-panel-body"><p class="tarot-hint">' + i18n.t("tarot.preparing") + "</p></div>" +
       "</div>" +
-      '<button class="tarot-fab" id="tarot-fab" aria-label="每日塔罗抽卡">' +
+      '<button class="tarot-fab" id="tarot-fab" aria-label="' + i18n.t("tarot.fabLabel") + '">' +
       FAB_ICON +
       '<span class="tarot-fab-dot" id="tarot-fab-dot" hidden></span>' +
       "</button>";
@@ -218,11 +223,11 @@
   function renderBody() {
     if (loadError) {
       els.body.innerHTML =
-        '<p class="tarot-hint">塔罗数据加载失败。若你是直接双击打开 HTML 文件，浏览器会阻止读取本地 JSON —— 请用本地服务器（比如 VS Code 的 Live Server，或命令行 python3 -m http.server）打开页面后重试。</p>';
+        '<p class="tarot-hint">' + i18n.t("tarot.loadFail") + "</p>";
       return;
     }
     if (!cards.length) {
-      els.body.innerHTML = '<p class="tarot-hint">占卜准备中…</p>';
+      els.body.innerHTML = '<p class="tarot-hint">' + i18n.t("tarot.preparing") + "</p>";
       return;
     }
 
@@ -233,21 +238,21 @@
         return c.id === drawn.cardId;
       })[0];
       if (!card) {
-        els.body.innerHTML = '<p class="tarot-hint">今日记录已损坏，明天再来重新抽取吧。</p>';
+        els.body.innerHTML = '<p class="tarot-hint">' + i18n.t("tarot.corrupt") + "</p>";
         return;
       }
-      var meaning = drawn.orientation === "reversed" ? card.reversed : card.upright;
+      var meaning = i18n.f(card, drawn.orientation === "reversed" ? "reversed" : "upright");
 
       els.body.innerHTML =
         flipCardHTML("tarot-flip") +
         '<div class="tarot-result"><h3 id="tarot-result-title"></h3>' +
         '<p class="tarot-meaning" id="tarot-result-meaning"></p></div>' +
-        '<p class="tarot-hint">今天的塔罗牌已经抽过啦，明天再来抽新的一张。</p>';
+        '<p class="tarot-hint">' + i18n.t("tarot.alreadyDrawn") + "</p>";
 
       document.getElementById("tarot-flip-inner").classList.add("flipped");
       renderCardFront(document.getElementById("tarot-flip-front"), card, drawn.orientation);
       document.getElementById("tarot-result-title").textContent =
-        card.name + " · " + (drawn.orientation === "reversed" ? "逆位" : "正位");
+        cardName(card) + " · " + i18n.t(drawn.orientation === "reversed" ? "tarot.reversed" : "tarot.upright");
       document.getElementById("tarot-result-meaning").textContent = meaning;
 
       els.dot.hidden = false;
@@ -257,8 +262,8 @@
     els.dot.hidden = true;
     els.body.innerHTML =
       flipCardHTML("tarot-flip") +
-      '<button class="tarot-draw-btn" id="tarot-draw-btn">抽一张牌</button>' +
-      '<p class="tarot-hint">今天还没有抽过塔罗牌，点击按钮开始今日占卜。</p>';
+      '<button class="tarot-draw-btn" id="tarot-draw-btn">' + i18n.t("tarot.draw") + "</button>" +
+      '<p class="tarot-hint">' + i18n.t("tarot.notDrawn") + "</p>";
 
     document.getElementById("tarot-draw-btn").addEventListener("click", handleDraw);
   }
@@ -289,12 +294,12 @@
       inner.removeEventListener("transitionend", finalize);
       saveDrawn(card.id, orientation);
 
-      var meaning = orientation === "reversed" ? card.reversed : card.upright;
+      var meaning = i18n.f(card, orientation === "reversed" ? "reversed" : "upright");
       var result = document.createElement("div");
       result.className = "tarot-result";
 
       var title = document.createElement("h3");
-      title.textContent = card.name + " · " + (orientation === "reversed" ? "逆位" : "正位");
+      title.textContent = cardName(card) + " · " + i18n.t(orientation === "reversed" ? "tarot.reversed" : "tarot.upright");
 
       var meaningEl = document.createElement("p");
       meaningEl.className = "tarot-meaning";
@@ -304,7 +309,7 @@
       result.appendChild(meaningEl);
       if (btn.isConnected) btn.replaceWith(result);
 
-      if (hint) hint.textContent = "今天的塔罗牌已经抽过啦，明天再来抽新的一张。";
+      if (hint) hint.textContent = i18n.t("tarot.alreadyDrawn");
       els.dot.hidden = false;
     }
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>留言板 · Alaaa</title>
+<title data-i18n="title.guestbook">留言板 · Alaaa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -18,47 +18,48 @@
 <nav class="site-nav">
   <a class="brand" href="index.html">Alaaa</a>
   <ul class="nav-links">
-    <li><a href="index.html">首页</a></li>
-    <li><a href="about.html">关于我</a></li>
-    <li><a href="portfolio.html">作品展示</a></li>
-    <li><a href="now.html">最近在玩</a></li>
-    <li><a href="rankings.html">游戏排行榜</a></li>
-    <li><a href="reviews.html">游戏鉴赏总结</a></li>
-    <li><a href="devlog.html">开发日志</a></li>
-    <li><a href="guestbook.html" class="active">留言板</a></li>
+    <li><a data-i18n="nav.home" href="index.html">首页</a></li>
+    <li><a data-i18n="nav.about" href="about.html">关于我</a></li>
+    <li><a data-i18n="nav.portfolio" href="portfolio.html">作品展示</a></li>
+    <li><a data-i18n="nav.now" href="now.html">最近在玩</a></li>
+    <li><a data-i18n="nav.rankings" href="rankings.html">游戏排行榜</a></li>
+    <li><a data-i18n="nav.reviews" href="reviews.html">游戏鉴赏总结</a></li>
+    <li><a data-i18n="nav.devlog" href="devlog.html">开发日志</a></li>
+    <li><a data-i18n="nav.guestbook" href="guestbook.html" class="active">留言板</a></li>
   </ul>
 </nav>
 
 <main>
   <div class="page-header">
-    <h1>留言板</h1>
-    <p>功能建议、Bug 反馈、单纯想说的话都欢迎～留言会先经过审核，通过之后才会显示在下面。</p>
+    <h1 data-i18n="h1.guestbook">留言板</h1>
+    <p data-i18n="guestbook.intro">功能建议、Bug 反馈、单纯想说的话都欢迎～留言会先经过审核，通过之后才会显示在下面。</p>
   </div>
 
   <form class="guestbook-form" id="guestbook-form">
-    <input type="text" id="gb-nickname" placeholder="昵称（选填，不填就是「匿名」）" maxlength="40" />
+    <input type="text" id="gb-nickname" placeholder="昵称（选填，不填就是「匿名」）" data-i18n-placeholder="guestbook.nickname" maxlength="40" />
 
-    <div class="guestbook-category" id="gb-category" role="radiogroup" aria-label="留言分类">
-      <button type="button" class="guestbook-category-btn active" data-value="功能建议">功能建议</button>
-      <button type="button" class="guestbook-category-btn" data-value="Bug反馈">Bug 反馈</button>
-      <button type="button" class="guestbook-category-btn" data-value="单纯想说的话">单纯想说的话</button>
+    <div class="guestbook-category" id="gb-category" role="radiogroup" aria-label="留言分类" data-i18n-aria="guestbook.categoryLabel">
+      <button type="button" class="guestbook-category-btn active" data-value="功能建议" data-i18n="guestbook.cat.feature">功能建议</button>
+      <button type="button" class="guestbook-category-btn" data-value="Bug反馈" data-i18n="guestbook.cat.bug">Bug 反馈</button>
+      <button type="button" class="guestbook-category-btn" data-value="单纯想说的话" data-i18n="guestbook.cat.chat">单纯想说的话</button>
     </div>
 
-    <textarea id="gb-message" rows="4" placeholder="想说点什么…" maxlength="2000" required></textarea>
+    <textarea id="gb-message" rows="4" placeholder="想说点什么…" data-i18n-placeholder="guestbook.message" maxlength="2000" required></textarea>
 
-    <button type="submit" id="gb-submit">提交留言</button>
+    <button type="submit" id="gb-submit" data-i18n="guestbook.submit">提交留言</button>
     <p class="guestbook-feedback" id="gb-feedback" hidden></p>
   </form>
 
   <div class="guestbook-list" id="guestbook-list">
-    <p class="tarot-hint">留言加载中…</p>
+    <p class="tarot-hint" data-i18n="guestbook.loading">留言加载中…</p>
   </div>
 </main>
 
 <footer class="site-footer">
-  © 2026 Alaaa · 用星星和代码搭的小站
+  <span data-i18n="footer.text">© 2026 Alaaa · 用星星和代码搭的小站</span>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/stars.js"></script>
 <script src="js/extras.js"></script>
 <script src="js/guestbook.js"></script>

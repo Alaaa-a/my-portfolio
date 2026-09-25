@@ -3,15 +3,19 @@
   "items": [
     {
       "title": "Final Fantasy XIV",
-      "reason": "彻底被骗了库啵。（瘫倒"
+      "reason": "彻底被骗了库啵。（瘫倒",
+      "reason_en": "Completely fooled, kupo. (collapses"
     },
     {
       "title": "VA-11 HALL-A: Cyberpunk Bartender Action",
-      "reason": "想起就会感到幸福。"
+      "reason": "想起就会感到幸福。",
+      "reason_en": "Just thinking about it makes me happy."
     },
     {
       "title": "Ace Attorney",
-      "reason": "異議あり！"
+      "reason": "異議あり！",
+      "reason_en": "Objection!"
     }
-  ]
+  ],
+  "intro_en": "My personal game rankings!"
 }

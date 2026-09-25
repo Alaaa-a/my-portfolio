@@ -15,7 +15,7 @@
     })
     .then(function (data) {
       var introEl = document.getElementById("page-intro");
-      if (introEl && data.intro) introEl.textContent = data.intro;
+      if (introEl && i18n.f(data, "intro")) introEl.textContent = i18n.f(data, "intro");
 
       var list = document.getElementById("rankings-list");
       if (!list || !Array.isArray(data.items)) return;
@@ -36,13 +36,13 @@
         title.style.fontSize = "1.25rem";
         title.style.fontWeight = "400";
         title.style.letterSpacing = "0.03em";
-        title.textContent = item.title || "";
+        title.textContent = i18n.f(item, "title") || "";
 
         var reason = document.createElement("p");
         reason.style.margin = "4px 0 0";
         reason.style.color = "var(--text-dim)";
         reason.style.fontSize = "0.9rem";
-        reason.textContent = item.reason || "";
+        reason.textContent = i18n.f(item, "reason") || "";
 
         wrap.appendChild(title);
         wrap.appendChild(reason);

@@ -20,7 +20,7 @@
     btn.type = "button";
     btn.className = "extras-toggle";
     btn.setAttribute("aria-pressed", isOn() ? "true" : "false");
-    btn.textContent = isOn() ? "✦ 小彩蛋：开" : "✦ 小彩蛋：关";
+    btn.textContent = i18n.t(isOn() ? "extras.on" : "extras.off");
     footer.appendChild(btn);
 
     btn.addEventListener("click", function () {

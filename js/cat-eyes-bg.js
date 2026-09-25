@@ -174,7 +174,7 @@
     var rect = btn.getBoundingClientRect();
     var tip = document.createElement("span");
     tip.className = "eyes-toggle-tip";
-    tip.textContent = enabled ? "🐱 猫猫眼睛背景已开启" : "🐱 猫猫眼睛背景已关闭";
+    tip.textContent = i18n.t(enabled ? "catEyes.on" : "catEyes.off");
     tip.style.right = window.innerWidth - rect.left + 10 + "px";
     tip.style.top = rect.top - 4 + "px";
     document.body.appendChild(tip);
@@ -195,7 +195,7 @@
     var btn = document.createElement("button");
     btn.type = "button";
     btn.className = "cat-eyes-toggle";
-    btn.setAttribute("aria-label", "切换猫猫眼睛背景彩蛋");
+    btn.setAttribute("aria-label", i18n.t("catEyes.toggleLabel"));
     document.body.appendChild(btn);
 
     btn.addEventListener("click", function () {

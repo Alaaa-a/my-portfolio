@@ -24,31 +24,30 @@
   }
 
   function render(item) {
-    document.title = item.title + " · Alaaa";
+    document.title = i18n.f(item, "title") + i18n.t("titleSuffix");
 
     articleEl.innerHTML =
       '<div class="devlog-article-header">' +
       '<span class="devlog-tag-pill">' +
-      (item.tag || "") +
+      (i18n.f(item, "tag") || "") +
       "</span>" +
       "<h1>" +
-      item.title +
+      i18n.f(item, "title") +
       "</h1>" +
       "</div>" +
       '<div class="devlog-body">' +
-      renderBody(item.body) +
+      renderBody(i18n.f(item, "body")) +
       "</div>";
   }
 
   function renderNotFound() {
     articleEl.innerHTML =
-      '<p class="tarot-hint">没找到这篇鉴赏，可能链接有误，或者内容还没加载出来。</p>' +
-      '<p><a class="devlog-back" href="reviews.html">← 返回鉴赏列表</a></p>';
+      '<p class="tarot-hint">' + i18n.t("reviews.notFound") + "</p>" +
+      '<p><a class="devlog-back" href="reviews.html">' + i18n.t("reviews.back") + "</a></p>";
   }
 
   function renderError() {
-    articleEl.innerHTML =
-      '<p class="tarot-hint">鉴赏加载失败。若你是直接双击打开 HTML 文件，浏览器会阻止读取本地 JSON —— 请用本地服务器打开页面后重试。</p>';
+    articleEl.innerHTML = '<p class="tarot-hint">' + i18n.t("reviews.error") + "</p>";
   }
 
   var id = new URLSearchParams(window.location.search).get("id");

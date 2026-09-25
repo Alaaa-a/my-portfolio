@@ -17,13 +17,13 @@
       encodeURIComponent(item.id) +
       '">' +
       '<span class="devlog-tag-pill">' +
-      (item.tag || "") +
+      (i18n.f(item, "tag") || "") +
       "</span>" +
       "<h2>" +
-      item.title +
+      i18n.f(item, "title") +
       "</h2>" +
       '<p class="review-excerpt">' +
-      (item.excerpt || "") +
+      (i18n.f(item, "excerpt") || "") +
       "</p>" +
       "</a>"
     );
@@ -35,18 +35,17 @@
       return res.json();
     })
     .then(function (data) {
-      if (introEl && data.intro) introEl.textContent = data.intro;
+      if (introEl && i18n.f(data, "intro")) introEl.textContent = i18n.f(data, "intro");
 
       var items = data.items || [];
       if (!items.length) {
-        listEl.innerHTML = '<p class="tarot-hint">还没有鉴赏内容。</p>';
+        listEl.innerHTML = '<p class="tarot-hint">' + i18n.t("reviews.empty") + "</p>";
         return;
       }
       listEl.innerHTML = items.map(cardHTML).join("");
     })
     .catch(function () {
-      listEl.innerHTML =
-        '<p class="tarot-hint">鉴赏加载失败。若你是直接双击打开 HTML 文件，浏览器会阻止读取本地 JSON —— 请用本地服务器打开页面后重试。</p>';
+      listEl.innerHTML = '<p class="tarot-hint">' + i18n.t("reviews.error") + "</p>";
     })
     .finally(reveal);
 })();

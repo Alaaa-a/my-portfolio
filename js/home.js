@@ -15,13 +15,13 @@
     })
     .then(function (data) {
       var greetingEl = document.getElementById("home-greeting");
-      if (greetingEl && data.greeting) greetingEl.textContent = data.greeting;
+      if (greetingEl && i18n.f(data, "greeting")) greetingEl.textContent = i18n.f(data, "greeting");
 
       var headingEl = document.getElementById("home-heading");
-      if (headingEl && data.heading) headingEl.textContent = data.heading;
+      if (headingEl && i18n.f(data, "heading")) headingEl.textContent = i18n.f(data, "heading");
 
       var introEl = document.getElementById("home-intro");
-      if (introEl && data.intro) introEl.textContent = data.intro;
+      if (introEl && i18n.f(data, "intro")) introEl.textContent = i18n.f(data, "intro");
 
       var linksEl = document.getElementById("home-links");
       if (linksEl && Array.isArray(data.links)) {
@@ -29,7 +29,7 @@
         data.links.forEach(function (link) {
           var a = document.createElement("a");
           a.href = link.href || "#";
-          a.textContent = (link.label || "") + " →";
+          a.textContent = (i18n.f(link, "label") || "") + " →";
           linksEl.appendChild(a);
         });
       }

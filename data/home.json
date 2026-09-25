@@ -5,15 +5,19 @@
   "links": [
     {
       "label": "关于我",
-      "href": "about.html"
+      "href": "about.html",
+      "label_en": "About me"
     },
     {
       "label": "看看作品",
-      "href": "portfolio.html"
+      "href": "portfolio.html",
+      "label_en": "See my work"
     },
     {
       "label": "留个言",
-      "href": "guestbook.html"
+      "href": "guestbook.html",
+      "label_en": "Leave a message"
     }
-  ]
+  ],
+  "intro_en": "Hope you have a great time on this site~"
 }

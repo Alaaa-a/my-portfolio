@@ -357,7 +357,7 @@
     var rect = btn.getBoundingClientRect();
     var tip = document.createElement("span");
     tip.className = "eyes-toggle-tip";
-    tip.textContent = enabled ? "👁 装饰眼睛已开启" : "👁 装饰眼睛已关闭";
+    tip.textContent = i18n.t(enabled ? "eyes.on" : "eyes.off");
     tip.style.right = window.innerWidth - rect.left + 10 + "px";
     tip.style.top = rect.top - 4 + "px";
     document.body.appendChild(tip);
@@ -378,7 +378,7 @@
     var btn = document.createElement("button");
     btn.type = "button";
     btn.className = "eyes-toggle";
-    btn.setAttribute("aria-label", "切换装饰眼睛显示");
+    btn.setAttribute("aria-label", i18n.t("eyes.toggleLabel"));
     document.body.appendChild(btn);
 
     btn.addEventListener("click", function () {

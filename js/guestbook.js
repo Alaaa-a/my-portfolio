@@ -37,15 +37,25 @@
     return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
   }
 
+  // 分类在数据库里存的是中文原值，英文模式下只改显示文字
+  var CATEGORY_KEYS = {
+    "功能建议": "guestbook.cat.feature",
+    "Bug反馈": "guestbook.cat.bug",
+    "单纯想说的话": "guestbook.cat.chat"
+  };
+  function categoryLabel(value) {
+    return CATEGORY_KEYS[value] ? i18n.t(CATEGORY_KEYS[value]) : value;
+  }
+
   function cardHTML(row) {
     return (
       '<div class="guestbook-item">' +
       '<div class="meta">' +
       '<span class="guestbook-tag">' +
-      escapeHtml(row.category) +
+      escapeHtml(categoryLabel(row.category)) +
       "</span>" +
       "<span>" +
-      escapeHtml(row.nickname || "匿名") +
+      escapeHtml(row.nickname || i18n.t("guestbook.anon")) +
       "</span>" +
       "<span>" +
       formatDate(row.created_at) +
@@ -60,7 +70,7 @@
 
   function loadMessages() {
     if (!configured) {
-      listEl.innerHTML = '<p class="tarot-hint">留言板还没接好数据库，稍后再来看看。</p>';
+      listEl.innerHTML = '<p class="tarot-hint">' + i18n.t("guestbook.noDb") + "</p>";
       return;
     }
 
@@ -73,13 +83,13 @@
       })
       .then(function (rows) {
         if (!rows.length) {
-          listEl.innerHTML = '<p class="tarot-hint">还没有留言，来做第一个吧！</p>';
+          listEl.innerHTML = '<p class="tarot-hint">' + i18n.t("guestbook.none") + "</p>";
           return;
         }
         listEl.innerHTML = rows.map(cardHTML).join("");
       })
       .catch(function () {
-        listEl.innerHTML = '<p class="tarot-hint">留言加载失败，刷新试试。</p>';
+        listEl.innerHTML = '<p class="tarot-hint">' + i18n.t("guestbook.loadFail") + "</p>";
       });
   }
 
@@ -112,7 +122,7 @@
       e.preventDefault();
 
       if (!configured) {
-        showFeedback("留言板还没接好数据库，暂时没法提交，请稍后再来。", true);
+        showFeedback(i18n.t("guestbook.noDbSubmit"), true);
         return;
       }
 
@@ -121,12 +131,12 @@
       var message = messageInput.value.trim();
 
       if (!message) {
-        showFeedback("留言内容不能是空的哦。", true);
+        showFeedback(i18n.t("guestbook.emptyMsg"), true);
         return;
       }
 
       submitBtn.disabled = true;
-      showFeedback("提交中…", false);
+      showFeedback(i18n.t("guestbook.submitting"), false);
 
       fetch(SUPABASE_URL + "/rest/v1/guestbook_messages", {
         method: "POST",
@@ -140,12 +150,12 @@
       })
         .then(function (res) {
           if (!res.ok) throw new Error("HTTP " + res.status);
-          showFeedback("留言已提交，等审核通过后就会显示在下面啦，谢谢你！", false);
+          showFeedback(i18n.t("guestbook.submitted"), false);
           form.reset();
           resetCategoryButtons();
         })
         .catch(function () {
-          showFeedback("提交失败，过一会儿再试试？", true);
+          showFeedback(i18n.t("guestbook.submitFail"), true);
         })
         .finally(function () {
           submitBtn.disabled = false;

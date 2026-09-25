@@ -23,12 +23,19 @@
       .join("");
   }
 
+  // tags_en 跟 tags 按位置一一对应；没填英文就直接显示原标签
+  function tagLabel(post, tag) {
+    var idx = (post.tags || []).indexOf(tag);
+    var en = post.tags_en && post.tags_en[idx];
+    return i18n.lang === "en" && en ? en : tag;
+  }
+
   function render(post) {
-    document.title = post.title + " · Alaaa";
+    document.title = i18n.f(post, "title") + i18n.t("titleSuffix");
 
     var tags = (post.tags || [])
       .map(function (t) {
-        return '<span class="devlog-tag-pill">' + t + "</span>";
+        return '<span class="devlog-tag-pill">' + tagLabel(post, t) + "</span>";
       })
       .join("");
 
@@ -49,10 +56,10 @@
       '<div class="devlog-meta"><span class="devlog-date">' +
       post.date +
       "</span><span>" +
-      (post.project || "") +
+      (i18n.f(post, "project") || "") +
       "</span></div>" +
       "<h1>" +
-      post.title +
+      i18n.f(post, "title") +
       "</h1>" +
       '<div class="devlog-tag-list">' +
       tags +
@@ -60,19 +67,18 @@
       "</div>" +
       gallery +
       '<div class="devlog-body">' +
-      renderBody(post.body) +
+      renderBody(i18n.f(post, "body")) +
       "</div>";
   }
 
   function renderNotFound() {
     articleEl.innerHTML =
-      '<p class="tarot-hint">没找到这篇日志，可能链接有误，或者日志还没加载出来。</p>' +
-      '<p><a class="devlog-back" href="devlog.html">← 返回日志列表</a></p>';
+      '<p class="tarot-hint">' + i18n.t("devlog.notFound") + "</p>" +
+      '<p><a class="devlog-back" href="devlog.html">' + i18n.t("devlog.back") + "</a></p>";
   }
 
   function renderError() {
-    articleEl.innerHTML =
-      '<p class="tarot-hint">日志加载失败。若你是直接双击打开 HTML 文件，浏览器会阻止读取本地 JSON —— 请用本地服务器打开页面后重试。</p>';
+    articleEl.innerHTML = '<p class="tarot-hint">' + i18n.t("devlog.error") + "</p>";
   }
 
   var id = new URLSearchParams(window.location.search).get("id");

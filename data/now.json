@@ -4,22 +4,33 @@
     {
       "tag": "游戏",
       "title": "Final Fantasy XIV",
-      "description": "困難も含めて、日々を謳歌している。"
+      "description": "困難も含めて、日々を謳歌している。",
+      "tag_en": "Game",
+      "description_en": "Hardships included, I'm enjoying every day to the fullest."
     },
     {
       "tag": "游戏",
       "title": "FF15",
-      "description": "诺克提斯就是很萌啊"
+      "description": "诺克提斯就是很萌啊",
+      "tag_en": "Game",
+      "description_en": "Noctis is just so cute, okay"
     },
     {
       "tag": "番剧",
       "title": "石纪元",
-      "description": "葱头实在美丽"
+      "description": "葱头实在美丽",
+      "tag_en": "Anime",
+      "title_en": "Dr. STONE",
+      "description_en": "Onion-head is so beautiful"
     },
     {
       "tag": "书籍",
       "title": "乌托邦",
-      "description": "因为是sci-fi课上推荐阅读书籍才来看，意外发现和ff背景还有所关联，狂暴阅读中。"
+      "description": "因为是sci-fi课上推荐阅读书籍才来看，意外发现和ff背景还有所关联，狂暴阅读中。",
+      "tag_en": "Book",
+      "title_en": "Utopia",
+      "description_en": "I picked it up because it was recommended reading for my sci-fi class, and was surprised to find it's connected to the FF backstory too. Devouring it."
     }
-  ]
+  ],
+  "intro_en": "A record of the games I'm playing, the anime I'm watching, and the books I'm reading lately. Updated continuously."
 }

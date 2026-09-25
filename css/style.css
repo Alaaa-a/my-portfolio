@@ -111,6 +111,27 @@ a {
   display: none;
 }
 
+/* 语言切换（中/EN）：导航栏最右侧的小按钮 */
+.lang-toggle {
+  margin-left: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  color: var(--text-dim);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-toggle:hover {
+  color: var(--text-main);
+  border-color: var(--accent);
+}
+
 /* ===== 页面主体 ===== */
 main {
   position: relative;

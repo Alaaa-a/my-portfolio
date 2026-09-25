@@ -17,14 +17,18 @@ collections:
         file: "data/home.json"
         fields:
           - { label: "小标签（英文问候语）", name: "greeting", widget: "string" }
+          - { label: "[EN] 小标签", name: "greeting_en", widget: "string", required: false }
           - { label: "大标题", name: "heading", widget: "string" }
+          - { label: "[EN] 大标题", name: "heading_en", widget: "string", required: false }
           - { label: "简介", name: "intro", widget: "text" }
+          - { label: "[EN] 简介", name: "intro_en", widget: "text", required: false }
           - label: "按钮"
             name: "links"
             widget: "list"
             summary: "{{label}}"
             fields:
               - { label: "文字（不用加箭头，会自动加上）", name: "label", widget: "string" }
+              - { label: "[EN] 按钮文字", name: "label_en", widget: "string", required: false }
               - { label: "链接地址", name: "href", widget: "string" }
 
   - name: "about"
@@ -35,6 +39,7 @@ collections:
         file: "data/about.json"
         fields:
           - { label: "页面副标题", name: "intro", widget: "string" }
+          - { label: "[EN] 页面副标题（英文）", name: "intro_en", widget: "string", required: false }
           - label: "内容板块"
             name: "sections"
             widget: "list"
@@ -43,6 +48,9 @@ collections:
               - { label: "标签", name: "tag", widget: "string" }
               - { label: "标题", name: "title", widget: "string" }
               - { label: "正文", name: "body", widget: "text" }
+              - { label: "[EN] 标签", name: "tag_en", widget: "string", required: false }
+              - { label: "[EN] 标题", name: "title_en", widget: "string", required: false }
+              - { label: "[EN] 正文", name: "body_en", widget: "text", required: false }
 
   - name: "portfolio"
     label: "作品展示"
@@ -52,6 +60,7 @@ collections:
         file: "data/portfolio.json"
         fields:
           - { label: "页面副标题", name: "intro", widget: "string" }
+          - { label: "[EN] 页面副标题（英文）", name: "intro_en", widget: "string", required: false }
           - label: "作品列表"
             name: "items"
             widget: "list"
@@ -60,6 +69,9 @@ collections:
               - { label: "标签", name: "tag", widget: "string", default: "占位作品" }
               - { label: "标题", name: "title", widget: "string" }
               - { label: "简介", name: "description", widget: "text" }
+              - { label: "[EN] 标签", name: "tag_en", widget: "string", required: false }
+              - { label: "[EN] 标题", name: "title_en", widget: "string", required: false }
+              - { label: "[EN] 简介", name: "description_en", widget: "text", required: false }
 
   - name: "now"
     label: "最近在玩"
@@ -69,6 +81,7 @@ collections:
         file: "data/now.json"
         fields:
           - { label: "页面副标题", name: "intro", widget: "string" }
+          - { label: "[EN] 页面副标题（英文）", name: "intro_en", widget: "string", required: false }
           - label: "条目列表"
             name: "items"
             widget: "list"
@@ -77,6 +90,9 @@ collections:
               - { label: "标签", name: "tag", widget: "string", default: "游戏" }
               - { label: "标题", name: "title", widget: "string" }
               - { label: "描述", name: "description", widget: "text" }
+              - { label: "[EN] 标签", name: "tag_en", widget: "string", required: false }
+              - { label: "[EN] 标题", name: "title_en", widget: "string", required: false }
+              - { label: "[EN] 描述", name: "description_en", widget: "text", required: false }
 
   - name: "rankings"
     label: "游戏排行榜"
@@ -86,6 +102,7 @@ collections:
         file: "data/rankings.json"
         fields:
           - { label: "页面副标题", name: "intro", widget: "string" }
+          - { label: "[EN] 页面副标题（英文）", name: "intro_en", widget: "string", required: false }
           - label: "排名列表（列表顺序即排名，可在编辑器里拖拽调整顺序）"
             name: "items"
             widget: "list"
@@ -93,6 +110,8 @@ collections:
             fields:
               - { label: "游戏标题", name: "title", widget: "string" }
               - { label: "上榜理由", name: "reason", widget: "text" }
+              - { label: "[EN] 游戏标题", name: "title_en", widget: "string", required: false }
+              - { label: "[EN] 上榜理由", name: "reason_en", widget: "text", required: false }
 
   - name: "reviews"
     label: "游戏鉴赏总结"
@@ -102,6 +121,7 @@ collections:
         file: "data/reviews.json"
         fields:
           - { label: "页面副标题", name: "intro", widget: "string" }
+          - { label: "[EN] 页面副标题（英文）", name: "intro_en", widget: "string", required: false }
           - label: "鉴赏列表"
             name: "items"
             widget: "list"
@@ -115,10 +135,21 @@ collections:
               - { label: "标签", name: "tag", widget: "string", default: "占位鉴赏" }
               - { label: "标题", name: "title", widget: "string" }
               - { label: "摘要（列表页展示）", name: "excerpt", widget: "text" }
+              - { label: "[EN] 标签", name: "tag_en", widget: "string", required: false }
+              - { label: "[EN] 标题", name: "title_en", widget: "string", required: false }
+              - { label: "[EN] 摘要", name: "excerpt_en", widget: "text", required: false }
               - {
                   label: "正文（支持空行分段、**加粗**、*斜体*）",
                   name: "body",
                   widget: "markdown",
+                  buttons: ["bold", "italic"],
+                  editor_components: [],
+                }
+              - {
+                  label: "[EN] 正文（英文，支持空行分段、**加粗**、*斜体*）",
+                  name: "body_en",
+                  widget: "markdown",
+                  required: false,
                   buttons: ["bold", "italic"],
                   editor_components: [],
                 }
@@ -131,6 +162,7 @@ collections:
         file: "data/devlog.json"
         fields:
           - { label: "页面副标题", name: "intro", widget: "string" }
+          - { label: "[EN] 页面副标题（英文）", name: "intro_en", widget: "string", required: false }
           - label: "日志列表"
             name: "posts"
             widget: "list"
@@ -142,14 +174,23 @@ collections:
                   widget: "string",
                 }
               - { label: "标题", name: "title", widget: "string" }
+              - { label: "[EN] 标题", name: "title_en", widget: "string", required: false }
               - { label: "日期", name: "date", widget: "date", format: "YYYY-MM-DD" }
               - { label: "关联项目", name: "project", widget: "string", default: "Ala 吟游诗人" }
+              - { label: "[EN] 关联项目", name: "project_en", widget: "string", required: false }
               - label: "标签"
                 name: "tags"
                 widget: "list"
                 field: { label: "标签", name: "tag", widget: "string" }
+              - label: "[EN] 标签（英文，顺序要跟上面的中文标签一一对应）"
+                name: "tags_en"
+                widget: "list"
+                required: false
+                field: { label: "标签", name: "tag", widget: "string" }
               - { label: "摘要（列表页展示）", name: "excerpt", widget: "text" }
-              - label: "配图（可多张，第一张会用作列表缩略图）"
+              - { label: "[EN] 摘要", name: "excerpt_en", widget: "text", required: false }
+              - label: "配图
+（可多张，第一张会用作列表缩略图）"
                 name: "images"
                 widget: "list"
                 field: { label: "图片", name: "image", widget: "image" }
@@ -157,6 +198,14 @@ collections:
                   label: "正文（支持空行分段、**加粗**、*斜体*）",
                   name: "body",
                   widget: "markdown",
+                  buttons: ["bold", "italic"],
+                  editor_components: [],
+                }
+              - {
+                  label: "[EN] 正文（英文，支持空行分段、**加粗**、*斜体*）",
+                  name: "body_en",
+                  widget: "markdown",
+                  required: false,
                   buttons: ["bold", "italic"],
                   editor_components: [],
                 }

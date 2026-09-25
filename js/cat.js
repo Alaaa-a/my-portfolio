@@ -250,7 +250,7 @@
 
     if (kind === "bubble") {
       el.className += " cat-fx-bubble";
-      el.textContent = ["喵~", "喵？", "呼噜噜"][Math.floor(Math.random() * 3)];
+      el.textContent = i18n.t("cat.sounds").split("|")[Math.floor(Math.random() * 3)];
       document.body.appendChild(el);
       setTimeout(function () {
         el.remove();
@@ -385,7 +385,7 @@
     var rect = btn.getBoundingClientRect();
     var tip = document.createElement("span");
     tip.className = "cat-toggle-tip";
-    tip.textContent = enabled ? "🐾 桌宠已开启" : "🐾 桌宠已关闭";
+    tip.textContent = i18n.t(enabled ? "cat.on" : "cat.off");
     tip.style.left = rect.right + 10 + "px";
     tip.style.top = rect.top - 4 + "px";
     document.body.appendChild(tip);
@@ -406,7 +406,7 @@
     var btn = document.createElement("button");
     btn.type = "button";
     btn.className = "cat-toggle";
-    btn.setAttribute("aria-label", "切换桌宠猫显示");
+    btn.setAttribute("aria-label", i18n.t("cat.toggleLabel"));
     document.body.appendChild(btn);
 
     btn.addEventListener("click", function () {

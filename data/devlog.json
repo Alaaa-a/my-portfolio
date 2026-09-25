@@ -13,7 +13,14 @@
       "images": [
         "/assets/uploads/截屏2026-07-27-14.26.11.png"
       ],
-      "body": "从去年第一次开始计划吟游诗人这个项目，到今天开始写项目日志，已经过了一年多了。在这一年多的时间里，走了很多弯路，但也是因为有这些失败的经验，让我如今知道怎么做才是真正有帮助的。今天开始在网站上记录自己的项目日志，也是希望以留痕的方式让我看到截止到今天的每一个脚印。\n\n这几天在上班的时候，以另一种方式对项目进行推进，我使用vibe coding的方式搭建游戏的大框架和玩法，而不是纠结于游戏的场景搭建和人物美术。在切换思路后，目前的测试来看游戏的玩法已经大体完成了，接下来只需要往游戏程序中填入对话内容，以及将美术资产导入就可以了。很期待游戏完成的那一天！d(`･∀･)b\n\n今天的目标是完成游戏的主要角色对话分支，在软件twine（开源的好好用）里进行设计，以及建立游戏美术风格mood board，根据风格决定究竟是约稿还是自己学习着画一画。除此之外，再继续推进一下另一个项目Cipher of the Blood Moon的剧情设计，完成第三个和第四个关卡的设计。\n\n今天先写到这里吧，明天继续！\n\n加油加油！٩(｡・ω・｡)﻿و\n\n2026.7.27\n\nAlaaa"
+      "body": "从去年第一次开始计划吟游诗人这个项目，到今天开始写项目日志，已经过了一年多了。在这一年多的时间里，走了很多弯路，但也是因为有这些失败的经验，让我如今知道怎么做才是真正有帮助的。今天开始在网站上记录自己的项目日志，也是希望以留痕的方式让我看到截止到今天的每一个脚印。\n\n这几天在上班的时候，以另一种方式对项目进行推进，我使用vibe coding的方式搭建游戏的大框架和玩法，而不是纠结于游戏的场景搭建和人物美术。在切换思路后，目前的测试来看游戏的玩法已经大体完成了，接下来只需要往游戏程序中填入对话内容，以及将美术资产导入就可以了。很期待游戏完成的那一天！d(`･∀･)b\n\n今天的目标是完成游戏的主要角色对话分支，在软件twine（开源的好好用）里进行设计，以及建立游戏美术风格mood board，根据风格决定究竟是约稿还是自己学习着画一画。除此之外，再继续推进一下另一个项目Cipher of the Blood Moon的剧情设计，完成第三个和第四个关卡的设计。\n\n今天先写到这里吧，明天继续！\n\n加油加油！٩(｡・ω・｡)﻿و\n\n2026.7.27\n\nAlaaa",
+      "title_en": "7.27 The First Step",
+      "project_en": "Between the pages",
+      "tags_en": [
+        "Planning"
+      ],
+      "excerpt_en": "The first project log.",
+      "body_en": "It's been more than a year since I first started planning the Bard project, and today I'm finally starting a project log. I took a lot of detours during that year, but because of those failures I now know what actually helps. I'm starting to keep my logs on this website in the hope that I can look back and see every footprint I've left up to today.\n\nThese past few days, during my work hours, I've been pushing the project forward in a different way: I'm using vibe coding to build the game's overall framework and mechanics, instead of agonizing over scenes and character art. Since switching approaches, the gameplay is mostly finished as far as testing goes. All that's left is to fill the game with dialogue and import the art assets. I can't wait for the day it's done! d(`･∀･)b\n\nToday's goals are to finish the main characters' dialogue branches, which I'm designing in Twine (an open-source tool that's so nice to use), and to build a mood board for the game's art style, then decide based on that whether to commission art or learn to draw it myself. On top of that, I want to keep working on the story design for my other project, Cipher of the Blood Moon, and finish designing the third and fourth levels.\n\nThat's all for today. More tomorrow!\n\nLet's go, let's go! ٩(｡・ω・｡)﻿و\n\n2026.7.27\n\nAlaaa"
     },
     {
       "project": "FF-Bartender",
@@ -24,7 +31,11 @@
       "body": "我其实一直很想做一款和赛博朋克酒保行动类似的游戏。也许是因为酒精对我来说总是叛逆的代表，而调酒的概念给相比于单纯的酒精又多了几分艺术气息，调酒的游戏对我来说总是有意思的。\n\n最终幻想更是不用说，我总是想做一款和我最喜欢的游戏有些关系的的产出，但是总是担心自己的笔力不足，或解读的过于浅薄，反倒糟蹋了自己最喜欢的一个领域。\n\n在丹麦，也许是因为身边都是热爱游戏，且想要创作游戏的人们。在这样的氛围下，我也希望我可以将我的想象化为现实，因此我开始尝试制作这个项目。目前已经推进到了可以调一些简单的酒，且对于不同的酒对方会有不同的对话，我感觉这样就已经完成了最基础的循环。下一步就是增加更多的人物，更多的酒和更多的对话。我打算先做一个童话主题的作为练手，然后再来开始重新启动这个项目。\n\ntifa酱真的是萌的不行啊\n\n2026.9.14",
       "images": [
         "/assets/uploads/截屏2026-09-14-00.15.09.png"
-      ]
+      ],
+      "title_en": "Final Fantasy Bartender Action",
+      "project_en": "FF-Bartender",
+      "excerpt_en": "Born out of a single conversation.",
+      "body_en": "I've always wanted to make a game similar to VA-11 HALL-A. Maybe it's because alcohol has always stood for rebellion to me, and mixing drinks adds a bit more artistry compared to simply drinking, so bartending games have always been fun for me.\n\nAs for Final Fantasy, it goes without saying. I've always wanted to make something connected to my favorite game, but I've always worried that my writing isn't strong enough, or that my reading of it is too shallow, and that I'd end up spoiling my favorite field instead.\n\nIn Denmark, perhaps because I'm surrounded by people who love games and want to create them, I've come to hope I can turn my imagination into reality, so I started working on this project. It has now progressed to the point where I can mix some simple drinks, and the other person has different dialogue for different drinks. I feel like that completes the most basic loop. The next step is adding more characters, more drinks, and more dialogue. I plan to first make a fairy-tale-themed one as practice, and then come back and restart this project.\n\nTifa-chan is just unbearably cute.\n\n2026.9.14"
     },
     {
       "project": "An Eye for Value",
@@ -34,7 +45,14 @@
       "body": "作为一个想要赚钱的人+喜欢玩模拟经营小游戏的人+被设计游戏故事剧情折磨得头秃的人，突然发现了一个自己喜欢的游戏类型且不需要很多剧情的游戏类别，因此发奋图强打算开始制作。现在其实还只停留在大纲阶段，将会在明天设计一下游戏页面和游戏玩法，感觉应该不会非常非常难。\n\n2026.9.14",
       "tags": [
         "An Eye for Value"
-      ]
+      ],
+      "title_en": "The Beginning",
+      "project_en": "An Eye for Value",
+      "tags_en": [
+        "An Eye for Value"
+      ],
+      "excerpt_en": "Some musings that came from tidying up my library and browsing my past game records on Xiaoheihe.",
+      "body_en": "I'm someone who wants to make money, who loves playing small management sims, and who's been going bald from agonizing over game stories and plots. Suddenly I found a game genre I like that doesn't need much story, so I've decided to throw myself into making one. Right now it's still only at the outline stage. Tomorrow I'll design the game screens and gameplay, and I don't think it should be very, very hard.\n\n2026.9.14"
     },
     {
       "project": "蓝胡子酒馆&奇幻主题当铺",
@@ -44,7 +62,14 @@
       "excerpt": "因为两个都有更新所以就写一起了。",
       "tags": [
         "An Eye for Value"
-      ]
+      ],
+      "title_en": "Bluebeard's Tavern & Fantasy-Themed Pawnshop",
+      "project_en": "Bluebeard's Tavern & Fantasy Pawnshop",
+      "tags_en": [
+        "An Eye for Value"
+      ],
+      "excerpt_en": "Both got updates, so I'm writing them up together.",
+      "body_en": "\n\nBluebeard's Tavern:\n\nThe setting is a tavern you can't leave once you've walked in: either you stay on as the bartender, or you get killed and become material for the next drink.\n\nThe player's goal is to talk with customers, serve the right drink at the right time, and dig out each customer's story. Once we know all of a customer's story, (Bluebeard appears or we have to kill the customer), and we make a drink named after that guest. This is inspired by Bluebeard's seven murdered wives.\n\nAfter clearing 7 days successfully, (we become the new Bluebeard / we can kill Bluebeard / some kind of ending).\n\nIf we don't clear it, customers will pry into our secrets. If a customer finds out our secret, they'll kill us and take our place, and she will become the next bartender.\n\n\n\nFantasy-Themed Pawnshop:\n\nThe story is set in a fantasy world with heroes, dragons, wizards, elves, and slimes. The player is a merchant who runs a pawnshop and works to make it more and more successful.\n\nGameplay:\n\nWe meet two kinds of customers: those who come to sell, and those who come to buy.\n\nFor customers who come to sell, we need to work out roughly what the item's market price is, and try to buy it for less than that. At the same time, as a pawnshop in a fantasy world, we need to tell not only whether an item is genuine, but also whether it's cursed (otherwise the shop will do badly because of the curse, or the owner will become unlucky TT).\n\nFor customers who come to buy, we need to size up how wealthy they are. For example, a ragged adventurer surely has no money, and if we quote too high a price they'll simply turn around and leave. But an elegant elf who seems to have no concept of prices can be fleeced for a good sum. However, if we keep selling customers cursed items or knockoff fakes, the shop's reputation drops and fewer people come in each day.\n\nThe stats that affect the player are: item appraisal, reading people, price estimation, and eloquence.\n\nOnce the player earns money, they can spend it to improve these skills (training courses), or upgrade their house to raise their fame and increase the number of customers.\n\nSome customers are regulars. For example, a dopey, ragged hero at the start may only bring shabby things to our shop at first, but after becoming a formidable hero will bring us high-grade items. By chatting with the hero we can learn about their recent life and adventures.\n\nThere are also things like a wizard who can turn into a kitten, slimes, and so on. The current plan is to write 3–5 long-term NPCs first, while all the others just show up by luck.\n\n2026.9.15"
     },
     {
       "project": "奇幻主题当铺",
@@ -57,7 +82,14 @@
       ],
       "tags": [
         "An Eye for Value"
-      ]
+      ],
+      "title_en": "Pawnshop Project Update",
+      "project_en": "Fantasy Pawnshop",
+      "tags_en": [
+        "An Eye for Value"
+      ],
+      "excerpt_en": "Game progress moves forward.",
+      "body_en": "I heard that when we go to Berlin on our long study tour, we might get a chance to discuss our work with game designers, and I want to polish this project to a level I'm happy with before then. Today I ported the project to Unity, fixed some bugs, and built the first version of the UI (super rough and plain), but the basic gameplay runs without problems. Next I need to think about how to implement talking to customers and inspecting items, and how to make the visuals look more refined (though with my terrible aesthetic sense that'll be hard to do well). I feel this is the most promising one of my pile of projects to actually finish, and I'm really looking forward to it!\n\n2026.9.19"
     },
     {
       "project": "当铺",
@@ -70,7 +102,14 @@
       "body": "今天又是进行了一些比较小的更新，现在可以编辑顾客和玩家的对话了，也可以编辑物品描述了。在玩法方面增加了完整的另一块的玩法，也就是添加了会来买东西的顾客，也因此添加了仓库和名声玩法。\n\n后续应该会在笔记本或者notion上列出常客清单+物品清单。\\\n以及应该会想办法增加一些其他的获取物品的手段（例如高等级后可以通过拍卖会或者黑市等手段获得）\n\n然后就是长线的玩法推进，比如说增加宠物养成玩法，具体的等级玩法（比如提升等级后可以更容易的讨价还价，升级商店可以搬去更好的地段，拥有更多的客人等），以及赚来的钱也可以拿来装修房屋/缴房屋水电费/租金。还有很重要的新手教程部分，以及UI美化，感觉距离完成还任重道远\n\n2026.9.19",
       "images": [
         "/assets/uploads/2.png"
-      ]
+      ],
+      "title_en": "An Update from Norway",
+      "project_en": "Pawnshop",
+      "tags_en": [
+        "An Eye for Value"
+      ],
+      "excerpt_en": "- Added customers who buy items\n- Added reputation\n- Added a warehouse",
+      "body_en": "Another fairly small update today. You can now edit the dialogue between customers and the player, and edit item descriptions too. On the gameplay side, I added a whole other half of the game: customers who come to buy things, and because of that I added the warehouse and reputation mechanics.\n\nNext I'll probably list regular customers and items in a notebook or Notion.\\\nI also want to find other ways of acquiring items (for example, at higher levels through auctions or the black market).\n\nThen there's the longer-term gameplay: adding a pet-raising mechanic, and concrete level mechanics (for example, at higher levels it's easier to haggle, and you can upgrade the shop and move to a better location with more customers), and the money you earn can also go toward renovating the house / paying utilities and rent. There's also the very important tutorial section, and polishing the UI. It feels like there's still a long way to go before it's finished.\n\n2026.9.19"
     },
     {
       "project": "当铺",
@@ -84,7 +123,15 @@
         "/assets/uploads/截屏2026-09-22-01.24.16.png",
         "/assets/uploads/截屏2026-09-22-01.23.56.png"
       ],
-      "body": "从挪威回来后就打算把项目进度推进一些，因此制定了相对来说比较详细的计划。因此这次更新完成了比较多的内容，其中包括：新手教程，中英双语语言切换，添加了物品的数量以及贴图（虽然有一些的物品描述和贴图对不上，但是后续会修改），增加了两个长线角色的两段剧情（对话还有一些问题需要修改一下）。增加了音效设置，开门音效，点击音效，BGM，成交音效，以及系统里可以调整音量和关闭音效。以及添加了结局（还没做结局图），结算页面会展示最终金币，卖出多少件物品，名声如何等。\n\n开心！！！\n\n2026.9.22 1:33am"
+      "body": "从挪威回来后就打算把项目进度推进一些，因此制定了相对来说比较详细的计划。因此这次更新完成了比较多的内容，其中包括：新手教程，中英双语语言切换，添加了物品的数量以及贴图（虽然有一些的物品描述和贴图对不上，但是后续会修改），增加了两个长线角色的两段剧情（对话还有一些问题需要修改一下）。增加了音效设置，开门音效，点击音效，BGM，成交音效，以及系统里可以调整音量和关闭音效。以及添加了结局（还没做结局图），结算页面会展示最终金币，卖出多少件物品，名声如何等。\n\n开心！！！\n\n2026.9.22 1:33am",
+      "title_en": "7-Day Demo Almost Done!",
+      "project_en": "Pawnshop",
+      "tags_en": [
+        "An Eye for Value"
+      ],
+      "excerpt_en": "A big step forward!!",
+      "body_en": "After coming back from Norway, I decided to push the project forward and made a relatively detailed plan. So this update covers quite a lot: a tutorial, Chinese/English language switching, item quantities and sprites (some item descriptions don't match their sprites, but I'll fix that later), and two segments of story for two long-term characters (the dialogue still has some issues to fix). I also added sound settings: a door-opening sound, click sounds, BGM, and a deal-closing sound, and the system lets you adjust the volume or turn sound off. I also added an ending (the ending art isn't done yet), and the results screen shows your final gold, how many items you sold, your reputation, and so on.\n\nSo happy!!!\n\n2026.9.22 1:33am"
     }
-  ]
+  ],
+  "intro_en": "A record of how my game projects are built. Posts are listed newest first, and you can filter them by tag."
 }

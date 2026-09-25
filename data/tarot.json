@@ -10,7 +10,9 @@
     "icon": "fool",
     "image": null,
     "upright": "全新的开始，怀着信任踏上未知的旅程。",
-    "reversed": "行事鲁莽或准备不足，需留意脚下的风险。"
+    "reversed": "行事鲁莽或准备不足，需留意脚下的风险。",
+    "upright_en": "A brand-new beginning: step into the unknown with trust.",
+    "reversed_en": "Recklessness or lack of preparation; watch where you step."
   },
   {
     "id": "major-01",
@@ -23,7 +25,9 @@
     "icon": "magician",
     "image": null,
     "upright": "具备将想法化为现实的能力与资源，主动出击的时机已到。",
-    "reversed": "才能被误用，或言行不一导致缺乏行动力。"
+    "reversed": "才能被误用，或言行不一导致缺乏行动力。",
+    "upright_en": "You have the ability and resources to turn ideas into reality. The time to take the initiative has come.",
+    "reversed_en": "Talent misused, or a gap between words and actions leaves you without drive."
   },
   {
     "id": "major-02",
@@ -36,7 +40,9 @@
     "icon": "high-priestess",
     "image": null,
     "upright": "倾听直觉，答案往往藏在内在的静默之中。",
-    "reversed": "忽视内心的声音，或被隐藏的秘密所困惑。"
+    "reversed": "忽视内心的声音，或被隐藏的秘密所困惑。",
+    "upright_en": "Listen to your intuition; the answer often hides in inner silence.",
+    "reversed_en": "Ignoring your inner voice, or being confused by hidden secrets."
   },
   {
     "id": "major-03",
@@ -49,7 +55,9 @@
     "icon": "empress",
     "image": null,
     "upright": "丰盛与创造力涌现，滋养着身边的一切。",
-    "reversed": "创造力受阻，或过度付出而忽略了自己。"
+    "reversed": "创造力受阻，或过度付出而忽略了自己。",
+    "upright_en": "Abundance and creativity flow, nourishing everything around you.",
+    "reversed_en": "Creativity is blocked, or you give too much and neglect yourself."
   },
   {
     "id": "major-04",
@@ -62,7 +70,9 @@
     "icon": "emperor",
     "image": null,
     "upright": "以秩序与掌控力建立稳固的根基。",
-    "reversed": "过度专制独断，或既有的权威受到挑战。"
+    "reversed": "过度专制独断，或既有的权威受到挑战。",
+    "upright_en": "Build a solid foundation through order and control.",
+    "reversed_en": "Overly tyrannical and rigid, or established authority is being challenged."
   },
   {
     "id": "major-05",
@@ -75,7 +85,9 @@
     "icon": "hierophant",
     "image": null,
     "upright": "遵循传统与既有的价值体系，从中获得指引。",
-    "reversed": "质疑常规教条，走出一条属于自己的路。"
+    "reversed": "质疑常规教条，走出一条属于自己的路。",
+    "upright_en": "Follow tradition and established values, and find guidance in them.",
+    "reversed_en": "Question conventional dogma and forge a path of your own."
   },
   {
     "id": "major-06",
@@ -88,7 +100,9 @@
     "icon": "lovers",
     "image": null,
     "upright": "心意相合的选择，关系与价值观趋于一致。",
-    "reversed": "关系失衡，或面临难以取舍的抉择。"
+    "reversed": "关系失衡，或面临难以取舍的抉择。",
+    "upright_en": "A choice made in harmony; relationships and values align.",
+    "reversed_en": "A relationship out of balance, or a hard choice you can't decide on."
   },
   {
     "id": "major-07",
@@ -101,7 +115,9 @@
     "icon": "chariot",
     "image": null,
     "upright": "凭意志力与专注驾驭局面，勇往直前。",
-    "reversed": "方向失控，内耗让前进的脚步受阻。"
+    "reversed": "方向失控，内耗让前进的脚步受阻。",
+    "upright_en": "Steer the situation with willpower and focus, and push boldly ahead.",
+    "reversed_en": "Direction slips out of control; inner conflict stalls your progress."
   },
   {
     "id": "major-08",
@@ -114,7 +130,9 @@
     "icon": "strength",
     "image": null,
     "upright": "以温和而坚定的内在力量化解难题。",
-    "reversed": "自我怀疑，或压抑情绪而感到力不从心。"
+    "reversed": "自我怀疑，或压抑情绪而感到力不从心。",
+    "upright_en": "Resolve difficulties with gentle yet steadfast inner strength.",
+    "reversed_en": "Self-doubt, or suppressed emotions leave you feeling powerless."
   },
   {
     "id": "major-09",
@@ -127,7 +145,9 @@
     "icon": "hermit",
     "image": null,
     "upright": "退居独处，向内探寻属于自己的答案。",
-    "reversed": "过度孤立，或逃避与外界的连接。"
+    "reversed": "过度孤立，或逃避与外界的连接。",
+    "upright_en": "Withdraw into solitude and look inward for your own answers.",
+    "reversed_en": "Too isolated, or avoiding connection with the outside world."
   },
   {
     "id": "major-10",
@@ -140,7 +160,9 @@
     "icon": "wheel",
     "image": null,
     "upright": "局势迎来转折，命运的齿轮开始转动。",
-    "reversed": "变化带来阻力，需顺势而为而非强求。"
+    "reversed": "变化带来阻力，需顺势而为而非强求。",
+    "upright_en": "A turning point arrives; the wheel of fate begins to turn.",
+    "reversed_en": "Change brings resistance; go with the flow rather than forcing things."
   },
   {
     "id": "major-11",
@@ -153,7 +175,9 @@
     "icon": "justice",
     "image": null,
     "upright": "以公正与理性权衡得失，因果自有回响。",
-    "reversed": "有失公允，或试图逃避应负的责任。"
+    "reversed": "有失公允，或试图逃避应负的责任。",
+    "upright_en": "Weigh gains and losses with fairness and reason; cause and effect will echo back.",
+    "reversed_en": "Unfairness, or trying to dodge responsibility you owe."
   },
   {
     "id": "major-12",
@@ -166,7 +190,9 @@
     "icon": "hanged-man",
     "image": null,
     "upright": "换个角度看待处境，暂缓行动反而豁然开朗。",
-    "reversed": "停滞不前，或牺牲流于徒劳。"
+    "reversed": "停滞不前，或牺牲流于徒劳。",
+    "upright_en": "See your situation from a new angle; pausing action brings sudden clarity.",
+    "reversed_en": "Stagnation, or a sacrifice that turns out to be futile."
   },
   {
     "id": "major-13",
@@ -179,7 +205,9 @@
     "icon": "death",
     "image": null,
     "upright": "一个阶段的终结，为新生腾出空间。",
-    "reversed": "抗拒必要的改变，旧模式难以放下。"
+    "reversed": "抗拒必要的改变，旧模式难以放下。",
+    "upright_en": "The end of one stage, making room for rebirth.",
+    "reversed_en": "Resisting necessary change; old patterns are hard to let go."
   },
   {
     "id": "major-14",
@@ -192,7 +220,9 @@
     "icon": "temperance",
     "image": null,
     "upright": "调和对立的两极，在平衡中寻得和谐。",
-    "reversed": "失衡与过度，耐心正在被慢慢消耗。"
+    "reversed": "失衡与过度，耐心正在被慢慢消耗。",
+    "upright_en": "Blend opposing extremes and find harmony in balance.",
+    "reversed_en": "Imbalance and excess; patience is slowly being worn down."
   },
   {
     "id": "major-15",
@@ -205,7 +235,9 @@
     "icon": "devil",
     "image": null,
     "upright": "受困于欲望或恐惧编织的枷锁之中。",
-    "reversed": "开始挣脱束缚，重新夺回主导权。"
+    "reversed": "开始挣脱束缚，重新夺回主导权。",
+    "upright_en": "Trapped in shackles woven from desire or fear.",
+    "reversed_en": "Beginning to break free and reclaim control."
   },
   {
     "id": "major-16",
@@ -218,7 +250,9 @@
     "icon": "tower",
     "image": null,
     "upright": "突如其来的变故，打破虚假的稳固。",
-    "reversed": "灾难得以避免，或延迟的崩塌终将到来。"
+    "reversed": "灾难得以避免，或延迟的崩塌终将到来。",
+    "upright_en": "A sudden upheaval shatters false stability.",
+    "reversed_en": "Disaster is averted, or a delayed collapse will still arrive."
   },
   {
     "id": "major-17",
@@ -231,7 +265,9 @@
     "icon": "star",
     "image": null,
     "upright": "风暴过后，希望与疗愈之光重新照亮前路。",
-    "reversed": "信心动摇，对未来感到迷茫。"
+    "reversed": "信心动摇，对未来感到迷茫。",
+    "upright_en": "After the storm, the light of hope and healing shines on the road ahead again.",
+    "reversed_en": "Confidence wavers and the future feels uncertain."
   },
   {
     "id": "major-18",
@@ -244,7 +280,9 @@
     "icon": "moon",
     "image": null,
     "upright": "潜意识与幻象交织，真相尚未明朗。",
-    "reversed": "迷雾渐散，隐藏的焦虑浮出水面。"
+    "reversed": "迷雾渐散，隐藏的焦虑浮出水面。",
+    "upright_en": "The subconscious and illusions intertwine; the truth is not yet clear.",
+    "reversed_en": "The fog is lifting and hidden anxieties surface."
   },
   {
     "id": "major-19",
@@ -257,7 +295,9 @@
     "icon": "sun",
     "image": null,
     "upright": "明朗喜悦，成功与活力毫无保留地绽放。",
-    "reversed": "短暂的阴霾遮住了本该有的光彩。"
+    "reversed": "短暂的阴霾遮住了本该有的光彩。",
+    "upright_en": "Bright joy; success and vitality bloom without reserve.",
+    "reversed_en": "A brief cloud covers the glow that should be there."
   },
   {
     "id": "major-20",
@@ -270,7 +310,9 @@
     "icon": "judgement",
     "image": null,
     "upright": "回顾过往，迎来觉醒与重生的召唤。",
-    "reversed": "对自我或他人的评判过于苛刻。"
+    "reversed": "对自我或他人的评判过于苛刻。",
+    "upright_en": "Look back on the past and answer the call to awakening and rebirth.",
+    "reversed_en": "Judging yourself or others too harshly."
   },
   {
     "id": "major-21",
@@ -283,7 +325,9 @@
     "icon": "world",
     "image": null,
     "upright": "圆满完成一个循环，达成整合与成就。",
-    "reversed": "只差临门一脚，完成前仍有课题未解。"
+    "reversed": "只差临门一脚，完成前仍有课题未解。",
+    "upright_en": "A cycle comes to a full close, bringing integration and achievement.",
+    "reversed_en": "Just one step short; unresolved lessons remain before completion."
   },
   {
     "id": "wands-ace",
@@ -296,7 +340,9 @@
     "icon": "wands",
     "image": null,
     "upright": "新的灵感与行动力涌现，是放手一搏的好时机。",
-    "reversed": "计划迟迟无法启动，热情消退或方向不明。"
+    "reversed": "计划迟迟无法启动，热情消退或方向不明。",
+    "upright_en": "New inspiration and drive surge up; a good time to go all in.",
+    "reversed_en": "The plan can't seem to get started; enthusiasm fades or direction is unclear."
   },
   {
     "id": "wands-02",
@@ -309,7 +355,9 @@
     "icon": "wands",
     "image": null,
     "upright": "站在十字路口，权衡未来的可能性与野心。",
-    "reversed": "犹豫不决错失良机，或视野过于狭隘。"
+    "reversed": "犹豫不决错失良机，或视野过于狭隘。",
+    "upright_en": "Standing at a crossroads, weighing future possibilities against ambition.",
+    "reversed_en": "Indecision misses opportunities, or your vision is too narrow."
   },
   {
     "id": "wands-03",
@@ -322,7 +370,9 @@
     "icon": "wands",
     "image": null,
     "upright": "前期布局初见成效，视野开阔，机会正在扩展。",
-    "reversed": "计划受阻，扩张过快导致后继乏力。"
+    "reversed": "计划受阻，扩张过快导致后继乏力。",
+    "upright_en": "Early groundwork begins to pay off; your view widens and opportunities expand.",
+    "reversed_en": "Plans are blocked; expanding too fast leaves you without follow-through."
   },
   {
     "id": "wands-04",
@@ -335,7 +385,9 @@
     "icon": "wands",
     "image": null,
     "upright": "阶段性的成果值得庆祝，家庭与团队关系稳固。",
-    "reversed": "根基不稳，庆祝被延后或内部出现分歧。"
+    "reversed": "根基不稳，庆祝被延后或内部出现分歧。",
+    "upright_en": "Milestone results are worth celebrating; family and team bonds are solid.",
+    "reversed_en": "Shaky foundations, a delayed celebration, or internal disagreements."
   },
   {
     "id": "wands-05",
@@ -348,7 +400,9 @@
     "icon": "wands",
     "image": null,
     "upright": "竞争与摩擦增多，需要在冲突中找到共识。",
-    "reversed": "逃避矛盾或内耗加剧，合作难以推进。"
+    "reversed": "逃避矛盾或内耗加剧，合作难以推进。",
+    "upright_en": "Competition and friction increase; find common ground within the conflict.",
+    "reversed_en": "Avoiding conflict or growing infighting makes cooperation hard."
   },
   {
     "id": "wands-06",
@@ -361,7 +415,9 @@
     "icon": "wands",
     "image": null,
     "upright": "努力得到认可，凯旋而归，声望上升。",
-    "reversed": "成果被质疑，或胜利只是暂时的。"
+    "reversed": "成果被质疑，或胜利只是暂时的。",
+    "upright_en": "Your effort is recognized; a triumphant return and rising reputation.",
+    "reversed_en": "Your results are questioned, or the victory is only temporary."
   },
   {
     "id": "wands-07",
@@ -374,7 +430,9 @@
     "icon": "wands",
     "image": null,
     "upright": "顶住压力坚守立场，在挑战中证明自己。",
-    "reversed": "疲于应付四面八方的压力，渐感力不从心。"
+    "reversed": "疲于应付四面八方的压力，渐感力不从心。",
+    "upright_en": "Hold your ground under pressure and prove yourself in the challenge.",
+    "reversed_en": "Worn out by pressure from all sides and feeling powerless."
   },
   {
     "id": "wands-08",
@@ -387,7 +445,9 @@
     "icon": "wands",
     "image": null,
     "upright": "事情进展迅速，消息与行动接踵而至。",
-    "reversed": "计划延误，沟通出现误差或节奏被打乱。"
+    "reversed": "计划延误，沟通出现误差或节奏被打乱。",
+    "upright_en": "Things move fast; news and action come one after another.",
+    "reversed_en": "Plans are delayed, communication goes wrong, or your rhythm is disrupted."
   },
   {
     "id": "wands-09",
@@ -400,7 +460,9 @@
     "icon": "wands",
     "image": null,
     "upright": "历经磨砺仍保持警觉，接近终点但不能松懈。",
-    "reversed": "身心俱疲，过度防备反而孤立了自己。"
+    "reversed": "身心俱疲，过度防备反而孤立了自己。",
+    "upright_en": "Still alert after being tested; the finish line is near, but don't let up.",
+    "reversed_en": "Exhausted in body and mind; too much defensiveness isolates you."
   },
   {
     "id": "wands-10",
@@ -413,7 +475,9 @@
     "icon": "wands",
     "image": null,
     "upright": "责任沉重，独自扛起了过多的任务。",
-    "reversed": "是时候放下负担，学会分担与取舍。"
+    "reversed": "是时候放下负担，学会分担与取舍。",
+    "upright_en": "The responsibility is heavy; you're carrying too many tasks alone.",
+    "reversed_en": "Time to put the burden down and learn to share and prioritize."
   },
   {
     "id": "wands-page",
@@ -426,7 +490,9 @@
     "icon": "wands",
     "image": null,
     "upright": "怀着好奇心探索新领域，带来令人兴奋的消息。",
-    "reversed": "计划流于空想，缺乏实际行动。"
+    "reversed": "计划流于空想，缺乏实际行动。",
+    "upright_en": "Exploring a new field with curiosity, bringing exciting news.",
+    "reversed_en": "Plans stay daydreams with no real action."
   },
   {
     "id": "wands-knight",
@@ -439,7 +505,9 @@
     "icon": "wands",
     "image": null,
     "upright": "冲劲十足，勇于追逐目标但略显冲动。",
-    "reversed": "行事鲁莽或半途而废，缺乏耐心。"
+    "reversed": "行事鲁莽或半途而废，缺乏耐心。",
+    "upright_en": "Full of drive and bold in chasing goals, though a bit impulsive.",
+    "reversed_en": "Reckless or giving up halfway, lacking patience."
   },
   {
     "id": "wands-queen",
@@ -452,7 +520,9 @@
     "icon": "wands",
     "image": null,
     "upright": "自信独立，用热情感染身边的人。",
-    "reversed": "过度强势或缺乏安全感，情绪起伏大。"
+    "reversed": "过度强势或缺乏安全感，情绪起伏大。",
+    "upright_en": "Confident and independent, inspiring those around you with passion.",
+    "reversed_en": "Overbearing or insecure, with big emotional swings."
   },
   {
     "id": "wands-king",
@@ -465,7 +535,9 @@
     "icon": "wands",
     "image": null,
     "upright": "具备远见与领导力，能将愿景付诸实践。",
-    "reversed": "专断固执，或空有野心却难以落地。"
+    "reversed": "专断固执，或空有野心却难以落地。",
+    "upright_en": "Has vision and leadership, able to turn a vision into practice.",
+    "reversed_en": "Domineering and stubborn, or ambitious but unable to make it real."
   },
   {
     "id": "cups-ace",
@@ -478,7 +550,9 @@
     "icon": "cups",
     "image": null,
     "upright": "情感的泉源涌现，新的爱意或灵性连接开始。",
-    "reversed": "情感受阻，内心空虚或错失表达的时机。"
+    "reversed": "情感受阻，内心空虚或错失表达的时机。",
+    "upright_en": "A wellspring of emotion rises; new love or a spiritual connection begins.",
+    "reversed_en": "Emotions are blocked; inner emptiness or a missed chance to express yourself."
   },
   {
     "id": "cups-02",
@@ -491,7 +565,9 @@
     "icon": "cups",
     "image": null,
     "upright": "心意相通，一段关系走向和谐与承诺。",
-    "reversed": "关系失衡，误解让彼此渐行渐远。"
+    "reversed": "关系失衡，误解让彼此渐行渐远。",
+    "upright_en": "Hearts in tune; a relationship moves toward harmony and commitment.",
+    "reversed_en": "A relationship out of balance; misunderstandings pull you apart."
   },
   {
     "id": "cups-03",
@@ -504,7 +580,9 @@
     "icon": "cups",
     "image": null,
     "upright": "与朋友共享喜悦，友情与团聚带来滋养。",
-    "reversed": "社交流于表面，或群体中出现小摩擦。"
+    "reversed": "社交流于表面，或群体中出现小摩擦。",
+    "upright_en": "Sharing joy with friends; friendship and gatherings nourish you.",
+    "reversed_en": "Socializing stays on the surface, or small frictions arise in the group."
   },
   {
     "id": "cups-04",
@@ -517,7 +595,9 @@
     "icon": "cups",
     "image": null,
     "upright": "陷入沉思而忽略眼前的机会，略显冷漠。",
-    "reversed": "重新打开心扉，开始留意被忽视的可能性。"
+    "reversed": "重新打开心扉，开始留意被忽视的可能性。",
+    "upright_en": "Lost in contemplation and overlooking the opportunity in front of you, a bit aloof.",
+    "reversed_en": "Opening your heart again and noticing possibilities you'd overlooked."
   },
   {
     "id": "cups-05",
@@ -530,7 +610,9 @@
     "icon": "cups",
     "image": null,
     "upright": "沉溺于失落之中，却忽略了仍然拥有的部分。",
-    "reversed": "开始释怀，学着从遗憾中走出来。"
+    "reversed": "开始释怀，学着从遗憾中走出来。",
+    "upright_en": "Wallowing in loss while ignoring what you still have.",
+    "reversed_en": "Starting to let go and learning to move on from regret."
   },
   {
     "id": "cups-06",
@@ -543,7 +625,9 @@
     "icon": "cups",
     "image": null,
     "upright": "怀旧的温情，与过去或纯真美好重新连接。",
-    "reversed": "过度依恋过去，难以面对当下的成长。"
+    "reversed": "过度依恋过去，难以面对当下的成长。",
+    "upright_en": "Nostalgic warmth; reconnecting with the past or with innocence and beauty.",
+    "reversed_en": "Too attached to the past, struggling to face present growth."
   },
   {
     "id": "cups-07",
@@ -556,7 +640,9 @@
     "icon": "cups",
     "image": null,
     "upright": "选择太多让人眼花缭乱，需理清真正想要的。",
-    "reversed": "看清幻象，作出务实而清醒的决定。"
+    "reversed": "看清幻象，作出务实而清醒的决定。",
+    "upright_en": "So many choices they dazzle you; sort out what you truly want.",
+    "reversed_en": "Seeing through illusions and making a practical, clear-headed decision."
   },
   {
     "id": "cups-08",
@@ -569,7 +655,9 @@
     "icon": "cups",
     "image": null,
     "upright": "放下已有的安逸，去追寻更深层的意义。",
-    "reversed": "犹豫是否离开，害怕未知而原地踏步。"
+    "reversed": "犹豫是否离开，害怕未知而原地踏步。",
+    "upright_en": "Leaving behind familiar comfort to seek deeper meaning.",
+    "reversed_en": "Hesitating over whether to leave, staying put out of fear of the unknown."
   },
   {
     "id": "cups-09",
@@ -582,7 +670,9 @@
     "icon": "cups",
     "image": null,
     "upright": "心愿得偿，享受满足与安逸的时刻。",
-    "reversed": "表面满足实则空虚，或有些自满。"
+    "reversed": "表面满足实则空虚，或有些自满。",
+    "upright_en": "A wish fulfilled; enjoy a moment of contentment and comfort.",
+    "reversed_en": "Seemingly satisfied but actually empty, or a bit complacent."
   },
   {
     "id": "cups-10",
@@ -595,7 +685,9 @@
     "icon": "cups",
     "image": null,
     "upright": "情感圆满，家庭与关系带来长久的幸福。",
-    "reversed": "理想与现实有落差，家庭关系出现裂痕。"
+    "reversed": "理想与现实有落差，家庭关系出现裂痕。",
+    "upright_en": "Emotional fulfillment; family and relationships bring lasting happiness.",
+    "reversed_en": "A gap between ideal and reality; cracks in family relationships."
   },
   {
     "id": "cups-page",
@@ -608,7 +700,9 @@
     "icon": "cups",
     "image": null,
     "upright": "怀着纯真的心去感受与表达情感，充满想象力。",
-    "reversed": "情绪化或不成熟，耽于幻想。"
+    "reversed": "情绪化或不成熟，耽于幻想。",
+    "upright_en": "Feeling and expressing emotion with an innocent heart, full of imagination.",
+    "reversed_en": "Emotional or immature, lost in fantasy."
   },
   {
     "id": "cups-knight",
@@ -621,7 +715,9 @@
     "icon": "cups",
     "image": null,
     "upright": "浪漫地追随内心，带着理想主义前行。",
-    "reversed": "三心二意，承诺难以兑现。"
+    "reversed": "三心二意，承诺难以兑现。",
+    "upright_en": "Romantically following your heart, moving forward with idealism.",
+    "reversed_en": "Wavering, with promises hard to keep."
   },
   {
     "id": "cups-queen",
@@ -634,7 +730,9 @@
     "icon": "cups",
     "image": null,
     "upright": "温柔体贴，善于共情并滋养他人。",
-    "reversed": "情绪过度敏感，容易被他人影响。"
+    "reversed": "情绪过度敏感，容易被他人影响。",
+    "upright_en": "Gentle and considerate, good at empathizing with and nurturing others.",
+    "reversed_en": "Overly sensitive and easily swayed by others."
   },
   {
     "id": "cups-king",
@@ -647,7 +745,9 @@
     "icon": "cups",
     "image": null,
     "upright": "情感成熟稳重，能理性地驾驭内心波澜。",
-    "reversed": "情绪压抑或喜怒无常，难以真诚相待。"
+    "reversed": "情绪压抑或喜怒无常，难以真诚相待。",
+    "upright_en": "Emotionally mature and steady, able to rationally steer inner turbulence.",
+    "reversed_en": "Repressed or moody emotions make sincerity difficult."
   },
   {
     "id": "swords-ace",
@@ -660,7 +760,9 @@
     "icon": "swords",
     "image": null,
     "upright": "思路豁然开朗，真相或突破性的想法浮现。",
-    "reversed": "思维混乱，沟通被误解或判断有失偏颇。"
+    "reversed": "思维混乱，沟通被误解或判断有失偏颇。",
+    "upright_en": "Your thinking suddenly clears; truth or a breakthrough idea emerges.",
+    "reversed_en": "Muddled thinking, misunderstood communication, or skewed judgment."
   },
   {
     "id": "swords-02",
@@ -673,7 +775,9 @@
     "icon": "swords",
     "image": null,
     "upright": "陷入两难，回避抉择只会让僵局持续。",
-    "reversed": "犹豫过久导致局势失控，需正视问题。"
+    "reversed": "犹豫过久导致局势失控，需正视问题。",
+    "upright_en": "Caught in a dilemma; avoiding the decision only prolongs the stalemate.",
+    "reversed_en": "Hesitating too long lets things spiral; face the problem."
   },
   {
     "id": "swords-03",
@@ -686,7 +790,9 @@
     "icon": "swords",
     "image": null,
     "upright": "心痛与失落袭来，但也是释放情绪的时刻。",
-    "reversed": "伤痛开始愈合，或旧伤被重新揭开。"
+    "reversed": "伤痛开始愈合，或旧伤被重新揭开。",
+    "upright_en": "Heartache and loss hit, but it's also a time to release emotion.",
+    "reversed_en": "The pain begins to heal, or an old wound is reopened."
   },
   {
     "id": "swords-04",
@@ -699,7 +805,9 @@
     "icon": "swords",
     "image": null,
     "upright": "暂停脚步，给身心一段休整与恢复的时间。",
-    "reversed": "被迫重新投入战斗，休息尚未充分。"
+    "reversed": "被迫重新投入战斗，休息尚未充分。",
+    "upright_en": "Pause and give your body and mind time to rest and recover.",
+    "reversed_en": "Forced back into the fight before you've rested enough."
   },
   {
     "id": "swords-05",
@@ -712,7 +820,9 @@
     "icon": "swords",
     "image": null,
     "upright": "争执带来的胜利只是表面，代价不小。",
-    "reversed": "尝试和解，放下无谓的争斗与执念。"
+    "reversed": "尝试和解，放下无谓的争斗与执念。",
+    "upright_en": "A victory won through quarrel is only superficial and costs a lot.",
+    "reversed_en": "Try to reconcile and let go of pointless fighting and fixation."
   },
   {
     "id": "swords-06",
@@ -725,7 +835,9 @@
     "icon": "swords",
     "image": null,
     "upright": "离开纷扰之地，驶向更平静的境地。",
-    "reversed": "迟迟无法脱身，旧问题反复纠缠。"
+    "reversed": "迟迟无法脱身，旧问题反复纠缠。",
+    "upright_en": "Leave the chaos behind and sail toward calmer waters.",
+    "reversed_en": "Unable to get away; old problems keep tangling you up."
   },
   {
     "id": "swords-07",
@@ -738,7 +850,9 @@
     "icon": "swords",
     "image": null,
     "upright": "悄悄行动或另辟蹊径，但需留意诚信问题。",
-    "reversed": "策略败露，或良心不安促使坦白。"
+    "reversed": "策略败露，或良心不安促使坦白。",
+    "upright_en": "Acting quietly or taking another route, but watch out for questions of integrity.",
+    "reversed_en": "Your strategy is exposed, or a guilty conscience pushes you to confess."
   },
   {
     "id": "swords-08",
@@ -751,7 +865,9 @@
     "icon": "swords",
     "image": null,
     "upright": "感觉被困住，其实束缚多来自内心的限制。",
-    "reversed": "开始挣脱思维的牢笼，重获自由。"
+    "reversed": "开始挣脱思维的牢笼，重获自由。",
+    "upright_en": "Feeling trapped, though the restraints mostly come from inner limits.",
+    "reversed_en": "Beginning to break out of the cage of your thoughts and regain freedom."
   },
   {
     "id": "swords-09",
@@ -764,7 +880,9 @@
     "icon": "swords",
     "image": null,
     "upright": "忧虑与失眠困扰，负面想法在夜里被放大。",
-    "reversed": "走出焦虑的低谷，重新看见希望。"
+    "reversed": "走出焦虑的低谷，重新看见希望。",
+    "upright_en": "Troubled by worry and sleeplessness; negative thoughts grow louder at night.",
+    "reversed_en": "Climbing out of the low point of anxiety and seeing hope again."
   },
   {
     "id": "swords-10",
@@ -777,7 +895,9 @@
     "icon": "swords",
     "image": null,
     "upright": "局面跌至谷底，但也意味着旧模式的终结。",
-    "reversed": "挣扎着复原，最坏的时刻已经过去。"
+    "reversed": "挣扎着复原，最坏的时刻已经过去。",
+    "upright_en": "Rock bottom, but also the end of an old pattern.",
+    "reversed_en": "Struggling to recover; the worst moment has passed."
   },
   {
     "id": "swords-page",
@@ -790,7 +910,9 @@
     "icon": "swords",
     "image": null,
     "upright": "保持警觉与好奇，渴望学习新的观点。",
-    "reversed": "言语鲁莽或消息不实，需多加求证。"
+    "reversed": "言语鲁莽或消息不实，需多加求证。",
+    "upright_en": "Staying alert and curious, eager to learn new perspectives.",
+    "reversed_en": "Careless words or false news; verify more."
   },
   {
     "id": "swords-knight",
@@ -803,7 +925,9 @@
     "icon": "swords",
     "image": null,
     "upright": "果断迅速地行动，直奔目标而去。",
-    "reversed": "行事冲动鲁莽，缺乏周全的考虑。"
+    "reversed": "行事冲动鲁莽，缺乏周全的考虑。",
+    "upright_en": "Acting decisively and quickly, heading straight for the goal.",
+    "reversed_en": "Impulsive and reckless, without thorough consideration."
   },
   {
     "id": "swords-queen",
@@ -816,7 +940,9 @@
     "icon": "swords",
     "image": null,
     "upright": "清晰理智，凭独立思考看穿表象。",
-    "reversed": "言辞尖锐或过于冷漠，疏离他人。"
+    "reversed": "言辞尖锐或过于冷漠，疏离他人。",
+    "upright_en": "Clear-minded and rational, seeing through appearances with independent thought.",
+    "reversed_en": "Sharp words or excessive coldness push others away."
   },
   {
     "id": "swords-king",
@@ -829,7 +955,9 @@
     "icon": "swords",
     "image": null,
     "upright": "逻辑严谨，以公正的判断力主导局面。",
-    "reversed": "滥用权威或过度苛刻，缺乏温度。"
+    "reversed": "滥用权威或过度苛刻，缺乏温度。",
+    "upright_en": "Rigorous in logic, leading the situation with fair judgment.",
+    "reversed_en": "Abusing authority or being too harsh, lacking warmth."
   },
   {
     "id": "pentacles-ace",
@@ -842,7 +970,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "实际的机会出现，是稳步开始的好兆头。",
-    "reversed": "机会被错过，或计划缺乏落地的基础。"
+    "reversed": "机会被错过，或计划缺乏落地的基础。",
+    "upright_en": "A practical opportunity appears, a good omen for a steady start.",
+    "reversed_en": "An opportunity is missed, or the plan lacks a foundation to land on."
   },
   {
     "id": "pentacles-02",
@@ -855,7 +985,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "在多项事务间寻求平衡，灵活应对变化。",
-    "reversed": "顾此失彼，资源调配出现失衡。"
+    "reversed": "顾此失彼，资源调配出现失衡。",
+    "upright_en": "Seeking balance among multiple matters and adapting flexibly to change.",
+    "reversed_en": "Neglecting one thing for another; resources are unevenly allocated."
   },
   {
     "id": "pentacles-03",
@@ -868,7 +1000,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "携手协作打磨作品，专业能力获得认可。",
-    "reversed": "团队配合不佳，标准难以达成一致。"
+    "reversed": "团队配合不佳，标准难以达成一致。",
+    "upright_en": "Collaborating to refine the work, with your professional skill recognized.",
+    "reversed_en": "Poor teamwork; standards can't be agreed on."
   },
   {
     "id": "pentacles-04",
@@ -881,7 +1015,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "稳固地守住已有的成果，但也略显保守。",
-    "reversed": "过度执着于安全感，害怕付出与改变。"
+    "reversed": "过度执着于安全感，害怕付出与改变。",
+    "upright_en": "Firmly holding on to what you have, though a bit conservative.",
+    "reversed_en": "Too attached to security, afraid of giving or changing."
   },
   {
     "id": "pentacles-05",
@@ -894,7 +1030,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "经历物质或精神上的困顿，感到被孤立。",
-    "reversed": "情况开始好转，援助正在靠近。"
+    "reversed": "情况开始好转，援助正在靠近。",
+    "upright_en": "Going through material or spiritual hardship and feeling isolated.",
+    "reversed_en": "Things begin to improve and help is drawing near."
   },
   {
     "id": "pentacles-06",
@@ -907,7 +1045,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "施与受达成平衡，慷慨带来良性循环。",
-    "reversed": "给予或接受失衡，帮助附带了条件。"
+    "reversed": "给予或接受失衡，帮助附带了条件。",
+    "upright_en": "Giving and receiving are in balance; generosity creates a healthy cycle.",
+    "reversed_en": "Giving or receiving is unbalanced; help comes with strings attached."
   },
   {
     "id": "pentacles-07",
@@ -920,7 +1060,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "停下来评估投入的成果，耐心等待收获。",
-    "reversed": "努力尚未见效，容易心生放弃的念头。"
+    "reversed": "努力尚未见效，容易心生放弃的念头。",
+    "upright_en": "Pause to assess the results of your investment and wait patiently for the harvest.",
+    "reversed_en": "Effort hasn't paid off yet, and thoughts of giving up creep in."
   },
   {
     "id": "pentacles-08",
@@ -933,7 +1075,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "专注打磨技艺，脚踏实地积累实力。",
-    "reversed": "敷衍了事或缺乏动力，进度停滞。"
+    "reversed": "敷衍了事或缺乏动力，进度停滞。",
+    "upright_en": "Focused on honing your craft and building strength step by step.",
+    "reversed_en": "Half-hearted or unmotivated; progress stalls."
   },
   {
     "id": "pentacles-09",
@@ -946,7 +1090,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "凭自己的努力获得独立与富足。",
-    "reversed": "过度追求物质而忽略了内心的满足。"
+    "reversed": "过度追求物质而忽略了内心的满足。",
+    "upright_en": "Independence and abundance earned through your own effort.",
+    "reversed_en": "Chasing material things while neglecting inner fulfillment."
   },
   {
     "id": "pentacles-10",
@@ -959,7 +1105,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "长久的积累带来家族与财富的传承。",
-    "reversed": "家庭财务出现纷争，根基受到动摇。"
+    "reversed": "家庭财务出现纷争，根基受到动摇。",
+    "upright_en": "Long accumulation brings a legacy of family and wealth.",
+    "reversed_en": "Family financial disputes shake the foundation."
   },
   {
     "id": "pentacles-page",
@@ -972,7 +1120,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "脚踏实地学习新技能，对现实机会充满好奇。",
-    "reversed": "三分钟热度，计划缺乏耐心执行。"
+    "reversed": "三分钟热度，计划缺乏耐心执行。",
+    "upright_en": "Learning new skills steadily, curious about real-world opportunities.",
+    "reversed_en": "A passing enthusiasm; the plan lacks patient execution."
   },
   {
     "id": "pentacles-knight",
@@ -985,7 +1135,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "稳扎稳打地推进目标，讲求效率与责任。",
-    "reversed": "进度停滞不前，或过于墨守成规。"
+    "reversed": "进度停滞不前，或过于墨守成规。",
+    "upright_en": "Advancing toward goals steadily, valuing efficiency and responsibility.",
+    "reversed_en": "Progress stalls, or you cling too rigidly to routine."
   },
   {
     "id": "pentacles-queen",
@@ -998,7 +1150,9 @@
     "icon": "pentacles",
     "image": null,
     "upright": "务实且体贴，善于经营生活与资源。",
-    "reversed": "过度操劳或忽略了自我照顾。"
+    "reversed": "过度操劳或忽略了自我照顾。",
+    "upright_en": "Practical and caring, good at managing life and resources.",
+    "reversed_en": "Overworked, or neglecting self-care."
   },
   {
     "id": "pentacles-king",
@@ -1011,6 +1165,8 @@
     "icon": "pentacles",
     "image": null,
     "upright": "稳健可靠，以务实的态度成就丰盛。",
-    "reversed": "过分看重物质，或固执于掌控一切。"
+    "reversed": "过分看重物质，或固执于掌控一切。",
+    "upright_en": "Steady and reliable, achieving abundance through a practical attitude.",
+    "reversed_en": "Overvaluing the material, or stubbornly clinging to control."
   }
 ]

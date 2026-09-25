@@ -17,11 +17,18 @@
   var activeTag = null;
   var posts = [];
 
+  // tags_en 跟 tags 按位置一一对应，筛选仍然用中文原值，只是按钮/标签上显示英文；
+  // 同一个中文标签在不同日志里可能只有一篇填了英文，所以先扫一遍建立 中文→英文 的对照表
+  var tagEn = {};
+  function tagLabel(tag) {
+    return i18n.lang === "en" && tagEn[tag] ? tagEn[tag] : tag;
+  }
+
   function cardHTML(post) {
     var thumb = post.images && post.images[0] ? '<img src="' + post.images[0] + '" alt="">' : BOOK_ICON;
     var tags = (post.tags || [])
       .map(function (t) {
-        return '<span class="devlog-tag-pill">' + t + "</span>";
+        return '<span class="devlog-tag-pill">' + tagLabel(t) + "</span>";
       })
       .join("");
 
@@ -36,13 +43,13 @@
       '<div class="devlog-meta"><span class="devlog-date">' +
       post.date +
       "</span><span>" +
-      (post.project || "") +
+      (i18n.f(post, "project") || "") +
       "</span></div>" +
       "<h2>" +
-      post.title +
+      i18n.f(post, "title") +
       "</h2>" +
       '<p class="devlog-excerpt">' +
-      (post.excerpt || "") +
+      (i18n.f(post, "excerpt") || "") +
       "</p>" +
       '<div class="devlog-tag-list">' +
       tags +
@@ -60,7 +67,7 @@
       : posts;
 
     if (!filtered.length) {
-      listEl.innerHTML = '<p class="tarot-hint">这个标签下还没有日志。</p>';
+      listEl.innerHTML = '<p class="tarot-hint">' + i18n.t("devlog.empty") + "</p>";
       return;
     }
 
@@ -79,10 +86,10 @@
 
     tagsEl.hidden = false;
     tagsEl.innerHTML =
-      '<button class="devlog-tag-btn active" data-tag="">全部</button>' +
+      '<button class="devlog-tag-btn active" data-tag="">' + i18n.t("devlog.all") + "</button>" +
       allTags
         .map(function (t) {
-          return '<button class="devlog-tag-btn" data-tag="' + t + '">' + t + "</button>";
+          return '<button class="devlog-tag-btn" data-tag="' + t + '">' + tagLabel(t) + "</button>";
         })
         .join("");
 
@@ -103,7 +110,12 @@
       return res.json();
     })
     .then(function (data) {
-      if (introEl && data.intro) introEl.textContent = data.intro;
+      if (introEl && i18n.f(data, "intro")) introEl.textContent = i18n.f(data, "intro");
+      (data.posts || []).forEach(function (p) {
+        (p.tags || []).forEach(function (tag, i) {
+          if (p.tags_en && p.tags_en[i] && !tagEn[tag]) tagEn[tag] = p.tags_en[i];
+        });
+      });
       posts = (data.posts || []).slice().sort(function (a, b) {
         return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
       });
@@ -111,8 +123,7 @@
       renderList();
     })
     .catch(function () {
-      listEl.innerHTML =
-        '<p class="tarot-hint">日志加载失败。若你是直接双击打开 HTML 文件，浏览器会阻止读取本地 JSON —— 请用本地服务器打开页面后重试。</p>';
+      listEl.innerHTML = '<p class="tarot-hint">' + i18n.t("devlog.error") + "</p>";
     })
     .finally(reveal);
 })();

@@ -15,7 +15,7 @@
     })
     .then(function (data) {
       var introEl = document.getElementById("page-intro");
-      if (introEl && data.intro) introEl.textContent = data.intro;
+      if (introEl && i18n.f(data, "intro")) introEl.textContent = i18n.f(data, "intro");
 
       var container = document.getElementById("about-sections");
       if (!container || !Array.isArray(data.sections)) return;
@@ -27,13 +27,13 @@
 
         var tag = document.createElement("span");
         tag.className = "placeholder-tag";
-        tag.textContent = section.tag || "";
+        tag.textContent = i18n.f(section, "tag") || "";
 
         var title = document.createElement("h2");
-        title.textContent = section.title || "";
+        title.textContent = i18n.f(section, "title") || "";
 
         var body = document.createElement("p");
-        body.textContent = section.body || "";
+        body.textContent = i18n.f(section, "body") || "";
 
         card.appendChild(tag);
         card.appendChild(title);

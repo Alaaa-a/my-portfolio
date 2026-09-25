@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>开发日志 · Alaaa</title>
+<title data-i18n="title.devlog">开发日志 · Alaaa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -18,35 +18,36 @@
 <nav class="site-nav">
   <a class="brand" href="index.html">Alaaa</a>
   <ul class="nav-links">
-    <li><a href="index.html">首页</a></li>
-    <li><a href="about.html">关于我</a></li>
-    <li><a href="portfolio.html">作品展示</a></li>
-    <li><a href="now.html">最近在玩</a></li>
-    <li><a href="rankings.html">游戏排行榜</a></li>
-    <li><a href="reviews.html">游戏鉴赏总结</a></li>
-    <li><a href="devlog.html" class="active">开发日志</a></li>
-    <li><a href="guestbook.html">留言板</a></li>
+    <li><a data-i18n="nav.home" href="index.html">首页</a></li>
+    <li><a data-i18n="nav.about" href="about.html">关于我</a></li>
+    <li><a data-i18n="nav.portfolio" href="portfolio.html">作品展示</a></li>
+    <li><a data-i18n="nav.now" href="now.html">最近在玩</a></li>
+    <li><a data-i18n="nav.rankings" href="rankings.html">游戏排行榜</a></li>
+    <li><a data-i18n="nav.reviews" href="reviews.html">游戏鉴赏总结</a></li>
+    <li><a data-i18n="nav.devlog" href="devlog.html" class="active">开发日志</a></li>
+    <li><a data-i18n="nav.guestbook" href="guestbook.html">留言板</a></li>
   </ul>
 </nav>
 
 <main class="page-loading">
 <noscript><style>main { opacity: 1 !important; }</style></noscript>
   <div class="page-header">
-    <h1>开发日志</h1>
+    <h1 data-i18n="h1.devlog">开发日志</h1>
     <p id="page-intro">占位说明：这里记录游戏项目的开发过程，日志按时间倒序排列，可以按标签筛选。</p>
   </div>
 
   <div class="devlog-tags" id="devlog-tags" hidden></div>
 
   <div class="devlog-list" id="devlog-list">
-    <p class="tarot-hint">日志加载中…</p>
+    <p class="tarot-hint" data-i18n="devlog.loading">日志加载中…</p>
   </div>
 </main>
 
 <footer class="site-footer">
-  © 2026 Alaaa · 用星星和代码搭的小站
+  <span data-i18n="footer.text">© 2026 Alaaa · 用星星和代码搭的小站</span>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/stars.js"></script>
 <script src="js/extras.js"></script>
 <script src="js/tarot.js"></script>

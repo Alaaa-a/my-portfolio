@@ -15,7 +15,7 @@
     })
     .then(function (data) {
       var introEl = document.getElementById("page-intro");
-      if (introEl && data.intro) introEl.textContent = data.intro;
+      if (introEl && i18n.f(data, "intro")) introEl.textContent = i18n.f(data, "intro");
 
       var container = document.getElementById("now-items");
       if (!container || !Array.isArray(data.items)) return;
@@ -27,13 +27,13 @@
 
         var tag = document.createElement("span");
         tag.className = "placeholder-tag";
-        tag.textContent = item.tag || "";
+        tag.textContent = i18n.f(item, "tag") || "";
 
         var title = document.createElement("h2");
-        title.textContent = item.title || "";
+        title.textContent = i18n.f(item, "title") || "";
 
         var desc = document.createElement("p");
-        desc.textContent = item.description || "";
+        desc.textContent = i18n.f(item, "description") || "";
 
         card.appendChild(tag);
         card.appendChild(title);
