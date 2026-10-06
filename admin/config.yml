@@ -189,8 +189,7 @@ collections:
                 field: { label: "标签", name: "tag", widget: "string" }
               - { label: "摘要（列表页展示）", name: "excerpt", widget: "text" }
               - { label: "[EN] 摘要", name: "excerpt_en", widget: "text", required: false }
-              - label: "配图
-（可多张，第一张会用作列表缩略图）"
+              - label: "配图（可多张，第一张会用作列表缩略图）"
                 name: "images"
                 widget: "list"
                 field: { label: "图片", name: "image", widget: "image" }
