@@ -84,12 +84,19 @@
 
     if (!allTags.length) return;
 
+    // 从作品展示点"查看开发日志"过来时，网址带 ?tag=xxx，直接预选这个标签；
+    // 只认真实存在的标签，网址里乱填的值一律忽略
+    var wanted = new URLSearchParams(window.location.search).get("tag");
+    if (wanted && allTags.indexOf(wanted) !== -1) activeTag = wanted;
+
     tagsEl.hidden = false;
     tagsEl.innerHTML =
-      '<button class="devlog-tag-btn active" data-tag="">' + i18n.t("devlog.all") + "</button>" +
+      '<button class="devlog-tag-btn' + (activeTag ? "" : " active") + '" data-tag="">' + i18n.t("devlog.all") + "</button>" +
       allTags
         .map(function (t) {
-          return '<button class="devlog-tag-btn" data-tag="' + t + '">' + tagLabel(t) + "</button>";
+          return (
+            '<button class="devlog-tag-btn' + (t === activeTag ? " active" : "") + '" data-tag="' + t + '">' + tagLabel(t) + "</button>"
+          );
         })
         .join("");
 

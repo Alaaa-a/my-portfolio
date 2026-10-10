@@ -78,12 +78,18 @@ collections:
             widget: "list"
             summary: "{{title}}"
             fields:
-              - { label: "标签", name: "tag", widget: "string", default: "占位作品" }
+              - { label: "标签", name: "tag", widget: "string", default: "游戏项目" }
               - { label: "标题", name: "title", widget: "string" }
               - { label: "简介", name: "description", widget: "text" }
               - { label: "[EN] 标签", name: "tag_en", widget: "string", required: false }
               - { label: "[EN] 标题", name: "title_en", widget: "string", required: false }
               - { label: "[EN] 简介", name: "description_en", widget: "text", required: false }
+              - label: "截图（可多张，第一张是封面；点击截图可看大图）"
+                name: "images"
+                widget: "list"
+                required: false
+                field: { label: "图片", name: "image", widget: "image" }
+              - { label: "对应的开发日志标签（要和开发日志里的标签完全一样，填了卡片上就会出现“查看开发日志”按钮；不填就不显示）", name: "devlog_tag", widget: "string", required: false }
 
   - name: "now"
     label: "最近在玩"
@@ -144,7 +150,7 @@ collections:
                   name: "id",
                   widget: "string",
                 }
-              - { label: "标签", name: "tag", widget: "string", default: "占位鉴赏" }
+              - { label: "标签", name: "tag", widget: "string", default: "游戏鉴赏" }
               - { label: "标题", name: "title", widget: "string" }
               - { label: "摘要（列表页展示）", name: "excerpt", widget: "text" }
               - { label: "[EN] 标签", name: "tag_en", widget: "string", required: false }

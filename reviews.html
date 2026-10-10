@@ -2,6 +2,24 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
+<script>
+(function () {
+  // 英文模式下先把带 data-i18n 的静态文字藏起来，等 i18n.js 换成英文再显示，避免先闪一下中文。
+  // 语言判断规则要和 js/i18n.js 的 detectLang() 保持一致；3 秒兜底，脚本出问题也不会一直藏着
+  try {
+    var l = localStorage.getItem("alaaa-lang");
+    if (l !== "en" && l !== "zh") {
+      var f = (navigator.languages && navigator.languages[0]) || navigator.language || "zh";
+      l = /^zh/i.test(f) ? "zh" : "en";
+    }
+    if (l === "en") {
+      var h = document.documentElement;
+      h.classList.add("i18n-pending");
+      setTimeout(function () { h.classList.remove("i18n-pending"); }, 3000);
+    }
+  } catch (e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title data-i18n="title.reviews">游戏鉴赏总结 · Luoyi</title>
 <meta name="description" content="Luoyi Liu · 东亚研究 × 计算机科学 · 游戏设计 / 开发 | Game design &amp; development" />
@@ -35,13 +53,18 @@
   <a class="brand" href="index.html">Luoyi</a>
   <ul class="nav-links">
     <li><a data-i18n="nav.home" href="index.html">首页</a></li>
-    <li><a data-i18n="nav.about" href="about.html">关于我</a></li>
     <li><a data-i18n="nav.portfolio" href="portfolio.html">作品展示</a></li>
-    <li><a data-i18n="nav.now" href="now.html">最近在玩</a></li>
-    <li><a data-i18n="nav.rankings" href="rankings.html">游戏排行榜</a></li>
-    <li><a data-i18n="nav.reviews" href="reviews.html" class="active">游戏鉴赏总结</a></li>
+    <li><a data-i18n="nav.about" href="about.html">关于我</a></li>
     <li><a data-i18n="nav.devlog" href="devlog.html">开发日志</a></li>
-    <li><a data-i18n="nav.guestbook" href="guestbook.html">留言板</a></li>
+    <li class="nav-more">
+      <button type="button" class="nav-more-btn active" aria-haspopup="true" aria-expanded="false" data-i18n="nav.more">更多</button>
+      <ul class="nav-more-menu">
+        <li><a data-i18n="nav.reviews" href="reviews.html" class="active">游戏鉴赏总结</a></li>
+        <li><a data-i18n="nav.rankings" href="rankings.html">游戏排行榜</a></li>
+        <li><a data-i18n="nav.now" href="now.html">最近在玩</a></li>
+        <li><a data-i18n="nav.guestbook" href="guestbook.html">留言板</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -49,7 +72,7 @@
 <noscript><style>main { opacity: 1 !important; }</style></noscript>
   <div class="page-header">
     <h1 data-i18n="h1.reviews">游戏鉴赏总结</h1>
-    <p id="page-intro">占位说明：这里以后会放游戏测评 / 长文鉴赏，可能按标签分类。</p>
+    <p id="page-intro"></p>
   </div>
 
   <div class="review-list" id="reviews-items">
@@ -62,6 +85,7 @@
 </footer>
 
 <script src="js/i18n.js"></script>
+<script src="js/nav.js"></script>
 <script src="js/stars.js"></script>
 <script src="js/extras.js"></script>
 <script src="js/tarot.js"></script>

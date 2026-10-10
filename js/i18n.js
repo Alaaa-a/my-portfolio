@@ -1,4 +1,5 @@
-// 中英双语：默认中文，导航栏右侧的按钮切换（记在 localStorage，切换后刷新页面生效）。
+// 中英双语：第一次访问按浏览器语言自动选（中文系统 → 中文，其他 → 英文），
+// 导航栏右侧的按钮手动切换后记在 localStorage，以后以手动选择为准（切换后刷新页面生效）。
 // - 静态文字：HTML 里带 data-i18n / data-i18n-placeholder / data-i18n-aria 的元素，英文模式下被替换
 // - 脚本里的动态文字：i18n.t("key")
 // - data/*.json 里的内容：i18n.f(obj, "title") 优先读 obj.title_en，没有就回退中文
@@ -6,17 +7,25 @@
 (function () {
   var KEY = "alaaa-lang";
 
+  // 没手动选过时按浏览器首选语言判断。每个页面 <head> 里还有一小段内联脚本用同样的规则
+  // 提前判断（用来在英文模式下先隐藏待翻译的静态文字，避免先闪一下中文），两处规则要保持一致
+  function detectLang() {
+    var first = (navigator.languages && navigator.languages[0]) || navigator.language || "zh";
+    return /^zh/i.test(first) ? "zh" : "en";
+  }
+
   function readLang() {
     try {
-      return localStorage.getItem(KEY) === "en" ? "en" : "zh";
-    } catch (e) {
-      return "zh";
-    }
+      var saved = localStorage.getItem(KEY);
+      if (saved === "en" || saved === "zh") return saved;
+    } catch (e) {}
+    return detectLang();
   }
 
   var lang = readLang();
 
   var DICT = {
+    "nav.more": { zh: "更多", en: "More" },
     "nav.home": { zh: "首页", en: "Home" },
     "nav.about": { zh: "关于我", en: "About" },
     "nav.portfolio": { zh: "作品展示", en: "Portfolio" },
@@ -46,6 +55,10 @@
     "h1.guestbook": { zh: "留言板", en: "Guestbook" },
 
     "page.loading": { zh: "加载中…", en: "Loading…" },
+    "page.loadFailed": { zh: "内容暂时加载失败，请刷新页面重试。", en: "Couldn't load this content. Please refresh the page and try again." },
+    "portfolio.viewDevlog": { zh: "查看开发日志 →", en: "Read the devlog →" },
+    "portfolio.lightboxClose": { zh: "关闭大图", en: "Close image" },
+    "portfolio.openImage": { zh: "查看大图", en: "View larger" },
     "reviews.loading": { zh: "鉴赏加载中…", en: "Loading reviews…" },
     "devlog.loading": { zh: "日志加载中…", en: "Loading posts…" },
     "reviews.back": { zh: "← 返回鉴赏列表", en: "← Back to reviews" },
@@ -157,7 +170,10 @@
 
   function applyStatic() {
     document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
-    if (lang !== "en") return;
+    if (lang !== "en") {
+      document.documentElement.classList.remove("i18n-pending");
+      return;
+    }
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       el.textContent = t(el.getAttribute("data-i18n"));
@@ -168,6 +184,7 @@
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
       el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
     });
+    document.documentElement.classList.remove("i18n-pending");
   }
 
   function buildSwitch() {

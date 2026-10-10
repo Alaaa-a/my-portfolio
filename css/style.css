@@ -111,6 +111,72 @@ a {
   display: none;
 }
 
+/* "更多"下拉：把次要页面（鉴赏、排行榜、最近在玩、留言板）收起来，主导航只留最重要的几项 */
+.nav-more {
+  position: relative;
+}
+
+.nav-more-btn {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-more-btn::after {
+  content: "▾";
+  margin-left: 6px;
+  font-size: 0.75em;
+}
+
+.nav-more-btn:hover,
+.nav-more.open .nav-more-btn {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-more-btn.active {
+  color: var(--bg-deep);
+  background: var(--accent);
+  font-weight: 600;
+}
+
+.nav-more-menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 170px;
+  margin: 0;
+  padding: 6px;
+  background: var(--bg-panel-solid);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.nav-more.open .nav-more-menu {
+  display: block;
+}
+
+.nav-more-menu a {
+  display: block;
+  border-radius: 10px;
+}
+
+/* 英文模式下，等 i18n.js 把静态文字换成英文再显示（<head> 里的内联脚本负责加上这个 class） */
+html.i18n-pending [data-i18n] {
+  visibility: hidden;
+}
+
 /* 语言切换（中/EN）：导航栏最右侧的小按钮 */
 .lang-toggle {
   margin-left: 12px;
@@ -288,6 +354,129 @@ main.page-loading {
 .placeholder-card p {
   color: var(--text-dim);
   margin-bottom: 0;
+  white-space: pre-line; /* 保留后台里写的换行和空行分段 */
+}
+
+/* ===== 作品展示：带截图的项目卡片 ===== */
+.placeholder-grid.portfolio-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.portfolio-card-body {
+  padding: 24px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.portfolio-cover {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: #0b0c1a;
+  cursor: zoom-in;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.portfolio-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.portfolio-cover:hover img {
+  transform: scale(1.03);
+}
+
+.portfolio-thumbs {
+  display: flex;
+  gap: 6px;
+  padding: 8px 8px 0;
+  flex-wrap: wrap;
+}
+
+.portfolio-thumbs button {
+  width: 56px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #0b0c1a;
+  cursor: zoom-in;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.portfolio-thumbs button:hover {
+  opacity: 1;
+  border-color: var(--tarot-gold);
+}
+
+.portfolio-thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-devlog-link {
+  align-self: flex-start;
+  margin-top: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--tarot-gold);
+  font-size: 0.85rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.portfolio-devlog-link:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--tarot-gold);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.88);
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .placeholder-grid {
@@ -519,9 +708,22 @@ main.page-loading {
     gap: 4px;
   }
 
-  .nav-links a {
+  .nav-links a,
+  .nav-more-btn {
     padding: 6px 10px;
     font-size: 0.85rem;
+  }
+
+  /* 手机上下拉菜单直接在导航栏里展开，不再飘在外面 */
+  .nav-more {
+    position: static;
+  }
+
+  .nav-more-menu {
+    position: static;
+    box-shadow: none;
+    min-width: 0;
+    margin-top: 6px;
   }
 }
 

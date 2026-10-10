@@ -1,5 +1,5 @@
 {
-  "intro": "这里以后会展示项目 / 作品卡片，附带链接和简介。",
+  "intro": "做过的游戏项目和原型。点击截图可以看大图，也可以跳转到对应的开发日志。",
   "items": [
     {
       "tag": "叙事推理｜线索收集类",
@@ -7,7 +7,11 @@
       "description": "一本没人愿意翻开的旧书，一座困在同一天里的村庄，一个只有你还记得昨天的清晨。\n\n拿起你的诗人身份，与村民对话，判断谁在说真话，谁在回避什么，你问的方式决定他们愿意告诉你多少。拼凑出真相，讲给这个世界听，也许你就能真正离开。",
       "tag_en": "Narrative mystery | Clue collecting",
       "title_en": "Between the pages",
-      "description_en": "An old book nobody wants to open, a village trapped in the same day, a morning where only you remember yesterday.\n\nTake up your identity as a bard, talk to the villagers, and judge who is telling the truth and who is avoiding something. How you ask decides how much they're willing to tell you. Piece the truth together and tell it to the world, and maybe you can finally leave."
+      "description_en": "An old book nobody wants to open, a village trapped in the same day, a morning where only you remember yesterday.\n\nTake up your identity as a bard, talk to the villagers, and judge who is telling the truth and who is avoiding something. How you ask decides how much they're willing to tell you. Piece the truth together and tell it to the world, and maybe you can finally leave.",
+      "images": [
+        "/assets/uploads/截屏2026-07-27-14.26.11.png"
+      ],
+      "devlog_tag": "Between the pages"
     },
     {
       "tag": "桌游｜破解密码",
@@ -23,8 +27,15 @@
       "description": "当铺小游戏，目前所有手头项目中推进最快的。",
       "tag_en": "Pawnshop",
       "title_en": "An Eye For Value",
-      "description_en": "A pawnshop mini-game, currently the fastest-moving of all my projects."
+      "description_en": "A pawnshop mini-game, currently the fastest-moving of all my projects.",
+      "images": [
+        "/assets/uploads/截屏2026-09-22-01.24.16.png",
+        "/assets/uploads/截屏2026-09-22-01.23.56.png",
+        "/assets/uploads/2.png",
+        "/assets/uploads/截屏2026-09-19-01.22.06.png"
+      ],
+      "devlog_tag": "An Eye for Value"
     }
   ],
-  "intro_en": "Projects and works will be shown here, with links and short descriptions."
+  "intro_en": "Game projects and prototypes I've worked on. Click a screenshot to enlarge it, or jump to the matching devlog."
 }

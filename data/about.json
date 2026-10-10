@@ -1,20 +1,30 @@
 {
-  "intro": "QQ：3289862282｜邮箱：liu225l@mtholyoke.edu",
+  "intro": "邮箱：liu225l@mtholyoke.edu",
   "sections": [
     {
       "tag": "自我介绍",
-      "title": "٩(｡・ω・｡)﻿و",
+      "title": "你好，我是 Luoyi",
       "body": "这里是每天都在打游戏的Luoyi（网名 Alaaa），目前在东亚研究和计算机科学的大三在读。每天都在努力制作作品集和学习日语中。游戏各种类型都会尝试，偏爱视觉小说和JRPG。如果有好玩的游戏欢迎随时安利！二次元&游戏&游戏设计相关话题大欢迎！欢迎来找我玩呀｡ 🫶   \n\n这个网站上会放一些关于我喜欢的东西的收藏展示！以及我喜欢的鸡尾酒和塔罗牌抽选！如果有希望出现的新功能欢迎在我的网站上进行留言，或者添加我的联系方式告诉我如何改进！祝你在我的网站玩的开心，拥有美好的一天！ d(`･∀･)b\n\n",
       "tag_en": "About me",
-      "body_en": "This is Luoyi (a.k.a. Alaaa), who plays games every single day. I'm currently a junior studying East Asian Studies and Computer Science. I'm working hard on my portfolio and studying Japanese every day. I try all kinds of games, but I especially love visual novels and JRPGs. If there's a fun game out there, please recommend it to me anytime! Anything about anime, games, and game design is very welcome! Come find me and hang out｡ 🫶   \n\nOn this website I'll be putting up collections of things I like! There's also a draw-a-card feature for my favorite cocktails and tarot cards! If there's a new feature you'd like to see, please leave a message on my website, or add me on social media and tell me how I can improve. I hope you have a great time on my site and a wonderful day! d(`･∀･)b\n\n"
+      "body_en": "This is Luoyi (a.k.a. Alaaa), who plays games every single day. I'm currently a junior studying East Asian Studies and Computer Science. I'm working hard on my portfolio and studying Japanese every day. I try all kinds of games, but I especially love visual novels and JRPGs. If there's a fun game out there, please recommend it to me anytime! Anything about anime, games, and game design is very welcome! Come find me and hang out｡ 🫶   \n\nOn this website I'll be putting up collections of things I like! There's also a draw-a-card feature for my favorite cocktails and tarot cards! If there's a new feature you'd like to see, please leave a message on my website, or add me on social media and tell me how I can improve. I hope you have a great time on my site and a wonderful day! d(`･∀･)b\n\n",
+      "title_en": "Hi, I'm Luoyi"
     },
     {
       "tag": "技能",
-      "title": "技能 / 经历",
-      "body": "ε٩(๑> ₃ <)۶з",
       "tag_en": "Skills",
-      "title_en": "Skills / Experience"
+      "title": "技能",
+      "title_en": "Skills",
+      "body": "游戏设计：叙事与对话分支设计 · 玩法与系统设计 · 游戏分析与评测\n开发：Unity · HTML / CSS / JavaScript · AI 辅助开发（vibe coding）\n工具：Twine（对话分支设计）\n语言：中文（母语）· English · 日本語（学习中）",
+      "body_en": "Game design: narrative & dialogue branching · gameplay & systems design · game analysis & reviews\nDevelopment: Unity · HTML / CSS / JavaScript · AI-assisted development (vibe coding)\nTools: Twine (dialogue branching)\nLanguages: Chinese (native) · English · Japanese (learning)"
+    },
+    {
+      "tag": "教育与经历",
+      "tag_en": "Education & experience",
+      "title": "经历",
+      "title_en": "Experience",
+      "body": "教育\nMount Holyoke College · 东亚研究 + 计算机科学（大三在读）\n\n独立游戏项目\n2026.9 · An Eye for Value —— 奇幻主题当铺经营游戏（Unity），7 天试玩 Demo 接近完成\n进行中 · Between the pages —— 叙事推理游戏，核心玩法原型已完成，正在补充对话与美术\n进行中 · Cipher of the Blood Moon —— 以密码学为核心的桌面解谜游戏\n\n写作\n撰写多篇游戏鉴赏与分析（海默2000、Orwell、Final Fantasy 系列、BitSummit 项目分析），见「游戏鉴赏总结」",
+      "body_en": "Education\nMount Holyoke College · East Asian Studies + Computer Science (junior)\n\nIndie game projects\n2026.9 · An Eye for Value: a fantasy-themed pawnshop management game (Unity); the 7-day playable demo is nearly done\nIn progress · Between the pages: a narrative mystery game; the core gameplay prototype is done, dialogue and art are being added\nIn progress · Cipher of the Blood Moon: a tabletop puzzle game built around cryptography\n\nWriting\nWrote several game reviews and analyses (Haimo 2000, Orwell, the Final Fantasy series, a BitSummit project analysis); see Game Reviews"
     }
   ],
-  "intro_en": "QQ: 3289862282 | Email: liu225l@mtholyoke.edu"
+  "intro_en": "Email: liu225l@mtholyoke.edu"
 }
