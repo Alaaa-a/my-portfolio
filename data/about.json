@@ -14,16 +14,24 @@
       "tag_en": "Skills",
       "title": "技能",
       "title_en": "Skills",
-      "body": "游戏设计：叙事与对话分支设计 · 玩法与系统设计 · 游戏分析与评测\n开发：Unity · HTML / CSS / JavaScript · AI 辅助开发（vibe coding）\n工具：Twine（对话分支设计）\n语言：中文（母语）· English · 日本語（学习中）",
-      "body_en": "Game design: narrative & dialogue branching · gameplay & systems design · game analysis & reviews\nDevelopment: Unity · HTML / CSS / JavaScript · AI-assisted development (vibe coding)\nTools: Twine (dialogue branching)\nLanguages: Chinese (native) · English · Japanese (learning)"
+      "body": "游戏设计：叙事与对话分支设计 · 玩法与系统设计 · 游戏分析与评测\n开发与制作：Unity · HTML / CSS / JavaScript · AI 辅助开发（vibe coding）· 游戏美术 · 音乐设计\n运营与分析：社交媒体文案 · 玩家反馈收集 · 游戏案例投资可能性分析\n工具：Twine（对话分支设计）\n语言：中文（母语）· English（中英口译经验）· 日本語（学习中，日语演讲比赛大学中级组第一名）",
+      "body_en": "Game design: narrative & dialogue branching · gameplay & systems design · game analysis & reviews\nDevelopment & production: Unity · HTML / CSS / JavaScript · AI-assisted development (vibe coding) · game art · music design\nMarketing & analysis: social media copywriting · player feedback collection · game case investment analysis\nTools: Twine (dialogue branching)\nLanguages: Chinese (native) · English (Chinese–English interpreting experience) · Japanese (learning; 1st place, university intermediate level, Japanese speech contest)"
     },
     {
       "tag": "教育与经历",
       "tag_en": "Education & experience",
       "title": "经历",
       "title_en": "Experience",
-      "body": "教育\nMount Holyoke College · 东亚研究 + 计算机科学（大三在读）\n\n独立游戏项目\n2026.9 · An Eye for Value —— 奇幻主题当铺经营游戏（Unity），7 天试玩 Demo 接近完成\n进行中 · Between the pages —— 叙事推理游戏，核心玩法原型已完成，正在补充对话与美术\n进行中 · Cipher of the Blood Moon —— 以密码学为核心的桌面解谜游戏\n\n写作\n撰写多篇游戏鉴赏与分析（海默2000、Orwell、Final Fantasy 系列、BitSummit 项目分析），见「游戏鉴赏总结」",
-      "body_en": "Education\nMount Holyoke College · East Asian Studies + Computer Science (junior)\n\nIndie game projects\n2026.9 · An Eye for Value: a fantasy-themed pawnshop management game (Unity); the 7-day playable demo is nearly done\nIn progress · Between the pages: a narrative mystery game; the core gameplay prototype is done, dialogue and art are being added\nIn progress · Cipher of the Blood Moon: a tabletop puzzle game built around cryptography\n\nWriting\nWrote several game reviews and analyses (Haimo 2000, Orwell, the Final Fantasy series, a BitSummit project analysis); see Game Reviews"
+      "body": "教育\nMount Holyoke College · 东亚研究 + 计算机科学 · 预计 2028 年毕业\n\n经历\n2026 秋 · DIS 哥本哈根留学项目（丹麦）\n2026 夏 · 2Pgames 市场部实习：撰写推特（X）帖文、收集玩家评论与反馈、游戏案例投资可能性分析\n2025 · BitSummit：为 2Pgames 担任中英口译（偶尔以日语辅助）\n2025 夏 · 早稻田大学 Summer Session（Waseda Summer Session）\n\n荣誉\n2026.3 · 第 15 届新英格兰日语比赛（日本国驻波士顿总领事馆主办）· 演讲部门 · 大学中级组 第一名\n\n游戏行业活动\n2025 年起每年参加 GDC\n参加过 3 次 Game Jam：\n2026 秋 · 班级 Game Jam —— slacking game，负责游戏美术和部分程序\n2026 春 · Global Game Jam —— 视觉小说，担任总策划\n2024 夏 · China Game Jam —— 2D 平台跳跃游戏，担任总策划，负责音乐设计",
+      "body_en": "Education\nMount Holyoke College · East Asian Studies + Computer Science · Expected graduation 2028\n\nExperience\nFall 2026 · DIS Copenhagen study abroad program (Denmark)\nSummer 2026 · Marketing intern at 2Pgames: wrote X (Twitter) posts, collected player reviews and feedback, analyzed game cases for investment potential\n2025 · BitSummit: Chinese–English interpreter for 2Pgames (occasionally assisting in Japanese)\nSummer 2025 · Waseda Summer Session, Waseda University\n\nHonors\nMarch 2026 · 1st place, Speech division (university intermediate level), 15th New England Japanese Language Contest, hosted by the Consulate-General of Japan in Boston\n\nGame industry activities\nAttended GDC every year since 2025\nTook part in 3 game jams:\nFall 2026 · Class game jam: a slacking game; game art and some programming\nSpring 2026 · Global Game Jam: a visual novel; lead game designer\nSummer 2024 · China Game Jam: a 2D platformer; lead game designer and music design"
+    },
+    {
+      "tag": "项目与写作",
+      "tag_en": "Projects & writing",
+      "title": "独立游戏与写作",
+      "title_en": "Indie games & writing",
+      "body": "独立游戏项目\n2026.9 · An Eye for Value —— 奇幻主题当铺经营游戏（Unity），7 天试玩 Demo 接近完成\n进行中 · Between the pages —— 叙事推理游戏，核心玩法原型已完成，正在补充对话与美术\n进行中 · Cipher of the Blood Moon —— 以密码学为核心的桌面解谜游戏\n\n写作\n撰写多篇游戏鉴赏与分析（海默2000、Orwell、Final Fantasy 系列、BitSummit 项目分析），见「游戏鉴赏总结」",
+      "body_en": "Indie game projects\n2026.9 · An Eye for Value: a fantasy-themed pawnshop management game (Unity); the 7-day playable demo is nearly done\nIn progress · Between the pages: a narrative mystery game; the core gameplay prototype is done, dialogue and art are being added\nIn progress · Cipher of the Blood Moon: a tabletop puzzle game built around cryptography\n\nWriting\nWrote several game reviews and analyses (Haimo 2000, Orwell, the Final Fantasy series, a BitSummit project analysis); see Game Reviews"
     }
   ],
   "intro_en": "Email: liu225l@mtholyoke.edu"
