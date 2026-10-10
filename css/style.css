@@ -231,6 +231,43 @@ main.page-loading {
   transform: translateY(-2px);
 }
 
+/* 名片扫码落地页：名字下面一句身份说明 + 底部联系方式 */
+.hero .hero-tagline {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  max-width: 560px;
+}
+
+.hero-contacts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin: 22px 0 0;
+  padding: 0;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+.hero-contacts a {
+  transition: color 0.2s ease;
+}
+
+.hero-contacts a:hover {
+  color: var(--text-main);
+}
+
+.hero-contacts .contact-label {
+  margin-right: 8px;
+  color: var(--tarot-gold);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
 /* ===== 占位卡片 ===== */
 .placeholder-card {
   background: var(--bg-panel);

@@ -20,6 +20,9 @@
       var headingEl = document.getElementById("home-heading");
       if (headingEl && i18n.f(data, "heading")) headingEl.textContent = i18n.f(data, "heading");
 
+      var taglineEl = document.getElementById("home-tagline");
+      if (taglineEl && i18n.f(data, "tagline")) taglineEl.textContent = i18n.f(data, "tagline");
+
       var introEl = document.getElementById("home-intro");
       if (introEl && i18n.f(data, "intro")) introEl.textContent = i18n.f(data, "intro");
 
@@ -31,6 +34,32 @@
           a.href = link.href || "#";
           a.textContent = (i18n.f(link, "label") || "") + " →";
           linksEl.appendChild(a);
+        });
+      }
+
+      // 联系方式：有 href 的做成链接（只放行 http(s) 和 mailto），没有 href 的（比如 QQ 号）只显示文字
+      var contactsEl = document.getElementById("home-contacts");
+      if (contactsEl && Array.isArray(data.contacts) && data.contacts.length) {
+        contactsEl.innerHTML = "";
+        data.contacts.forEach(function (c) {
+          if (!c.value) return;
+          var li = document.createElement("li");
+          var safeHref = /^(https?:|mailto:)/i.test(c.href || "");
+          var node = document.createElement(safeHref ? "a" : "span");
+          if (safeHref) {
+            node.href = c.href;
+            if (/^https?:/i.test(c.href)) {
+              node.target = "_blank";
+              node.rel = "noopener";
+            }
+          }
+          var label = document.createElement("span");
+          label.className = "contact-label";
+          label.textContent = i18n.f(c, "label") || "";
+          node.appendChild(label);
+          node.appendChild(document.createTextNode(c.value));
+          li.appendChild(node);
+          contactsEl.appendChild(li);
         });
       }
     })

@@ -20,6 +20,8 @@ collections:
           - { label: "[EN] 小标签", name: "greeting_en", widget: "string", required: false }
           - { label: "大标题", name: "heading", widget: "string" }
           - { label: "[EN] 大标题", name: "heading_en", widget: "string", required: false }
+          - { label: "身份一句话（大标题下面，名片扫码进来第一眼看到）", name: "tagline", widget: "string", required: false }
+          - { label: "[EN] 身份一句话", name: "tagline_en", widget: "string", required: false }
           - { label: "简介", name: "intro", widget: "text" }
           - { label: "[EN] 简介", name: "intro_en", widget: "text", required: false }
           - label: "按钮"
@@ -30,6 +32,16 @@ collections:
               - { label: "文字（不用加箭头，会自动加上）", name: "label", widget: "string" }
               - { label: "[EN] 按钮文字", name: "label_en", widget: "string", required: false }
               - { label: "链接地址", name: "href", widget: "string" }
+          - label: "联系方式（显示在首页最底下）"
+            name: "contacts"
+            widget: "list"
+            required: false
+            summary: "{{label}}：{{value}}"
+            fields:
+              - { label: "名称（比如 邮箱 / GitHub / LinkedIn）", name: "label", widget: "string" }
+              - { label: "[EN] 名称", name: "label_en", widget: "string", required: false }
+              - { label: "显示的文字（比如邮箱地址、用户名）", name: "value", widget: "string" }
+              - { label: "链接（邮箱写 mailto:你的邮箱；不需要点击就留空）", name: "href", widget: "string", required: false }
 
   - name: "about"
     label: "关于我"
