@@ -14,16 +14,32 @@
       "tag_en": "Skills",
       "title": "技能",
       "title_en": "Skills",
-      "body": "游戏设计：叙事与对话分支设计 · 玩法与系统设计 · 游戏分析与评测\n开发与制作：Unity · HTML / CSS / JavaScript · AI 辅助开发（vibe coding）· 游戏美术 · 音乐设计\n运营与分析：社交媒体文案 · 玩家反馈收集 · 游戏案例投资可能性分析\n工具：Twine（对话分支设计）\n语言：中文（母语）· English（中英口译经验）· 日本語（学习中，日语演讲比赛大学中级组第一名）",
-      "body_en": "Game design: narrative & dialogue branching · gameplay & systems design · game analysis & reviews\nDevelopment & production: Unity · HTML / CSS / JavaScript · AI-assisted development (vibe coding) · game art · music design\nMarketing & analysis: social media copywriting · player feedback collection · game case investment analysis\nTools: Twine (dialogue branching)\nLanguages: Chinese (native) · English (Chinese–English interpreting experience) · Japanese (learning; 1st place, university intermediate level, Japanese speech contest)"
+      "body": "游戏设计：叙事与对话分支设计 · 玩法与系统设计 · 游戏分析与评测\n开发与制作：Unity · HTML / CSS / JavaScript · AI 辅助开发（vibe coding）· 游戏美术 · 音乐设计\n运营与分析：社交媒体文案 · 玩家反馈收集 · 游戏案例投资可能性分析\n工具：Twine（对话分支设计）\n语言：中文（母语）· English（中英口译经验）· 日本語（学习中；曾任曼荷莲日语助教；演讲比赛大学中级组第一名）",
+      "body_en": "Game design: narrative & dialogue branching · gameplay & systems design · game analysis & reviews\nDevelopment & production: Unity · HTML / CSS / JavaScript · AI-assisted development (vibe coding) · game art · music design\nMarketing & analysis: social media copywriting · player feedback collection · game case investment analysis\nTools: Twine (dialogue branching)\nLanguages: Chinese (native) · English (Chinese–English interpreting experience) · Japanese (learning; former Japanese teaching assistant at Mount Holyoke; 1st place, university intermediate level, Japanese speech contest)"
     },
     {
-      "tag": "教育与经历",
-      "tag_en": "Education & experience",
-      "title": "经历",
-      "title_en": "Experience",
-      "body": "教育\nMount Holyoke College · 东亚研究 + 计算机科学 · 预计 2028 年毕业\n\n经历\n2026 秋 · DIS 哥本哈根留学项目（丹麦）\n2026 夏 · 2Pgames 市场部实习：撰写推特（X）帖文、收集玩家评论与反馈、游戏案例投资可能性分析\n2025 · BitSummit：为 2Pgames 担任中英口译（偶尔以日语辅助）\n2025 夏 · 早稻田大学 Summer Session（Waseda Summer Session）\n\n荣誉\n2026.3 · 第 15 届新英格兰日语比赛（日本国驻波士顿总领事馆主办）· 演讲部门 · 大学中级组 第一名\n\n游戏行业活动\n2025 年起每年参加 GDC\n参加过 3 次 Game Jam：\n2026 秋 · 班级 Game Jam —— slacking game，负责游戏美术和部分程序\n2026 春 · Global Game Jam —— 视觉小说，担任总策划\n2024 夏 · China Game Jam —— 2D 平台跳跃游戏，担任总策划，负责音乐设计",
-      "body_en": "Education\nMount Holyoke College · East Asian Studies + Computer Science · Expected graduation 2028\n\nExperience\nFall 2026 · DIS Copenhagen study abroad program (Denmark)\nSummer 2026 · Marketing intern at 2Pgames: wrote X (Twitter) posts, collected player reviews and feedback, analyzed game cases for investment potential\n2025 · BitSummit: Chinese–English interpreter for 2Pgames (occasionally assisting in Japanese)\nSummer 2025 · Waseda Summer Session, Waseda University\n\nHonors\nMarch 2026 · 1st place, Speech division (university intermediate level), 15th New England Japanese Language Contest, hosted by the Consulate-General of Japan in Boston\n\nGame industry activities\nAttended GDC every year since 2025\nTook part in 3 game jams:\nFall 2026 · Class game jam: a slacking game; game art and some programming\nSpring 2026 · Global Game Jam: a visual novel; lead game designer\nSummer 2024 · China Game Jam: a 2D platformer; lead game designer and music design"
+      "tag": "教育与荣誉",
+      "tag_en": "Education & honors",
+      "title": "教育与荣誉",
+      "title_en": "Education & honors",
+      "body": "教育\nMount Holyoke College · 东亚研究 + 计算机科学 · 预计 2028 年毕业\n2026 春 · 荣誉学位论文（Honors Thesis）\n\n荣誉与奖项\n2026 春 · Barbara Yen Sun Prize（荣誉论文奖学金）\n2026.3 · 第 15 届新英格兰日语比赛（日本国驻波士顿总领事馆主办）· 演讲部门 · 大学中级组 第一名",
+      "body_en": "Education\nMount Holyoke College · East Asian Studies + Computer Science · Expected graduation 2028\nSpring 2026 · Honors thesis\n\nHonors & awards\nSpring 2026 · Barbara Yen Sun Prize (honors thesis scholarship)\nMarch 2026 · 1st place, Speech division (university intermediate level), 15th New England Japanese Language Contest, hosted by the Consulate-General of Japan in Boston"
+    },
+    {
+      "tag": "经历",
+      "tag_en": "Experience",
+      "title": "工作、实习与留学",
+      "title_en": "Work, internships & study abroad",
+      "body": "2026 秋 · 哥本哈根 · DIS 海外交流学习\n2026 夏 · 京都 · BitSummit：为 2P Games 担任口译员\n2026 夏 · 福州 · 2P Games 市场部实习：撰写推特（X）帖文、收集玩家评论与反馈、游戏案例投资可能性分析\n2026 春 · 曼荷莲 · 日语助教\n2025 夏 · 京都 · BitSummit：为 2P Games 担任中英口译员（偶尔以日语辅助）\n2025 夏 · 东京 · 早稻田大学暑期课程（Waseda Summer Session）",
+      "body_en": "Fall 2026 · Copenhagen · DIS study abroad program\nSummer 2026 · Kyoto · BitSummit: interpreter for 2P Games\nSummer 2026 · Fuzhou · Marketing intern at 2P Games: wrote X (Twitter) posts, collected player reviews and feedback, analyzed game cases for investment potential\nSpring 2026 · Mount Holyoke · Japanese teaching assistant\nSummer 2025 · Kyoto · BitSummit: Chinese–English interpreter for 2P Games (occasionally assisting in Japanese)\nSummer 2025 · Tokyo · Waseda University Summer Session"
+    },
+    {
+      "tag": "行业活动与社团",
+      "tag_en": "Industry events & community",
+      "title": "行业活动、社团与志愿",
+      "title_en": "Industry events, clubs & volunteering",
+      "body": "行业活动\n2026.10 · 德国汉堡 · Polaris 参会者\n2026.8 · 德国科隆 · Gamescom 参会者\n2026 春 · 旧金山 · GDC 2026 参会者\n2026 春 · 波士顿 · PAX East\n2025 春 · 旧金山 · GDC 2025 参会者\n\nGame Jam（共 3 次）\n2026 秋 · 班级 Game Jam —— slacking game，负责游戏美术和部分程序\n2026 春 · Global Game Jam（曼荷莲）—— 视觉小说，担任总策划\n2024 夏 · China Game Jam —— 2D 平台跳跃游戏，担任总策划，负责音乐设计\n\n社团与志愿\n2026 春 · 曼荷莲中国之夜 志愿者\n2025 秋 · HackHolyoke 志愿者\n2024 秋 · 曼荷莲计算机科学学会（学生社团）\n2024 秋 · Autosave（曼荷莲游戏研究学生社团）",
+      "body_en": "Industry events\nOctober 2026 · Hamburg, Germany · Polaris attendee\nAugust 2026 · Cologne, Germany · Gamescom attendee\nSpring 2026 · San Francisco · GDC 2026 attendee\nSpring 2026 · Boston · PAX East\nSpring 2025 · San Francisco · GDC 2025 attendee\n\nGame jams (3)\nFall 2026 · Class game jam: a slacking game; game art and some programming\nSpring 2026 · Global Game Jam (Mount Holyoke): a visual novel; lead game designer\nSummer 2024 · China Game Jam: a 2D platformer; lead game designer and music design\n\nClubs & volunteering\nSpring 2026 · Volunteer, Mount Holyoke China Night\nFall 2025 · Volunteer, HackHolyoke\nFall 2024 · Mount Holyoke Computer Science Club\nFall 2024 · Autosave (Mount Holyoke game studies student club)"
     },
     {
       "tag": "项目与写作",
