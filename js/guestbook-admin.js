@@ -1,6 +1,7 @@
-// 留言审核页：密码登录 + 按状态分 3 个标签页 + 通过/忽略操作
+// 留言审核页：密码登录（记住这台设备 30 天）+ 按状态分 3 个标签页 + 通过/忽略操作
 (function () {
-  var SESSION_KEY = "alaaa-guestbook-admin-pw";
+  var STORAGE_KEY = "alaaa-guestbook-admin-pw";
+  var REMEMBER_MS = 30 * 24 * 60 * 60 * 1000;
 
   var loginWrap = document.getElementById("gb-admin-login");
   var loginForm = document.getElementById("gb-admin-login-form");
@@ -148,18 +149,48 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password: pw }),
     }).then(function (res) {
-      if (!res.ok) throw new Error("HTTP " + res.status);
+      if (!res.ok) {
+        var err = new Error("HTTP " + res.status);
+        err.status = res.status;
+        throw err;
+      }
       return res.json();
     });
+  }
+
+  // 密码存在这台设备的 localStorage 里，30 天后自动失效，需要重新输入
+  function saveRemembered(pw) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ pw: pw, exp: Date.now() + REMEMBER_MS }));
+    } catch (e) {}
+  }
+
+  function readRemembered() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      var data = JSON.parse(raw);
+      if (!data || !data.pw || !data.exp || data.exp < Date.now()) {
+        localStorage.removeItem(STORAGE_KEY);
+        return null;
+      }
+      return data.pw;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function forgetRemembered() {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch (e) {}
   }
 
   function tryLogin(pw) {
     return loadMessages(pw).then(function (rows) {
       password = pw;
       messages = rows;
-      try {
-        sessionStorage.setItem(SESSION_KEY, pw);
-      } catch (e) {}
+      saveRemembered(pw);
       loginWrap.hidden = true;
       panel.hidden = false;
       renderList();
@@ -171,21 +202,34 @@
     var pw = passwordInput.value;
     if (!pw) return;
     loginFeedback.hidden = true;
-    tryLogin(pw).catch(function () {
-      showLoginError("密码不对，或者服务器还没配置好（缺少环境变量）。");
+    tryLogin(pw).catch(function (err) {
+      if (err && err.status === 401) {
+        showLoginError("密码不对。");
+      } else {
+        showLoginError("服务器出错了（可能是留言数据库连不上，或者环境变量没配好），密码本身不一定有问题。");
+      }
     });
   });
 
-  // 如果这个浏览器标签页之前登录过，直接尝试沿用，不用每次都重新输密码
-  var saved = null;
-  try {
-    saved = sessionStorage.getItem(SESSION_KEY);
-  } catch (e) {}
+  var logoutBtn = document.getElementById("gb-admin-logout");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+      forgetRemembered();
+      window.location.reload();
+    });
+  }
+
+  // 这台设备之前登录过（30 天内），直接沿用，不用再输密码。
+  // 只有服务器明确说"密码不对"（401）才清掉记住的密码；数据库临时连不上这类错误不清，
+  // 否则 Supabase 一出问题就会把已记住的正确密码丢了
+  var saved = readRemembered();
   if (saved) {
-    tryLogin(saved).catch(function () {
-      try {
-        sessionStorage.removeItem(SESSION_KEY);
-      } catch (e) {}
+    tryLogin(saved).catch(function (err) {
+      if (err && err.status === 401) {
+        forgetRemembered();
+      } else {
+        showLoginError("服务器出错了（可能是留言数据库连不上），已记住的密码没有丢，等数据库恢复后刷新即可。");
+      }
     });
   }
 })();
