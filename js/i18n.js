@@ -56,6 +56,8 @@
 
     "page.loading": { zh: "加载中…", en: "Loading…" },
     "page.loadFailed": { zh: "内容暂时加载失败，请刷新页面重试。", en: "Couldn't load this content. Please refresh the page and try again." },
+    "portfolio.prev": { zh: "上一个项目", en: "Previous project" },
+    "portfolio.next": { zh: "下一个项目", en: "Next project" },
     "portfolio.viewDevlog": { zh: "查看开发日志 →", en: "Read the devlog →" },
     "lightbox.close": { zh: "关闭大图", en: "Close image" },
     "lightbox.open": { zh: "查看大图", en: "View larger" },

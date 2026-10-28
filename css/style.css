@@ -357,9 +357,162 @@ main.page-loading {
   white-space: pre-line; /* 保留后台里写的换行和空行分段 */
 }
 
-/* ===== 作品展示：带截图的项目卡片 ===== */
-.placeholder-grid.portfolio-grid {
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+/* ===== 作品展示：带截图的项目卡片 + 轮播 ===== */
+.portfolio-carousel {
+  --step: 72%; /* 两侧卡片离中间卡片多远（相对卡片自身宽度） */
+}
+
+.portfolio-stage {
+  display: grid;
+  justify-items: center;
+  align-items: stretch; /* 所有卡片等高，这样中间那张按比例放大后一定比两侧大 */
+  overflow: hidden;
+  padding: 8px 0 20px;
+  touch-action: pan-y; /* 竖着滑仍然滚动页面，横着滑交给脚本 */
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  outline: none;
+}
+
+.portfolio-stage.is-dragging {
+  cursor: grabbing;
+}
+
+.portfolio-stage:focus-visible {
+  outline: 1px dashed rgba(212, 175, 55, 0.5);
+  outline-offset: 4px;
+}
+
+.portfolio-slide {
+  grid-area: 1 / 1;
+  width: 44%;
+  min-width: 300px;
+  max-width: 440px;
+  --d: 0;
+  --s: 1;
+  transform-origin: top center;
+  transform: translateX(calc(var(--d) * var(--step) + var(--drag, 0px))) scale(var(--s));
+  transition: transform 0.45s cubic-bezier(0.22, 0.8, 0.3, 1), opacity 0.45s ease, filter 0.45s ease;
+  will-change: transform;
+}
+
+.portfolio-stage.is-dragging .portfolio-slide {
+  transition: none;
+}
+
+.portfolio-slide.is-near {
+  --s: 0.82;
+  opacity: 0.55;
+  filter: saturate(0.75);
+  cursor: pointer;
+}
+
+.portfolio-slide.is-far {
+  --s: 0.66;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 两侧卡片里的链接/按钮先不响应，点到的是整张卡片 = 把它切到中间 */
+.portfolio-slide:not(.is-active) .portfolio-card * {
+  pointer-events: none;
+}
+
+.portfolio-slide .portfolio-devlog-link {
+  margin-top: auto; /* 卡片等高后，按钮贴在卡片底部 */
+}
+
+.portfolio-slide .portfolio-card-body p {
+  margin-bottom: 16px;
+}
+
+.portfolio-slide .portfolio-card {
+  margin-bottom: 0;
+  height: 100%;
+  background: var(--bg-panel-solid); /* 卡片会互相叠一部分，不能透明，否则后面的卡片会透出来 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.portfolio-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-panel);
+  color: var(--text-main);
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0 0 3px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.portfolio-arrow:hover:not(:disabled) {
+  border-color: var(--tarot-gold);
+  color: var(--tarot-gold);
+}
+
+.portfolio-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.portfolio-dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.portfolio-dot {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.portfolio-dot::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  opacity: 0.45;
+  transition: opacity 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio-dot:hover::after {
+  opacity: 0.9;
+}
+
+.portfolio-dot.is-current::after {
+  background: var(--tarot-gold);
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.portfolio-carousel.reduce-motion .portfolio-slide {
+  transition: none;
+}
+
+@media (max-width: 720px) {
+  .portfolio-carousel {
+    --step: 84%;
+  }
+  .portfolio-slide {
+    width: 74%;
+    min-width: 0;
+  }
 }
 
 .portfolio-card {
