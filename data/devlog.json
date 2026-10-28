@@ -135,17 +135,22 @@
       "id": "2026-09-22"
     },
     {
-      "project": "GroundTruth",
-      "id": "2026-10-27",
+      "excerpt": "GroundTruth",
+      "body": "今天终于把一个一直拖延的项目开始了！项目灵感来源于Papers, Please类型的模拟打工小游戏，但是感觉此游戏的玩法目前过于简单，将会努力提高水准，做一款自己也会想玩的游戏。\n\n今天创建了自己的itch账号，还上传了这个项目，感觉今天的效率还是挺高的。这是一个关于ai标注员的游戏，玩家需要对数据进行判断来训练AI。\n\n欢迎试玩😋\n\nhttps://luoyidev.itch.io/groundtruth\n\n密码:Alaaa.dev\n\n2026.10.28",
+      "tags_en": [
+        "GroundTruth"
+      ],
+      "project_en": "GroundTruth",
+      "title_en": "New Game!",
       "title": "新游戏！",
+      "images": [
+        "/assets/uploads/1.01.png"
+      ],
       "tags": [
         "数据标注员"
       ],
-      "excerpt": "GroundTruth",
-      "body": "今天终于把一个一直拖延的项目开始了！项目灵感来源于Papers, Please类型的模拟打工小游戏，但是感觉此游戏的玩法目前过于简单，将会努力提高水准，做一款自己也会想玩的游戏。\n\n今天创建了自己的itch账号，还上传了这个项目，感觉今天的效率还是挺高的。这是一个关于ai标注员的游戏，玩家需要对数据进行判断来训练AI。\n\n欢迎试玩😋\n\nhttps://luoyidev.itch.io/groundtruth\n\n密码:Alaaa.dev\n\n2026.10.28",
-      "images": [
-        "/assets/uploads/1.01.png"
-      ]
+      "project": "GroundTruth",
+      "id": "2026-10-27"
     }
   ],
   "intro_en": "A record of how my game projects are built. Posts are listed newest first, and you can filter them by tag."
