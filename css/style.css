@@ -467,6 +467,46 @@ main.page-loading {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 64px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(20, 22, 40, 0.7);
+  color: var(--text-main);
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lightbox-nav:hover {
+  background: rgba(60, 64, 100, 0.85);
+}
+
+.lightbox-prev {
+  left: 12px;
+}
+
+.lightbox-next {
+  right: 12px;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(20, 22, 40, 0.7);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
 .lightbox-close {
   position: absolute;
   top: 16px;
@@ -1915,11 +1955,23 @@ main.page-loading {
 }
 
 .devlog-article-gallery img {
+  cursor: zoom-in;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
   width: 100%;
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid var(--border-soft);
+}
+
+.devlog-article-gallery img:hover {
+  opacity: 0.85;
+  border-color: var(--tarot-gold);
+}
+
+.devlog-article-gallery img:focus-visible {
+  outline: 2px solid var(--tarot-gold);
+  outline-offset: 2px;
 }
 
 .devlog-body {

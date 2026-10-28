@@ -44,8 +44,8 @@
       gallery =
         '<div class="devlog-article-gallery">' +
         post.images
-          .map(function (src) {
-            return '<img src="' + src + '" alt="">';
+          .map(function (src, i) {
+            return '<img src="' + src + '" alt="' + escapeHtml(i18n.f(post, "title")) + " " + (i + 1) + '" tabindex="0" role="button" data-index="' + i + '">';
           })
           .join("") +
         "</div>";
@@ -69,6 +69,26 @@
       '<div class="devlog-body">' +
       renderBody(i18n.f(post, "body")) +
       "</div>";
+
+    // 配图点开看大图；用事件代理，点击或回车/空格都行
+    var galleryEl = articleEl.querySelector(".devlog-article-gallery");
+    if (galleryEl) {
+      var imgs = post.images;
+      var openAt = function (target) {
+        var img = target.closest("img");
+        if (!img) return;
+        lightbox.open(imgs, parseInt(img.getAttribute("data-index"), 10) || 0, img.alt);
+      };
+      galleryEl.addEventListener("click", function (e) {
+        openAt(e.target);
+      });
+      galleryEl.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openAt(e.target);
+        }
+      });
+    }
   }
 
   function renderNotFound() {

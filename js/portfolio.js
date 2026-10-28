@@ -1,4 +1,4 @@
-// 作品展示：读取 data/portfolio.json 渲染项目卡片（封面截图 + 缩略图 + 点击看大图 + 跳转开发日志）
+// 作品展示：读取 data/portfolio.json 渲染项目卡片（封面截图 + 缩略图 + 点击看大图（js/lightbox.js）+ 跳转开发日志）
 (function () {
   // 真实内容换上去之后（无论 fetch 成功还是失败）才把 <main> 显示出来，
   // 避免先闪一下写死的占位内容；4 秒兜底，防止意外卡在隐藏状态
@@ -8,70 +8,18 @@
   }
   setTimeout(reveal, 4000);
 
-  // ===== 点击截图看大图：最简单的灯箱，点任意处或按 Esc 关闭，多张图时 ←/→ 切换 =====
-  var lightbox = null;
-  var lbImages = [];
-  var lbIndex = 0;
-
-  function lbShow() {
-    lightbox.querySelector("img").src = lbImages[lbIndex];
-  }
-
-  function closeLightbox() {
-    if (!lightbox) return;
-    lightbox.remove();
-    lightbox = null;
-    document.removeEventListener("keydown", onLightboxKey);
-  }
-
-  function onLightboxKey(e) {
-    if (e.key === "Escape") closeLightbox();
-    else if (e.key === "ArrowRight" && lbImages.length > 1) {
-      lbIndex = (lbIndex + 1) % lbImages.length;
-      lbShow();
-    } else if (e.key === "ArrowLeft" && lbImages.length > 1) {
-      lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length;
-      lbShow();
-    }
-  }
-
-  function openLightbox(images, index, alt) {
-    closeLightbox();
-    lbImages = images;
-    lbIndex = index;
-    lightbox = document.createElement("div");
-    lightbox.className = "lightbox";
-    lightbox.setAttribute("role", "dialog");
-    lightbox.setAttribute("aria-modal", "true");
-
-    var img = document.createElement("img");
-    img.alt = alt || "";
-    var close = document.createElement("button");
-    close.type = "button";
-    close.className = "lightbox-close";
-    close.setAttribute("aria-label", i18n.t("portfolio.lightboxClose"));
-    close.textContent = "×";
-
-    lightbox.appendChild(img);
-    lightbox.appendChild(close);
-    lightbox.addEventListener("click", closeLightbox);
-    document.body.appendChild(lightbox);
-    document.addEventListener("keydown", onLightboxKey);
-    lbShow();
-  }
-
   function imageButton(className, images, index, alt) {
     var btn = document.createElement("button");
     btn.type = "button";
     btn.className = className;
-    btn.setAttribute("aria-label", i18n.t("portfolio.openImage"));
+    btn.setAttribute("aria-label", i18n.t("lightbox.open"));
     var img = document.createElement("img");
     img.src = images[index];
     img.alt = alt;
     img.loading = "lazy";
     btn.appendChild(img);
     btn.addEventListener("click", function () {
-      openLightbox(images, index, alt);
+      lightbox.open(images, index, alt);
     });
     return btn;
   }
