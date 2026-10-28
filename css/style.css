@@ -386,9 +386,9 @@ main.page-loading {
 
 .portfolio-slide {
   grid-area: 1 / 1;
-  width: 44%;
-  min-width: 300px;
-  max-width: 440px;
+  width: 36%;
+  min-width: 260px;
+  max-width: 340px;
   --d: 0;
   --s: 1;
   transform-origin: top center;
@@ -423,8 +423,33 @@ main.page-loading {
   margin-top: auto; /* 卡片等高后，按钮贴在卡片底部 */
 }
 
+.portfolio-slide .portfolio-card-body {
+  padding: 18px 20px 18px;
+}
+
+.portfolio-slide .portfolio-card-body h2 {
+  font-size: 1.15rem;
+}
+
 .portfolio-slide .portfolio-card-body p {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  /* 简介太长时卡片不再无限变高，在卡片里面滚动看完 */
+  max-height: 8.5em;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  overscroll-behavior: contain;
+}
+
+.portfolio-slide .portfolio-cover {
+  aspect-ratio: 16 / 9;
+}
+
+.portfolio-slide .portfolio-thumbs button {
+  width: 48px;
+  height: 32px;
 }
 
 .portfolio-slide .portfolio-card {
@@ -510,7 +535,7 @@ main.page-loading {
     --step: 84%;
   }
   .portfolio-slide {
-    width: 74%;
+    width: 64%;
     min-width: 0;
   }
 }
