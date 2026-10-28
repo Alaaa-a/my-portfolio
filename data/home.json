@@ -40,6 +40,12 @@
       "label_en": "GitHub",
       "value": "Alaaa-a",
       "href": "https://github.com/Alaaa-a"
+    },
+    {
+      "label": "itch.io",
+      "label_en": "itch.io",
+      "value": "luoyidev",
+      "href": "https://luoyidev.itch.io"
     }
   ]
 }
