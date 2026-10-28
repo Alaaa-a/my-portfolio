@@ -44,7 +44,8 @@
       "title_en": "GroundTruth",
       "images": [
         "/assets/uploads/cover.png"
-      ]
+      ],
+      "devlog_tag": "数据标注员"
     }
   ],
   "intro_en": "Game projects and prototypes I've worked on. Click a screenshot to enlarge it, or jump to the matching devlog."
