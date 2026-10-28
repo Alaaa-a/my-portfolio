@@ -35,6 +35,16 @@
         "/assets/uploads/截屏2026-09-19-01.22.06.png"
       ],
       "devlog_tag": "An Eye for Value"
+    },
+    {
+      "tag": "模拟",
+      "title": "数据标注员",
+      "description": "你是一名外包数据标注员。这份工作来之不易。\n\n每天，你会收到一条条待标注的数据：外卖评价、监控截图、社交动态、情绪曲线。你的判断会被拿来训练模型，模型会被拿来做决定。\n\n规则：和大多数人保持一致。 共识分数低于 70%，就要扣工资。",
+      "tag_en": "Simulation",
+      "title_en": "GroundTruth",
+      "images": [
+        "/assets/uploads/cover.png"
+      ]
     }
   ],
   "intro_en": "Game projects and prototypes I've worked on. Click a screenshot to enlarge it, or jump to the matching devlog."
