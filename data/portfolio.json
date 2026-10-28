@@ -19,7 +19,10 @@
       "description": "《Cipher of the Blood Moon》是一款以密码学为核心玩法的桌面解谜游戏。你将通过凯撒密码、维吉尼亚密码和摩斯电码，一步步破解导师留下的线索，揭开血月背后的真相，并最终决定：是继续沉默地活下去，还是把这个秘密告诉所有人。",
       "tag_en": "Board game | Code breaking",
       "title_en": "Cipher of the Blood Moon",
-      "description_en": "Cipher of the Blood Moon is a tabletop puzzle game built around cryptography. Using the Caesar cipher, the Vigenère cipher, and Morse code, you'll decode the clues your mentor left behind step by step, uncover the truth behind the blood moon, and finally decide: keep living in silence, or tell everyone the secret."
+      "description_en": "Cipher of the Blood Moon is a tabletop puzzle game built around cryptography. Using the Caesar cipher, the Vigenère cipher, and Morse code, you'll decode the clues your mentor left behind step by step, uncover the truth behind the blood moon, and finally decide: keep living in silence, or tell everyone the secret.",
+      "images": [
+        "/assets/uploads/cover_no_eye.png"
+      ]
     },
     {
       "tag": "当铺",
