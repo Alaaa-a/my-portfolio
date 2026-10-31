@@ -46,7 +46,7 @@
       "tag_en": "Simulation",
       "title_en": "GroundTruth",
       "images": [
-        "/assets/uploads/cover.png"
+        "/assets/uploads/groundtruthcover.png"
       ],
       "devlog_tag": "数据标注员"
     }
