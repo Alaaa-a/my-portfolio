@@ -156,21 +156,8 @@ collections:
               - { label: "[EN] 标签", name: "tag_en", widget: "string", required: false }
               - { label: "[EN] 标题", name: "title_en", widget: "string", required: false }
               - { label: "[EN] 摘要", name: "excerpt_en", widget: "text", required: false }
-              - {
-                  label: "正文（支持空行分段、**加粗**、*斜体*）",
-                  name: "body",
-                  widget: "markdown",
-                  buttons: ["bold", "italic"],
-                  editor_components: [],
-                }
-              - {
-                  label: "[EN] 正文（英文，支持空行分段、**加粗**、*斜体*）",
-                  name: "body_en",
-                  widget: "markdown",
-                  required: false,
-                  buttons: ["bold", "italic"],
-                  editor_components: [],
-                }
+              - { label: "正文（支持空行分段、**加粗**、*斜体*）", name: "body", widget: "text" }
+              - { label: "[EN] 正文（英文，支持空行分段、**加粗**、*斜体*）", name: "body_en", widget: "text", required: false }
 
   - name: "devlog"
     label: "开发日志"
@@ -211,18 +198,5 @@ collections:
                 name: "images"
                 widget: "list"
                 field: { label: "图片", name: "image", widget: "image" }
-              - {
-                  label: "正文（支持空行分段、**加粗**、*斜体*）",
-                  name: "body",
-                  widget: "markdown",
-                  buttons: ["bold", "italic"],
-                  editor_components: [],
-                }
-              - {
-                  label: "[EN] 正文（英文，支持空行分段、**加粗**、*斜体*）",
-                  name: "body_en",
-                  widget: "markdown",
-                  required: false,
-                  buttons: ["bold", "italic"],
-                  editor_components: [],
-                }
+              - { label: "正文（支持空行分段、**加粗**、*斜体*）", name: "body", widget: "text" }
+              - { label: "[EN] 正文（英文，支持空行分段、**加粗**、*斜体*）", name: "body_en", widget: "text", required: false }
