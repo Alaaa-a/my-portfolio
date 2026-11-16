@@ -9,6 +9,14 @@
   }
 
   // 极简 Markdown 子集：空行分段、**加粗**、*斜体*，先转义再替换，避免注入
+  // 日期优先用后台填的 date；没填的话从日志编号（2026-09-19-xxx）里取
+  function postDate(post) {
+    if (post.date) return String(post.date).slice(0, 10);
+    var m = /^(\d{4})-(\d{1,2})-(\d{1,2})/.exec(post.id || "");
+    if (!m) return "";
+    return m[1] + "-" + ("0" + m[2]).slice(-2) + "-" + ("0" + m[3]).slice(-2);
+  }
+
   function renderBody(md) {
     var paragraphs = (md || "").split(/\n\s*\n/);
     return paragraphs
@@ -54,7 +62,7 @@
     articleEl.innerHTML =
       '<div class="devlog-article-header">' +
       '<div class="devlog-meta"><span class="devlog-date">' +
-      post.date +
+      postDate(post) +
       "</span><span>" +
       (i18n.f(post, "project") || "") +
       "</span></div>" +

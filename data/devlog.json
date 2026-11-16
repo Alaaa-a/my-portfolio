@@ -37,7 +37,8 @@
       ],
       "tags": [],
       "project": "FF-Bartender",
-      "id": "2026-09-13"
+      "id": "2026-09-13",
+      "date": "2026-09-13"
     },
     {
       "excerpt": "一些整理图书馆+看小黑盒过往游戏记录出现的迷思",
@@ -54,7 +55,8 @@
         "An Eye for Value"
       ],
       "project": "An Eye for Value",
-      "id": "2026-09-14"
+      "id": "2026-09-14",
+      "date": "2026-09-14"
     },
     {
       "excerpt": "因为两个都有更新所以就写一起了。",
@@ -71,7 +73,8 @@
         "An Eye for Value"
       ],
       "project": "蓝胡子酒馆&奇幻主题当铺",
-      "id": "2026-09-15"
+      "id": "2026-09-15",
+      "date": "2026-09-15"
     },
     {
       "excerpt": "游戏进度推进",
@@ -91,7 +94,8 @@
         "An Eye for Value"
       ],
       "project": "奇幻主题当铺",
-      "id": "2026-9-19"
+      "id": "2026-9-19",
+      "date": "2026-09-19"
     },
     {
       "excerpt": "- 添加了会购买物品的顾客\n- 添加了名声\n- 添加了仓库",
@@ -111,7 +115,8 @@
         "An Eye for Value"
       ],
       "project": "当铺",
-      "id": "2026-09-19-Prologue"
+      "id": "2026-09-19-Prologue",
+      "date": "2026-09-19"
     },
     {
       "excerpt": "迈进了一大步！！",
@@ -132,7 +137,8 @@
         "An Eye for Value"
       ],
       "project": "当铺",
-      "id": "2026-09-22"
+      "id": "2026-09-22",
+      "date": "2026-09-22"
     },
     {
       "excerpt": "GroundTruth",
@@ -150,7 +156,8 @@
         "数据标注员"
       ],
       "project": "GroundTruth",
-      "id": "2026-10-27"
+      "id": "2026-10-27",
+      "date": "2026-10-27"
     },
     {
       "excerpt": "版本美术画风更新！",
@@ -170,7 +177,8 @@
         "数据标注员"
       ],
       "project": "GroundTruth",
-      "id": "2026-10-30"
+      "id": "2026-10-30",
+      "date": "2026-10-30"
     },
     {
       "excerpt": "这两天把 GroundTruth 的全部画面重做成统一的公司内部系统风格,并新增了夜间主题。",
@@ -190,7 +198,8 @@
         "数据标注员"
       ],
       "project": "数据标注员",
-      "id": "2026-11-10"
+      "id": "2026-11-10",
+      "date": "2026-11-10"
     }
   ],
   "intro_en": "A record of how my game projects are built. Posts are listed newest first, and you can filter them by tag."

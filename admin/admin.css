@@ -1,0 +1,583 @@
+/* 后台（Decap CMS）的外观：跟网站一样的深夜星空 + 金色点缀。
+   Decap 的样式是运行时生成的，类名里带着组件名（比如 css-1x2y3z-AppHeader），
+   所以这里用 [class*="组件名"] 去选，不依赖那串会变的哈希。
+   大部分地方要盖掉 Decap 自带的浅色样式，所以带了 !important。 */
+
+:root {
+  --a-bg: #05060f;
+  --a-panel: #0e1126;
+  --a-panel-2: #151933;
+  --a-field: #0a0c1d;
+  --a-line: rgba(255, 255, 255, 0.09);
+  --a-line-strong: rgba(255, 255, 255, 0.18);
+  --a-text: #e8e9f5;
+  --a-dim: #9a9db8;
+  --a-gold: #d4af37;
+  --a-gold-soft: rgba(212, 175, 55, 0.14);
+  --a-blue: #8ab4ff;
+  --a-danger: #ff8a8a;
+  --a-ok: #7fd6a0;
+  --a-serif: "Cormorant", "Noto Serif SC", "Songti SC", serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background:
+    radial-gradient(1px 1px at 12% 18%, rgba(255, 255, 255, 0.55) 50%, transparent 51%),
+    radial-gradient(1px 1px at 78% 12%, rgba(255, 255, 255, 0.45) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 44% 62%, rgba(255, 255, 255, 0.4) 50%, transparent 51%),
+    radial-gradient(1px 1px at 90% 70%, rgba(255, 255, 255, 0.5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 25% 88%, rgba(255, 255, 255, 0.4) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 62% 35%, rgba(212, 175, 55, 0.5) 50%, transparent 51%),
+    radial-gradient(ellipse at 50% -10%, #11163a 0%, var(--a-bg) 60%) !important;
+  background-attachment: fixed !important;
+  color: var(--a-text) !important;
+  font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* 整个 Decap 根节点和主区域都不要自己的底色，让星空透出来 */
+#nc-root,
+#nc-root > div,
+[class*="AppMainContainer"],
+[class*="CollectionContainer"],
+[class*="CollectionMain"],
+[class*="EditorContainer"],
+[class*="Editor-"],
+[class*="MediaLibrary"] {
+  background: transparent !important;
+}
+
+#nc-root *::selection {
+  background: rgba(212, 175, 55, 0.35);
+}
+
+/* ===== 顶栏 ===== */
+[class*="AppHeader-css"],
+[class*="ToolbarContainer"] {
+  background: rgba(8, 10, 24, 0.92) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--a-line) !important;
+  box-shadow: none !important;
+}
+
+[class*="AppHeaderButton"],
+[class*="AppHeaderLink"],
+[class*="AppHeaderTestRepoIndicator"] {
+  color: var(--a-dim) !important;
+  background: transparent !important;
+  border-radius: 10px !important;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+[class*="AppHeaderButton"]:hover,
+[class*="AppHeaderLink"]:hover {
+  color: var(--a-text) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.header-link-active {
+  color: var(--a-gold) !important;
+  background: var(--a-gold-soft) !important;
+}
+
+[class*="AppHeaderButton"] svg,
+[class*="AppHeaderButton"] path {
+  color: inherit !important;
+  fill: currentColor !important;
+}
+
+[class*="AvatarDropdownButton"] {
+  background: transparent !important;
+}
+
+[class*="AvatarPlaceholderIcon"] {
+  color: var(--a-dim) !important;
+}
+
+/* 下拉菜单（头像、发布状态） */
+[class*="DropdownList"] {
+  background: var(--a-panel-2) !important;
+  border: 1px solid var(--a-line-strong) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55) !important;
+  overflow: hidden;
+}
+
+[class*="DropdownItem"] {
+  color: var(--a-text) !important;
+}
+
+[class*="DropdownItem"]:hover,
+[class*="DropdownItem"]:focus {
+  background: var(--a-gold-soft) !important;
+  color: var(--a-gold) !important;
+}
+
+/* ===== 左侧栏、列表卡片 ===== */
+[class*="SidebarContainer"],
+[class*="CollectionTopContainer"],
+[class*="ListCard-"],
+[class*="GridCard"],
+[class*="CardsGrid"] > div {
+  background: rgba(14, 17, 38, 0.78) !important;
+  border: 1px solid var(--a-line) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35) !important;
+}
+
+[class*="SidebarHeading"],
+[class*="CollectionTopHeading"],
+[class*="cardTopHeading"] {
+  font-family: var(--a-serif) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em;
+  color: var(--a-text) !important;
+}
+
+[class*="SidebarNavLink"] {
+  color: var(--a-dim) !important;
+  border-left: 2px solid transparent !important;
+  border-radius: 0 8px 8px 0 !important;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+[class*="SidebarNavLink"]:hover {
+  color: var(--a-text) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+[class*="SidebarNavLink"].sidebar-active {
+  color: var(--a-gold) !important;
+  background: var(--a-gold-soft) !important;
+  border-left-color: var(--a-gold) !important;
+}
+
+[class*="SidebarNavLink"] svg,
+[class*="SidebarNavLink"] path {
+  fill: currentColor !important;
+  color: inherit !important;
+}
+
+[class*="ListCardTitle"],
+[class*="ListCardLink"] {
+  color: var(--a-text) !important;
+}
+
+[class*="ListCard-"]:hover {
+  border-color: rgba(212, 175, 55, 0.45) !important;
+}
+
+/* 搜索框 */
+[class*="SearchContainer"] input,
+[class*="SearchInput"] {
+  background: var(--a-field) !important;
+  color: var(--a-text) !important;
+  border: 1px solid var(--a-line) !important;
+  border-radius: 10px !important;
+}
+
+[class*="SearchContainer"] svg,
+[class*="SearchContainer"] path {
+  fill: var(--a-dim) !important;
+}
+
+/* ===== 编辑页 ===== */
+[class*="ToolbarSectionBackLink"] {
+  border-right: 1px solid var(--a-line) !important;
+  background: transparent !important;
+  color: var(--a-text) !important;
+}
+
+[class*="BackCollection"] {
+  color: var(--a-dim) !important;
+}
+
+[class*="BackStatus"] {
+  color: var(--a-ok) !important;
+  font-weight: 600;
+}
+
+[class*="ToolbarButton"],
+[class*="RefreshPreviewButton"],
+[class*="PreviewButtonContainer"] a,
+[class*="PreviewButtonContainer"] button {
+  color: var(--a-blue) !important;
+  background: transparent !important;
+}
+
+/* 发布状态、保存、发布等按钮 */
+[class*="DropdownButton"],
+[class*="ToolbarDropdown"] button,
+[class*="PublishButton"],
+[class*="StatusButton"] {
+  background: var(--a-gold-soft) !important;
+  color: var(--a-gold) !important;
+  border: 1px solid rgba(212, 175, 55, 0.4) !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+}
+
+[class*="DropdownButton"]:hover,
+[class*="PublishButton"]:hover {
+  background: rgba(212, 175, 55, 0.24) !important;
+}
+
+[class*="StyledSplitPane"] {
+  background: transparent !important;
+}
+
+[class*="ControlPaneContainer"] {
+  padding: 28px 36px 120px !important;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* 预览栏：这个站点没写预览模板，里面只会显示一堆原始字段，直接隐藏更清爽 */
+[class*="StyledSplitPane"] .Pane2,
+[class*="StyledSplitPane"] .Resizer {
+  display: none !important;
+}
+
+[class*="StyledSplitPane"] .Pane1 {
+  width: 100% !important;
+}
+
+/* 字段：标签 + 输入框 */
+[class*="ControlContainer"] {
+  margin-top: 22px !important;
+}
+
+[class*="FieldLabel"] {
+  background: transparent !important;
+  color: var(--a-dim) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em;
+  padding: 0 !important;
+  margin-bottom: 8px !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+[class*="ControlContainer"]:focus-within > [class*="ControlTopbar"] [class*="FieldLabel"],
+[class*="ControlContainer"]:focus-within > [class*="FieldLabel"] {
+  color: var(--a-gold) !important;
+}
+
+[class*="FieldLabel"]::before,
+[class*="FieldLabel"]::after {
+  display: none !important;
+}
+
+[class*="ControlTopbar"] {
+  background: transparent !important;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input:not([type]),
+textarea,
+select {
+  background: var(--a-field) !important;
+  color: var(--a-text) !important;
+  border: 1px solid var(--a-line-strong) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input:not([type]):focus,
+textarea:focus,
+select:focus {
+  border-color: var(--a-gold) !important;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18) !important;
+  outline: none !important;
+}
+
+textarea {
+  line-height: 1.7 !important;
+}
+
+::placeholder {
+  color: #5d6080 !important;
+}
+
+/* 校验错误提示 */
+[class*="ControlErrorsList"] {
+  background: rgba(255, 138, 138, 0.12) !important;
+  color: var(--a-danger) !important;
+  border-radius: 8px !important;
+}
+
+/* 列表 / 对象字段 */
+[class*="ObjectWidgetTopBar"],
+[class*="ListItemTopBar"],
+[class*="TopBarContainer"] {
+  background: var(--a-panel-2) !important;
+  border: 1px solid var(--a-line) !important;
+  border-radius: 12px !important;
+  color: var(--a-text) !important;
+}
+
+[class*="ObjectWidgetTopBar"] *,
+[class*="ListItemTopBar"] * {
+  color: inherit;
+}
+
+[class*="StyledListItem"],
+[class*="ListItem-"] {
+  background: rgba(10, 12, 29, 0.55) !important;
+  border: 1px solid var(--a-line) !important;
+  border-radius: 12px !important;
+  margin-top: 10px !important;
+}
+
+/* 列表/对象字段里包着内容的那一层，Decap 默认是白底 */
+[class*="ControlContainer"] > div,
+[class*="ListItem-"] > div,
+[class*="DateTimeControl"] {
+  background: transparent !important;
+}
+
+/* 这些包裹层的边框默认是接近白色的，换成淡淡的细线 */
+[class*="ControlContainer"] div,
+[class*="ListItem-"] div,
+[class*="TopBarContainer"] {
+  border-color: var(--a-line) !important;
+}
+
+[class*="DateTimeControl"] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+[class*="DateTimeControl"] input {
+  min-width: 170px;
+}
+
+[class*="DateTimeControl"] button {
+  background: var(--a-panel-2) !important;
+  color: var(--a-dim) !important;
+  border: 1px solid var(--a-line) !important;
+  border-radius: 999px !important;
+  padding: 0 14px !important;
+}
+
+[class*="NestedObjectLabel"],
+[class*="ObjectWidget"] > div {
+  background: transparent !important;
+}
+
+[class*="ObjectLabel"] {
+  color: var(--a-dim) !important;
+}
+
+button[class*="AddButton"],
+button[class*="ExpandButton"],
+button[class*="TopBarButton"] {
+  background: var(--a-gold-soft) !important;
+  color: var(--a-gold) !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+}
+
+button[class*="AddButton"]:hover,
+button[class*="ExpandButton"]:hover {
+  background: rgba(212, 175, 55, 0.26) !important;
+}
+
+[class*="DragHandle"] {
+  background: transparent !important;
+  color: var(--a-dim) !important;
+}
+
+/* 开关、图片选择等其他控件 */
+[class*="ImageUpload"],
+[class*="FileWidget"],
+[class*="ImageWidget"] {
+  background: transparent !important;
+}
+
+[class*="ImageWidget"] img,
+[class*="ImageWrapper"] img {
+  border-radius: 10px;
+}
+
+/* 通用按钮（Decap 的 button 组件） */
+button[class*="button-"]:not([class*="AppHeader"]):not([class*="ToolbarButton"]) {
+  border-radius: 999px !important;
+}
+
+[class*="ViewControlsButton"] {
+  background: transparent !important;
+  color: var(--a-dim) !important;
+}
+
+[class*="ViewControlsButton"] svg,
+[class*="ViewControlsButton"] path {
+  fill: currentColor !important;
+}
+
+[class*="ButtonRound"] {
+  background: var(--a-panel-2) !important;
+  color: var(--a-dim) !important;
+  border: 1px solid var(--a-line) !important;
+  box-shadow: none !important;
+}
+
+/* ===== 弹窗、通知、素材库 ===== */
+[class*="ModalContainer"],
+[class*="ModalContent"],
+[class*="MediaLibrary"] [class*="Modal"],
+[class*="ConfirmModal"] {
+  background: var(--a-panel) !important;
+  color: var(--a-text) !important;
+  border: 1px solid var(--a-line-strong) !important;
+  border-radius: 14px !important;
+}
+
+[class*="ModalBackground"],
+.ReactModal__Overlay {
+  background: rgba(2, 3, 10, 0.72) !important;
+}
+
+.ReactModal__Content {
+  background: var(--a-panel) !important;
+  color: var(--a-text) !important;
+  border-radius: 14px !important;
+  border: 1px solid var(--a-line-strong) !important;
+}
+
+[class*="CardImage"],
+[class*="Card-"],
+[class*="MediaLibraryCard"] {
+  background: var(--a-panel-2) !important;
+  border-radius: 12px !important;
+  color: var(--a-text) !important;
+}
+
+[class*="MediaLibraryTopRow"] *,
+[class*="LibraryTop"] * {
+  color: var(--a-text);
+}
+
+.notif__container [class*="notif"],
+[class*="Toast"] {
+  background: var(--a-panel-2) !important;
+  color: var(--a-text) !important;
+  border: 1px solid var(--a-line-strong) !important;
+  border-radius: 12px !important;
+}
+
+/* ===== 登录页 ===== */
+[class*="AuthenticationPage"],
+section[class*="AuthenticationPage"] {
+  background: transparent !important;
+}
+
+[class*="AuthenticationPage"] h1,
+[class*="AuthenticationPage"] h2 {
+  color: var(--a-text) !important;
+  font-family: var(--a-serif) !important;
+}
+
+[class*="AuthenticationPage"] button,
+[class*="LoginButton"] {
+  background: var(--a-gold-soft) !important;
+  color: var(--a-gold) !important;
+  border: 1px solid rgba(212, 175, 55, 0.5) !important;
+  border-radius: 999px !important;
+  padding: 0 28px !important;
+  height: 42px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em;
+}
+
+[class*="AuthenticationPage"] button:hover {
+  background: rgba(212, 175, 55, 0.28) !important;
+}
+
+/* Decap 登录页的 logo 是写死的 SVG（而且是黑字，在深色底上看不见），
+   换成 Luoyi 的猫眼图标，并在下面加一行标题 */
+[class*="PageLogoIcon"] {
+  display: none !important;
+}
+
+[class*="AuthenticationPage"]::before {
+  content: "";
+  width: 96px;
+  height: 96px;
+  background: url("../assets/brand/icon-512.png") center / contain no-repeat;
+  border-radius: 22px;
+  margin-bottom: 14px;
+}
+
+[class*="AuthenticationPage"]::after {
+  content: "Luoyi · 内容管理";
+  order: 2;
+  margin: 6px 0 22px;
+  font-family: var(--a-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  color: var(--a-text);
+}
+
+[class*="AuthenticationPage"] {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+[class*="AuthenticationPage"] button {
+  order: 3;
+}
+
+/* ===== 细节 ===== */
+a {
+  color: var(--a-blue);
+}
+
+h1, h2, h3 {
+  color: var(--a-text);
+}
+
+hr {
+  border-color: var(--a-line) !important;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+@media (max-width: 720px) {
+  [class*="ControlPaneContainer"] {
+    padding: 20px 16px 120px !important;
+  }
+}

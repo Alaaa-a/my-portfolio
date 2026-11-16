@@ -8,6 +8,14 @@
   }
   setTimeout(reveal, 4000);
 
+  // 日期优先用后台填的 date；没填的话从日志编号（2026-09-19-xxx）里取
+  function postDate(post) {
+    if (post.date) return String(post.date).slice(0, 10);
+    var m = /^(\d{4})-(\d{1,2})-(\d{1,2})/.exec(post.id || "");
+    if (!m) return "";
+    return m[1] + "-" + ("0" + m[2]).slice(-2) + "-" + ("0" + m[3]).slice(-2);
+  }
+
   var BOOK_ICON =
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5c3-1.5 6-1.5 8 0c2-1.5 5-1.5 8 0v13c-3-1.5-6-1.5-8 0c-2-1.5-5-1.5-8 0z"/><line x1="12" y1="5" x2="12" y2="18"/></svg>';
 
@@ -41,7 +49,7 @@
       "</div>" +
       '<div class="devlog-card-body">' +
       '<div class="devlog-meta"><span class="devlog-date">' +
-      post.date +
+      postDate(post) +
       "</span><span>" +
       (i18n.f(post, "project") || "") +
       "</span></div>" +
@@ -124,7 +132,9 @@
         });
       });
       posts = (data.posts || []).slice().sort(function (a, b) {
-        return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
+        var da = postDate(a);
+        var db = postDate(b);
+        return da < db ? 1 : da > db ? -1 : 0;
       });
       renderTags();
       renderList();
