@@ -29,6 +29,7 @@
       "body": "我其实一直很想做一款和赛博朋克酒保行动类似的游戏。也许是因为酒精对我来说总是叛逆的代表，而调酒的概念给相比于单纯的酒精又多了几分艺术气息，调酒的游戏对我来说总是有意思的。\n\n最终幻想更是不用说，我总是想做一款和我最喜欢的游戏有些关系的的产出，但是总是担心自己的笔力不足，或解读的过于浅薄，反倒糟蹋了自己最喜欢的一个领域。\n\n在丹麦，也许是因为身边都是热爱游戏，且想要创作游戏的人们。在这样的氛围下，我也希望我可以将我的想象化为现实，因此我开始尝试制作这个项目。目前已经推进到了可以调一些简单的酒，且对于不同的酒对方会有不同的对话，我感觉这样就已经完成了最基础的循环。下一步就是增加更多的人物，更多的酒和更多的对话。我打算先做一个童话主题的作为练手，然后再来开始重新启动这个项目。\n\ntifa酱真的是萌的不行啊\n\n2026.9.14",
       "body_en": "I've always wanted to make a game similar to VA-11 HALL-A. Maybe it's because alcohol has always stood for rebellion to me, and mixing drinks adds a bit more artistry compared to simply drinking, so bartending games have always been fun for me.\n\nAs for Final Fantasy, it goes without saying. I've always wanted to make something connected to my favorite game, but I've always worried that my writing isn't strong enough, or that my reading of it is too shallow, and that I'd end up spoiling my favorite field instead.\n\nIn Denmark, perhaps because I'm surrounded by people who love games and want to create them, I've come to hope I can turn my imagination into reality, so I started working on this project. It has now progressed to the point where I can mix some simple drinks, and the other person has different dialogue for different drinks. I feel like that completes the most basic loop. The next step is adding more characters, more drinks, and more dialogue. I plan to first make a fairy-tale-themed one as practice, and then come back and restart this project.\n\nTifa-chan is just unbearably cute.\n\n2026.9.14",
       "excerpt_en": "Born out of a single conversation.",
+      "date": "2026-09-13",
       "project_en": "FF-Bartender",
       "title_en": "Final Fantasy Bartender Action",
       "title": "最终幻想酒保行动",
@@ -37,14 +38,14 @@
       ],
       "tags": [],
       "project": "FF-Bartender",
-      "id": "2026-09-13",
-      "date": "2026-09-13"
+      "id": "2026-09-13"
     },
     {
       "excerpt": "一些整理图书馆+看小黑盒过往游戏记录出现的迷思",
       "body": "作为一个想要赚钱的人+喜欢玩模拟经营小游戏的人+被设计游戏故事剧情折磨得头秃的人，突然发现了一个自己喜欢的游戏类型且不需要很多剧情的游戏类别，因此发奋图强打算开始制作。现在其实还只停留在大纲阶段，将会在明天设计一下游戏页面和游戏玩法，感觉应该不会非常非常难。\n\n2026.9.14",
       "body_en": "I'm someone who wants to make money, who loves playing small management sims, and who's been going bald from agonizing over game stories and plots. Suddenly I found a game genre I like that doesn't need much story, so I've decided to throw myself into making one. Right now it's still only at the outline stage. Tomorrow I'll design the game screens and gameplay, and I don't think it should be very, very hard.\n\n2026.9.14",
       "excerpt_en": "Some musings that came from tidying up my library and browsing my past game records on Xiaoheihe.",
+      "date": "2026-09-14",
       "tags_en": [
         "An Eye for Value"
       ],
@@ -55,14 +56,14 @@
         "An Eye for Value"
       ],
       "project": "An Eye for Value",
-      "id": "2026-09-14",
-      "date": "2026-09-14"
+      "id": "2026-09-14"
     },
     {
       "excerpt": "因为两个都有更新所以就写一起了。",
       "body": "\n\n蓝胡子酒馆：\n\n设定里是一家你进来以后就出不去的酒馆，要么留下来当酒保，要么就会被杀掉，成为下一杯酒的素材。\n\n玩家的目标是通过和顾客对话，在合适的时候上合适的酒，挖出顾客的故事，当我们得知了顾客所有的故事后，（蓝胡子就会出现or我们就需要将顾客杀掉），并做一杯以这为客人的名字命名的酒，此处参考的是蓝胡子过去的七位被杀死的妻子们。\n\n成功通关7天后，（我们会成为新的蓝胡子/我们可以杀死蓝胡子/某种结尾）\n\n如果没有成功通关，那么顾客会打听我们的秘密。如果顾客得知了我们的秘密，我们就会被顾客杀掉，取而代之，她将会成为下一个酒保。\n\n\n\n奇幻主题当铺：\n\n故事背景是在一个有勇者，有巨龙，有巫师，有精灵，有史莱姆的奇幻世界。玩家作为一个商人，需要经营一家当铺，并努力让这个当铺经营得越来越好。\n\n玩法：\n\n我们一共会遇到两种顾客：来卖东西的，来买东西的。\n\n对于来卖东西的顾客，我们需要辨别出这个物品的市场价格大概是多少，并且我们需要努力以低于市场价格的价位买入。与此同时，作为奇幻世界的当铺，我们不仅需要辨别物品的真假，我们还需要辨别物品上是否附有诅咒（否则店铺将会因为诅咒经营不顺，或者店主会变得倒霉TT）\n\n对于来买东西的顾客，我们需要看出这个顾客的财力如何，比如穿着破破烂烂的冒险者，那肯定没什么钱，如果我们提出过高的价格，那应该冒险者就会转身就走。而对于穿着优雅，看起来对物价没什么概念的精灵族，就可以狠狠敲诈一笔。但是如果一直卖给顾客被诅咒的物品，或者盗版假冒伪劣的物品，店铺名声会下降，每天来店里的人也会变少。\n\n影响玩家的几个数值分别是：宝物鉴别能力，识人能力，价格估算能力，口才。\n\n当玩家赚钱后，可以选择花钱提升这几个能力（培训课），也可以选择升级自己的房子，这样可以提升名气，增加客户数量。\n\n有一些顾客是回头客，比如说一开始呆呆的破破烂烂的勇者，ta一开始可能只会带破破的东西给我们店铺，但是后面成为厉害的勇者后，就会给我们带一些很高级的道具。我们可以通过和勇者聊天得知ta的近况和冒险经历。\n\n还有比如说可以化身为小猫的巫师，史莱姆之类的，目前计划是先写3-5个长线NPC，其他的都只是看运气出现的npc\n\n2026.9.15",
       "body_en": "\n\nBluebeard's Tavern:\n\nThe setting is a tavern you can't leave once you've walked in: either you stay on as the bartender, or you get killed and become material for the next drink.\n\nThe player's goal is to talk with customers, serve the right drink at the right time, and dig out each customer's story. Once we know all of a customer's story, (Bluebeard appears or we have to kill the customer), and we make a drink named after that guest. This is inspired by Bluebeard's seven murdered wives.\n\nAfter clearing 7 days successfully, (we become the new Bluebeard / we can kill Bluebeard / some kind of ending).\n\nIf we don't clear it, customers will pry into our secrets. If a customer finds out our secret, they'll kill us and take our place, and she will become the next bartender.\n\n\n\nFantasy-Themed Pawnshop:\n\nThe story is set in a fantasy world with heroes, dragons, wizards, elves, and slimes. The player is a merchant who runs a pawnshop and works to make it more and more successful.\n\nGameplay:\n\nWe meet two kinds of customers: those who come to sell, and those who come to buy.\n\nFor customers who come to sell, we need to work out roughly what the item's market price is, and try to buy it for less than that. At the same time, as a pawnshop in a fantasy world, we need to tell not only whether an item is genuine, but also whether it's cursed (otherwise the shop will do badly because of the curse, or the owner will become unlucky TT).\n\nFor customers who come to buy, we need to size up how wealthy they are. For example, a ragged adventurer surely has no money, and if we quote too high a price they'll simply turn around and leave. But an elegant elf who seems to have no concept of prices can be fleeced for a good sum. However, if we keep selling customers cursed items or knockoff fakes, the shop's reputation drops and fewer people come in each day.\n\nThe stats that affect the player are: item appraisal, reading people, price estimation, and eloquence.\n\nOnce the player earns money, they can spend it to improve these skills (training courses), or upgrade their house to raise their fame and increase the number of customers.\n\nSome customers are regulars. For example, a dopey, ragged hero at the start may only bring shabby things to our shop at first, but after becoming a formidable hero will bring us high-grade items. By chatting with the hero we can learn about their recent life and adventures.\n\nThere are also things like a wizard who can turn into a kitten, slimes, and so on. The current plan is to write 3–5 long-term NPCs first, while all the others just show up by luck.\n\n2026.9.15",
       "excerpt_en": "Both got updates, so I'm writing them up together.",
+      "date": "2026-09-15",
       "tags_en": [
         "An Eye for Value"
       ],
@@ -73,14 +74,14 @@
         "An Eye for Value"
       ],
       "project": "蓝胡子酒馆&奇幻主题当铺",
-      "id": "2026-09-15",
-      "date": "2026-09-15"
+      "id": "2026-09-15"
     },
     {
       "excerpt": "游戏进度推进",
       "body": "听说我们long study tour去柏林的时候有机会和游戏设计师们讨论我们的作品，我希望能在那之前把这个项目完善到我自己可以接受的地步。今天把项目移植到了unity，修改了一些bug，搭建了第一版UI（超级粗糙简陋），但是基础玩法运行是没有问题的。后续需要考虑一下如何实现和顾客对话，调查道具，以及让画面看起来更精致一些（但是凭借我稀烂的审美感觉很难做到很好）。感觉这个项目是一堆项目里最有望可以完成的一个，很期待了！\n\n2026.9.19",
       "body_en": "I heard that when we go to Berlin on our long study tour, we might get a chance to discuss our work with game designers, and I want to polish this project to a level I'm happy with before then. Today I ported the project to Unity, fixed some bugs, and built the first version of the UI (super rough and plain), but the basic gameplay runs without problems. Next I need to think about how to implement talking to customers and inspecting items, and how to make the visuals look more refined (though with my terrible aesthetic sense that'll be hard to do well). I feel this is the most promising one of my pile of projects to actually finish, and I'm really looking forward to it!\n\n2026.9.19",
       "excerpt_en": "Game progress moves forward.",
+      "date": "2026-09-19",
       "tags_en": [
         "An Eye for Value"
       ],
@@ -94,14 +95,14 @@
         "An Eye for Value"
       ],
       "project": "奇幻主题当铺",
-      "id": "2026-9-19",
-      "date": "2026-09-19"
+      "id": "2026-9-19"
     },
     {
       "excerpt": "- 添加了会购买物品的顾客\n- 添加了名声\n- 添加了仓库",
       "body": "今天又是进行了一些比较小的更新，现在可以编辑顾客和玩家的对话了，也可以编辑物品描述了。在玩法方面增加了完整的另一块的玩法，也就是添加了会来买东西的顾客，也因此添加了仓库和名声玩法。\n\n后续应该会在笔记本或者notion上列出常客清单+物品清单。\\\n以及应该会想办法增加一些其他的获取物品的手段（例如高等级后可以通过拍卖会或者黑市等手段获得）\n\n然后就是长线的玩法推进，比如说增加宠物养成玩法，具体的等级玩法（比如提升等级后可以更容易的讨价还价，升级商店可以搬去更好的地段，拥有更多的客人等），以及赚来的钱也可以拿来装修房屋/缴房屋水电费/租金。还有很重要的新手教程部分，以及UI美化，感觉距离完成还任重道远\n\n2026.9.19",
       "body_en": "Another fairly small update today. You can now edit the dialogue between customers and the player, and edit item descriptions too. On the gameplay side, I added a whole other half of the game: customers who come to buy things, and because of that I added the warehouse and reputation mechanics.\n\nNext I'll probably list regular customers and items in a notebook or Notion.\\\nI also want to find other ways of acquiring items (for example, at higher levels through auctions or the black market).\n\nThen there's the longer-term gameplay: adding a pet-raising mechanic, and concrete level mechanics (for example, at higher levels it's easier to haggle, and you can upgrade the shop and move to a better location with more customers), and the money you earn can also go toward renovating the house / paying utilities and rent. There's also the very important tutorial section, and polishing the UI. It feels like there's still a long way to go before it's finished.\n\n2026.9.19",
       "excerpt_en": "- Added customers who buy items\n- Added reputation\n- Added a warehouse",
+      "date": "2026-09-19",
       "tags_en": [
         "An Eye for Value"
       ],
@@ -115,14 +116,14 @@
         "An Eye for Value"
       ],
       "project": "当铺",
-      "id": "2026-09-19-Prologue",
-      "date": "2026-09-19"
+      "id": "2026-09-19-Prologue"
     },
     {
       "excerpt": "迈进了一大步！！",
       "body": "从挪威回来后就打算把项目进度推进一些，因此制定了相对来说比较详细的计划。因此这次更新完成了比较多的内容，其中包括：新手教程，中英双语语言切换，添加了物品的数量以及贴图（虽然有一些的物品描述和贴图对不上，但是后续会修改），增加了两个长线角色的两段剧情（对话还有一些问题需要修改一下）。增加了音效设置，开门音效，点击音效，BGM，成交音效，以及系统里可以调整音量和关闭音效。以及添加了结局（还没做结局图），结算页面会展示最终金币，卖出多少件物品，名声如何等。\n\n开心！！！\n\n2026.9.22 1:33am",
       "body_en": "After coming back from Norway, I decided to push the project forward and made a relatively detailed plan. So this update covers quite a lot: a tutorial, Chinese/English language switching, item quantities and sprites (some item descriptions don't match their sprites, but I'll fix that later), and two segments of story for two long-term characters (the dialogue still has some issues to fix). I also added sound settings: a door-opening sound, click sounds, BGM, and a deal-closing sound, and the system lets you adjust the volume or turn sound off. I also added an ending (the ending art isn't done yet), and the results screen shows your final gold, how many items you sold, your reputation, and so on.\n\nSo happy!!!\n\n2026.9.22 1:33am",
       "excerpt_en": "A big step forward!!",
+      "date": "2026-09-22",
       "tags_en": [
         "An Eye for Value"
       ],
@@ -137,12 +138,12 @@
         "An Eye for Value"
       ],
       "project": "当铺",
-      "id": "2026-09-22",
-      "date": "2026-09-22"
+      "id": "2026-09-22"
     },
     {
       "excerpt": "GroundTruth",
       "body": "今天终于把一个一直拖延的项目开始了！项目灵感来源于Papers, Please类型的模拟打工小游戏，但是感觉此游戏的玩法目前过于简单，将会努力提高水准，做一款自己也会想玩的游戏。\n\n今天创建了自己的itch账号，还上传了这个项目，感觉今天的效率还是挺高的。这是一个关于ai标注员的游戏，玩家需要对数据进行判断来训练AI。\n\n欢迎试玩😋\n\nhttps://luoyidev.itch.io/groundtruth\n\n密码:Alaaa.dev\n\n2026.10.28",
+      "date": "2026-10-27",
       "tags_en": [
         "GroundTruth"
       ],
@@ -156,14 +157,14 @@
         "数据标注员"
       ],
       "project": "GroundTruth",
-      "id": "2026-10-27",
-      "date": "2026-10-27"
+      "id": "2026-10-27"
     },
     {
       "excerpt": "版本美术画风更新！",
       "body": "准备出发前往巴塞罗那！距离上次更新已经推进了很多，现在应该已经是版本1.3了。在机场等待的时候，打算调整一下目前的游戏画风，因为感觉之前的页面是真的太像是在上班了，而不是一款游戏，做了4-5版最后采用了类似于墨水屏的一版！因为感觉墨水屏比较易读+比较可爱，画风想选择像素字体，比较有游戏的感觉。但是画风上大概应该还需要比较长时间的调试，希望下飞机后还有动力继续修改。\n\n二编：\n整理了一下今天更新的内容！\n\n**更新日志 · 新画风与更多细节**\n\n**全新画风：柔和字符终端**\n\n• 整体界面换成了\"外包专用老系统\"风格：暖灰墨水屏配色，直角细线边框，面板标题写成 ┤ 标注手册 ├。\n• 任务卡像一张连续打印纸：浅色横条纹，任务编号写成\"任务.. TASK-XX\"这样的字段。\n• 选项改成终端式列表，模型建议的那一项整行反白，底部有一行会闪光标的\"选择 ===>\"。\n• 共识分数改成十格方块条，指标卡更大、更清楚。\n• 时钟、余额等数字换成了复古终端字体。\n\n**新内容**\n\n• 窗外 · 北郊：左上角多了一扇窗，天色会随上班时间从早晨变到黄昏，傍晚老楼会亮灯。一周下来，窗外的风景也会慢慢改变。\n• 点阵头像和通讯录：每位同事都有自己的像素头像，消息栏顶部的通讯录会显示每个人的状态。\n• 纸质信：有些人不发邮件，而是寄来一封真正的信。上班前你会看到一个信封，可以亲手拆开。\n• 新的每日开场：日期会像系统刷新一样数字乱跳，然后一位位定格。\n\n**音效与动画**\n\n• 新增开机登录动画、同事\"正在输入…\"提示、工资单逐行打印效果。\n• 新增按键声、打印声、计票声、新闻插播提示音和撕信封的声音，全部由程序生成。\n• 新闻插播现在会打断滚动条、闪红提示，更容易注意到\"新闻在回应你的选择\"。\n\n**体验优化**\n\n• 字号整体放大，文字颜色加深，小字更清楚。建议全屏游玩。\n• 邮件和商城页面不再显示指标卡，阅读空间更大。\n• 商城壁纸重新调色，适配新的界面风格。\n• 修复了多处文字重叠、提示框位置错误和新手教程高亮异常的问题。\n\n2026.10.30",
       "body_en": "Off to Barcelona! A lot has happened since my last update, and the project should be at version 1.3 by now. While waiting at the airport, I'm planning to rework the game's art style, because the previous screens honestly felt way too much like being at work rather than playing a game. I went through 4 or 5 versions and finally settled on one inspired by e-ink displays! E-ink feels easy to read and also pretty cute, and I want to go with a pixel font to give it more of a game feel. The art style will probably still take a good while to fine-tune, though. Hopefully I'll still have the motivation to keep working on it after I land.\n\nEdit: here's a rundown of what I updated today!\n\n**Devlog · A New Look and More Details**\n\n**New art style: Soft Terminal**\n\n• The whole interface now looks like an outdated system issued to contract workers: warm e-ink grays, thin square borders, and panel titles like ┤ Handbook ├.\n• Task cards look like continuous printer paper, with faint stripes and field-style headers (“TASK.. TASK-XX”).\n• Options are now a terminal-style list. The model’s suggestion is shown in reverse video, with a blinking “SELECT ===>” prompt.\n• The consensus score is now a ten-block bar, and the stat cards are bigger and easier to read.\n• Clocks, balance and other numbers now use a retro terminal font.\n\n**New content**\n\n• Outside · North End: a small window shows the view outside. The sky shifts from morning to dusk as your shift goes on, and lights come on in the old buildings in the evening. Over the week, the view slowly changes too.\n• Pixel portraits & roster: every coworker has their own pixel portrait, and a roster at the top of the chat shows who’s online.\n• Paper letters: some people don’t send emails. They send real letters. Before work, an envelope may be waiting for you to open.\n• New daily opening: the date scrambles like a system refresh, then locks into place digit by digit.\n\n**Sound & animation**\n\n• New boot-up login sequence, “typing…” indicators from coworkers, and a line-by-line printed payslip.\n• New procedurally generated sounds: key clicks, printing, vote counting, breaking-news alerts, and tearing open envelopes.\n• Breaking news now interrupts the ticker with a red flash, making it easier to notice when the news is reacting to your choices.\n\n**Quality of life**\n\n• Larger text and higher contrast throughout. Fullscreen is recommended.\n• Mail and Shop pages no longer show the stat cards, leaving more room to read.\n• Shop wallpapers have been recolored to match the new look.\n• Fixed overlapping text, misplaced pop-ups, and a tutorial highlight bug.\n\n2026.10.30",
       "excerpt_en": "Art Style Update!",
+      "date": "2026-10-30",
       "tags_en": [
         "GroundTruth"
       ],
@@ -177,14 +178,14 @@
         "数据标注员"
       ],
       "project": "GroundTruth",
-      "id": "2026-10-30",
-      "date": "2026-10-30"
+      "id": "2026-10-30"
     },
     {
       "excerpt": "这两天把 GroundTruth 的全部画面重做成统一的公司内部系统风格,并新增了夜间主题。",
       "body": "这两天把游戏里几乎所有画面都重做了一遍,目标是让它更像一个真正的\"公司内部系统\"。\n\n夜间主题\n商城新增夜间主题(TUI),售价 ¥160。切换后界面、文字颜色、头像和剧情数据都会跟着变。信件、小票、入职表这类纸质物件保持原样,因为它们是\"纸\"。\n\n一天的节奏\n\n每天开始时,点阵汇聚成日期,然后才出现邮件。\n任务简报像版本对比:新增规则标\"+”,删除的规则划线。点开始后刷工牌,”嘀\"一声计时开始。\n下班后,热敏小票从出纸口吐出来,底部是点阵大数字的今日结余,撕下后盖上\"已结算\"章。\n邮箱里新邮件逐行淡入,打开时文字会\"解码\"出来。回复改成了终端菜单。\n\n开场\n语言选择、开机日志、入职登记表都重做了。开机日志结束时屏幕会\"通电\"变成米色,入职表的字段会逐个打出来,签名后盖\"已入职\"章。教程改成了 AI 标注框的样式,角标加类别和置信度标签。\n\n周五最后一票\n现在是一个独立的计票终端,有点阵计数器、横条和投票记录。投完后你那一行会反白,然后盖章:通过是朱红,未通过是青色。\n\n结局\n结局页改成深色\"人事档案\",展示这一局的真实数据(在岗天数、共识分数、余额),正文逐段淡入,最后盖\"已归档\"章。新增 10 张档案卡组成的结局图鉴,未解锁的显示\"???”。暂停菜单也重做了,键鼠都能操作,背景不透明,暂停时看不到题目。\n\n声音\n每次点击都有音效,灰掉的按钮是闷声。开机声缩短、调轻。AI 陪伴那首背景音乐提高了八度并加了泛音,现在听得清了。\n\n接下来\n\n让抉择变得更难(目前最优先的玩法问题)\n第二轮试玩\n更新 itch 网页版\n统一调整音效\n\n2026.11.10",
       "body_en": "These two days I reworked almost every screen in the game, with one goal: make it feel like a real internal company system.\n\nNight Theme\nThe shop now sells a Night Theme (TUI) for ¥160. When you switch, the UI, text colors, avatars, and story data all change with it. Paper items like letters, receipts, and the onboarding form stay as they are, because they are paper.\n\nThe Rhythm of a Day\n\nEach day begins with dots converging into the date, and only then do the emails arrive.\nThe daily briefing works like a version diff: new rules are marked “+” and removed rules are struck through. After you press start, you swipe your badge and a “beep” starts the timer.\nAfter work, a thermal receipt prints out of the paper slot with your day’s balance in big dot-matrix digits, then gets stamped “Settled” once torn off.\nIn the mailbox, new emails fade in line by line, and the text “decodes” when you open one. Replies are now a terminal menu.\n\nOpening Sequence\nThe language select screen, boot log, and onboarding form were all rebuilt. When the boot log finishes, the screen “powers on” into beige, and the onboarding form fills in field by field before getting an “Onboarded” stamp after you sign. The tutorial now uses an AI annotation-box style, with corner markers plus category and confidence labels.\n\nFriday’s Final Vote\nThis is now a standalone vote-counting terminal with dot-matrix counters, a bar, and a vote log. After you vote, your row is highlighted in inverted colors and then stamped: vermilion for passed, teal for failed.\n\nEndings\nThe ending page is now a dark “Personnel File” showing real data from your run (days on duty, consensus score, balance). The text fades in paragraph by paragraph and ends with an “Archived” stamp. There is also a new Endings gallery of 10 file cards, with locked ones shown as “???”. The pause menu was rebuilt too: it works with keyboard and mouse, and the background is fully opaque so you can’t peek at the puzzle while paused.\n\nSound\nEvery click now has a sound, and disabled buttons make a muffled one. The boot sound is shorter and quieter. The AI companion background track was raised an octave and given overtones, so it is clearly audible now.\n\nUp Next\nMaking decisions harder (the top gameplay priority right now)\nA second round of playtesting\nUpdating the itch web build\nA pass to unify the sound effects",
       "excerpt_en": "Over these two days, I rebuilt all of GroundTruth’s screens into a unified “internal company system” style and added a Night Theme.",
+      "date": "2026-11-10",
       "tags_en": [
         "GroundTruth"
       ],
@@ -198,8 +199,24 @@
         "数据标注员"
       ],
       "project": "数据标注员",
-      "id": "2026-11-10",
-      "date": "2026-11-10"
+      "id": "2026-11-10"
+    },
+    {
+      "excerpt": "11.17更新",
+      "body": "### 反馈\n1. **要读的东西太多**，玩久了会累，对玩家来说门槛偏高。\n2. **建议加一些简单的美术**，粗糙一点也可以，只要画风统一，这样也能减轻阅读负担。\n3. **需要一个可以自己改游戏文本的表格（比如 Excel）**，让我对项目有更多掌控。\n4. **有些题目的答案不明确**，最好修改一下。\n5. **部分英文没有本地化**，比如\"番茄炒蛋\"外国玩家很难理解。\n6. **（我自己在旁边观察到的）有些选项的文字超出了按钮框。**\n\n### 主要修改\n1. **减少上班时出现的消息**：合并了几条对话，也删掉了一部分，每天必定出现的消息控制在 5 条以内。周三开工时的消息从 4 条减到 1 条。\n2. **系统通知挪出上班时间**：周三的半票规则和设备押金，改到早上的今日简报里显示，不占倒计时。\n3. **手册可以收起**：默认只显示当天新增的规则，点按钮或按 H 键展开全部。\n4. **新增对话总表**：把全部对话整理成可编辑的表格，带编号，方便修改后同步回游戏。\n5. **加入像素美术**：9 道看图题配上了用代码画的像素图，分照片和监控截图两种质感，画风和窗外的城市一致。海港区的生日野餐和北郊的生日聚餐用了同一批人和同一条横幅，只换了背景。多数人把前一张标成\"合法\"，后一张标成\"非法集会\"，玩家现在能直接看到这个差别，而不只是读文字描述。\n6. **英文本地化**：番茄炒蛋改成 chili，包子改成 muffin，红烧肉改成 pot roast。\n7. **修复回复按钮的大小**：按钮会随文字长度自动变高，不再超框；另外缩短了三条过长的英文选项。\n\n### 还没处理的\n- **答案不明确**：先观察更多玩家具体在哪里选错，再决定怎么改。目前怀疑的几处是申诉题的「维持 / 撤销」、周四最后一题和周五投票的「是 / 否」，选项文字容易让人选反。\n- **自己改文本的工具**：对话总表只包含聊天对话，改完还需要手动同步回游戏。下一步是做一个能导出、导入的 Excel，直接修改游戏里的全部文本。",
+      "body_en": "### Feedback\n1. **Too much reading.** It gets tiring after a while and makes the game harder to get into for new players.\n2. **Add some simple art.** It's fine if it's rough, as long as the style is consistent. Visuals would also take some of the reading load off.\n3. **I need a spreadsheet (e.g. Excel) for editing the game text myself**, so I have more control over my own project.\n4. **Some questions don't have a clear answer**, and that should be addressed.\n5. **Some of the English isn't properly localized.** For example, \"tomato eggs\" is hard for non-Chinese players to picture.\n6. **(My own observation while watching him play)** Some reply options overflowed their buttons.\n\n### Main Changes\n1. **Fewer messages during the shift.** I merged some conversations and cut others. Each day now has at most 5 messages that always appear while you're working. Wednesday's shift now opens with 1 message instead of 4.\n2. **System notices moved out of work time.** Wednesday's half-vote rule and equipment deposit now appear in the morning briefing, so they no longer eat into the timer.\n3. **Collapsible handbook.** By default it shows only the rules that are new today. Click the button or press H to see all of them.\n4. **Dialogue spreadsheet.** All chat dialogue is now in one editable table with an ID for every line, so I can revise lines and sync them back into the game.\n5. **Pixel art.** All 9 image-based tasks now show pixel art drawn in code, in two styles: photo and CCTV footage. It matches the window view's style. The Harbor District birthday picnic and the North End birthday dinner use the same people and the same banner, with only the background changed. The majority calls the first one \"legal\" and the second one \"illegal assembly,\" and now players can see the difference instead of just reading about it.\n6. **English localization.** Tomato eggs became chili, the steamed bun became a muffin, and braised pork became pot roast.\n7. **Reply buttons resize.** Buttons now grow to fit their text, so nothing overflows. I also shortened the three longest English options.\n\n### Still To Do\n- **Unclear answers.** I want to watch more playtests first to see exactly where players make mistakes. My current suspects are options whose wording makes them easy to pick by accident: \"Keep / Revoke\" in the appeal reviews, and the \"Yes / No\" options in Thursday's last task and Friday's vote.\n- **A text editing tool.** The dialogue table only covers chat messages, and changes still have to be synced into the game by hand. The next step is an Excel export/import pipeline so I can edit all of the game's text directly.",
+      "excerpt_en": "11.17update",
+      "tags_en": [
+        "GroundTruth"
+      ],
+      "project_en": "GroundTruth",
+      "title_en": "11.17Update",
+      "title": "11.17更新",
+      "tags": [
+        "数据标注员"
+      ],
+      "project": "数据标注员",
+      "id": "2026-11-17"
     }
   ],
   "intro_en": "A record of how my game projects are built. Posts are listed newest first, and you can filter them by tag."
